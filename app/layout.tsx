@@ -1,15 +1,19 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono , Instrument_Sans , Inter_Tight} from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "../components/ThemeProvider";
+import AosAnimate from "@/components/AOS_animate.tsx";
+import SlowScroll from "@/components/SlowScroll.tsx";
+import Cursor from "@/components/cursor.tsx";
 
-const geistSans = Geist({
-    variable: "--font-geist-sans",
+const instrumentSans = Instrument_Sans({
+    variable: "--font-instrument-sans",
     subsets: ["latin"],
+
 });
 
-const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
+const interTight = Inter_Tight({
+    variable: "--font-inter-tight",
     subsets: ["latin"],
 });
 
@@ -24,10 +28,13 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="ru" suppressHydrationWarning>
-        <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <html lang="ru"  suppressHydrationWarning>
+        <body className={`${instrumentSans.variable} ${interTight.variable} antialiased scroll-smooth`} suppressHydrationWarning>
         <ThemeProvider>
+            <SlowScroll/>
+            <Cursor/>
             {children}
+            <AosAnimate/>
         </ThemeProvider>
         </body>
         </html>

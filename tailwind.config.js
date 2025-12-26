@@ -8,9 +8,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Ensure dark mode colors are available
-        background: 'var(--background)',
-        foreground: 'var(--foreground)',
+        background: 'rgb(var(--background))',
+        foreground: 'rgb(var(--foreground))',
+        border: 'rgb(var(--border))',
       },
     },
   },

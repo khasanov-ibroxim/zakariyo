@@ -1,5 +1,6 @@
 import { i18n, Locale } from "@/i18n-config";
 import {getDictionary} from "@/lib/dictionary";
+import Navbar from "@/components/navbar.tsx";
 
 
 export async function generateStaticParams() {
@@ -13,6 +14,7 @@ export default async function LangLayout({children, params}: {
     const { lang } = await params;
     const dict = await getDictionary(lang);
     return(<>
+        <Navbar dict={dict}/>
         {children}
     </>)
 }

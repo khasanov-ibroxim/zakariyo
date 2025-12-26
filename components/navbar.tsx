@@ -1,0 +1,176 @@
+"use client";
+import React, {useState} from "react";
+import {Mail, X, ArrowUpRight} from "lucide-react";
+import {ThemeToggle} from "@/components/ThemeToggle.tsx";
+import {motion, Variants} from "framer-motion";
+import Link from "next/link";
+
+const Navbar = ({dict}) => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const navLinks = [
+        {name: dict.nav.home, path: "/"},
+        {name: dict.nav.about, path: "/about"},
+        {name: dict.nav.contact, path: "/contact"},
+    ];
+    // Pastdan yuqoriga animatsiya
+    const bottomToTop: Variants = {
+        hidden: {opacity: 0, y: "100%"}, // boshlanish holati: pastda
+        visible: {
+            opacity: 1,
+            y: "0%", // ekranda joylashadi
+            transition: {
+                staggerChildren: 0.2,
+                delayChildren: 0.3,
+                ease: "easeInOut",
+            },
+        },
+    };
+
+    return (
+        <>
+            {/* NAVBAR */}
+            <div
+                className="absolute w-full sm:py-10  sm:px-10 py-5 px-5 flex items-center justify-between border-b border-b-[rgba(0,0,0,0.16)] dark:border-b-[rgba(255,255,255,0.16)]">
+                <ThemeToggle/>
+
+                <Mail
+                    size={30}
+                    className="cursor-pointer  origin-top-left hover:rotate-[40deg] transition duration-700"
+                />
+
+                {/* NAVIGATE BUTTON */}
+                <div
+                    onClick={() => setIsMenuOpen(true)}
+                    className="
+            relative overflow-hidden
+            font-inter-tight cursor-pointer
+            border-2 border-border
+            font-bold uppercase
+            sm:text-[18px]
+            sm:py-2 sm:px-6
+            text-[14px]
+            py-1 px-4
+            rounded-3xl
+            dark:bg-transparent bg-black
+            text-white
+            transition-colors duration-500
+
+            before:absolute before:inset-0 before:z-0
+            dark:before:bg-black before:bg-white
+            before:origin-bottom before:scale-y-0
+            before:transition-transform before:duration-500
+            before:content-['']
+
+            hover:before:scale-y-100
+            dark:hover:text-white hover:text-black
+          "
+                >
+                    <span className="relative z-10">Navigate Here</span>
+                </div>
+            </div>
+
+            {/* FULLSCREEN MENU */}
+            <div
+                className={`
+          fixed inset-0 z-50
+          bg-white text-black
+          dark:bg-black dark:text-white
+          flex flex-col items-center justify-center
+          transition-transform duration-700 ease-in-out
+          w-full h-screen overflow-hidden
+              ${isMenuOpen ? "translate-y-0 opacity-100 pointer-events-auto" : "translate-y-full opacity-0 pointer-events-none"}
+
+        `}
+            >
+                {/* CLOSE BUTTON */}
+                <button
+                    onClick={() => setIsMenuOpen(false)}
+                    className="absolute top-10   rounded-[50%] border-border border p-1 hover:rotate-180 transition duration-700 text-[#7A7A7A] bg-[#333336]  border-[#383838] dark:bg-transparent"
+                >
+                    <X size={32} />
+                </button>
+
+                {/* MENU LINKS */}
+                <nav className="flex  flex-col w-full justify-center items-center">
+                    {navLinks.map((link) => (
+                        <FlipLink
+                            key={link.path}
+                            href={"/public"}
+                            animation={"asd"}
+                        >
+                            {link.name}
+                        </FlipLink>
+                    ))}
+                </nav>
+
+                <div className="absolute bottom-10  text-[18px] uppercase font-bold flex flex-col justify-center items-center gap-5 sm:flex-row sm:right-[20px]">
+                    {["Instagram", "Dribble", "Twitter"].map((name) => (
+                        <Link
+                            key={name}
+                            href="#"
+                            className="
+                                relative flex items-center gap-2
+
+                                after:content-['']
+                                after:absolute after:left-0 after:-bottom-1
+                                after:h-[1px] after:w-[80%]  dark:after:bg-white after:bg-black
+                                after:scale-x-0 after:origin-left
+                                after:transition-transform after:duration-700
+                                hover:after:scale-x-100
+                                "
+                        >
+                            <motion.div
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{once: false, amount: 1}}
+                                variants={bottomToTop}
+                                className={'flex'}>
+                                {name} <ArrowUpRight/>
+                            </motion.div>
+                        </Link>
+                    ))}
+                </div>
+            </div>
+        </>
+    );
+};
+
+export default Navbar;
+
+const FlipLink = ({children, href}: { children: string; href: string, animation: string }) => {
+    return (
+        <motion.a
+            href={href}
+            className="relative  block overflow-hidden whitespace-nowrap text-4xl font-black uppercase sm:text-7xl md:text-8xl lg:text-9xl"
+            initial="initial"               // variants boshqaradi
+            whileInView="inView"            // ekranga kelganda animatsiya
+            whileHover="hovered"             // hover animatsiyasi
+            viewport={{once: false, amount: 0.5}}
+            transition={{duration: 0.6, ease: "easeInOut", delay: 1}}
+        >
+            <motion.div
+                variants={{
+                    initial: {y: "100%", opacity: 0},
+                    hovered: {y: "-100%"},
+                    inView: {y: 0, opacity: 1},
+                }}
+                transition={{duration: 0.7, ease: "easeInOut"}}
+            >
+                {children}
+            </motion.div>
+
+            <motion.div
+                className="absolute inset-0"
+                variants={{
+                    initial: {y: "100%"},
+                    hovered: {y: 0},
+                }}
+                transition={{duration: 0.7, ease: "easeInOut"}}
+            >
+                {children}
+            </motion.div>
+        </motion.a>
+
+    )
+}

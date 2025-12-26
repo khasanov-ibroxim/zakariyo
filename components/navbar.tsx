@@ -57,13 +57,13 @@ const Navbar = ({dict}) => {
             transition-colors duration-500
 
             before:absolute before:inset-0 before:z-0
-            dark:before:bg-black before:bg-white
+            dark:before:bg-white before:bg-white
             before:origin-bottom before:scale-y-0
             before:transition-transform before:duration-500
             before:content-['']
 
             hover:before:scale-y-100
-            dark:hover:text-white hover:text-black
+            dark:hover:text-black hover:text-black
           "
                 >
                     <span className="relative z-10">Navigate Here</span>

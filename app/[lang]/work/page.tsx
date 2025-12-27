@@ -21,7 +21,7 @@ export default function WorkPage() {
 
     return (
         <div>
-            <div className="flex w-full h-[70vh] justify-end items-center flex-col font-inter-tight font-bold text-9xl">
+            <div className="flex w-full h-[70vh] justify-end items-center flex-col font-inter-tight font-bold text-7xl sm:text-9xl">
                 <div className="text-[18px] mb-5 dark:text-white/60 text-black/60 font-instrument-sans">
                     (2021 - 2024)
                 </div>

@@ -11,7 +11,7 @@ import logo_5 from "@/assets/home/home_about/l5.svg"
 import logo_6 from "@/assets/home/home_about/l6.svg"
 import logo_7 from "@/assets/home/home_about/l7.svg"
 
-const HomeAbout = () => {
+const HomeAbout = (dict) => {
     const containerRef = useRef(null);
     const [isMobile, setIsMobile] = useState(false);
 

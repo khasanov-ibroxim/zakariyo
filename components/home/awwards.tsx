@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 
-const Awwards = () => {
+const Awwards = (dict) => {
     const experiences = [
         {
             period: "2024",

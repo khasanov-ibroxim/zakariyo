@@ -17,7 +17,7 @@ import human_5 from "@/assets/home/trusted/imgi_28_testimonial-5.png"
 import human_6 from "@/assets/home/trusted/imgi_29_testimonial-6.png"
 import bg from "@/assets/home/trusted/trusted_bottom_photo.jpg";
 
-const Trusted = () => {
+const Trusted = (dict) => {
 
     const [scrollY, setScrollY] = useState(0);
     const [windowHeight, setWindowHeight] = useState(0);
@@ -143,16 +143,17 @@ const Trusted = () => {
             sm:w-screen sm:h-[300px]
             md:w-[500px] md:h-[300px]
             lg:w-[600px] lg:h-[300px]
-            bg-[#0a0a0a] rounded-2xl
-            border-[1px] border-[#1d1d1d]
-            text-white
+            dark:bg-[#0a0a0a] bg-gray-100
+             rounded-2xl
+            border-[1px] dark:border-[#1d1d1d] border-[rgba(0, 0, 0, .04)]
+            dark:text-white text-black
             p-5
           `}>
                                     <div className="flex w-full justify-between items-center">
 
                                         <div className="flex  w-4/5 justify-start items-center gap-5">
                                             <div
-                                                className="w-2/12 rounded-2xl  border-[1px] border-[#1d1d1d] overflow-x-hidden">
+                                                className="w-2/12 rounded-2xl  border-[1px] border-[rgba(0, 0, 0, .04)] dark:border-[#1d1d1d] overflow-x-hidden">
                                                 <Image src={item.human} alt={item.name}
                                                        className={"w-full h-full object-cover"}/>
                                             </div>
@@ -164,13 +165,13 @@ const Trusted = () => {
                                             </div>
 
                                         </div>
-                                        <div className="w-1/5 "><Image src={item.logo} alt={item.name}
+                                        <div className="w-1/5 bg-gray-400 dark:bg-none py-0 px-5 rounded-2xl"><Image src={item.logo} alt={item.name}
                                                                        className={"w-full h-full object-cover"}/></div>
                                     </div>
 
 
                                     <div
-                                        className="w-full p-5 rounded-2xl bg-[#0d0d0d] border-[1px] border-[#1d1d1d] font-inter-tight text-xl">
+                                        className="w-full p-5 rounded-2xl mt-5 bg-gray-300 dark:bg-[#0d0d0d] border-[1px] border-[rgba(0, 0, 0, .04)] dark:border-[#1d1d1d] font-inter-tight text-xl">
                                         {item.desc}
                                     </div>
 
@@ -211,15 +212,17 @@ const Trusted = () => {
             sm:w-screen sm:h-[300px]
             md:w-[500px] md:h-[300px]
             lg:w-[600px] lg:h-[300px]
-            bg-[#0a0a0a] rounded-2xl
-            border-[1px] border-[#1d1d1d]
-            p-5 text-white
+            dark:bg-[#0a0a0a] bg-gray-100
+             rounded-2xl
+            border-[1px] dark:border-[#1d1d1d] border-[rgba(0, 0, 0, .04)]
+            dark:text-white text-black
+            p-5
           `}>
                                     <div className="flex w-full justify-between items-center">
 
                                         <div className="flex  w-4/5 justify-start items-center gap-5">
                                             <div
-                                                className="w-2/12 rounded-2xl  border-[1px] border-[#1d1d1d] overflow-x-hidden">
+                                                className="w-2/12 rounded-2xl  border-[1px] border-[rgba(0, 0, 0, .04)] dark:border-[#1d1d1d] overflow-x-hidden">
                                                 <Image src={item.human} alt={item.name}
                                                        className={"w-full h-full object-cover"}/>
                                             </div>
@@ -231,12 +234,13 @@ const Trusted = () => {
                                             </div>
 
                                         </div>
-                                        <div className="w-1/5 "><Image src={item.logo} alt={item.name}/></div>
+                                        <div className="w-1/5 bg-gray-400 dark:bg-none py-0 px-5 rounded-2xl"><Image src={item.logo} alt={item.name}
+                                                                                                                     className={"w-full h-full object-cover"}/></div>
                                     </div>
 
 
                                     <div
-                                        className="w-full p-5 rounded-2xl bg-[#0d0d0d] border-[1px] border-[#1d1d1d] font-inter-tight text-xl">
+                                        className="w-full p-5 rounded-2xl mt-5 bg-gray-300 dark:bg-[#0d0d0d] border-[1px] border-[rgba(0, 0, 0, .04)] dark:border-[#1d1d1d] font-inter-tight text-xl">
                                         {item.desc}
                                     </div>
 

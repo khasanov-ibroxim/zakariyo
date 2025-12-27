@@ -4,7 +4,7 @@ import Link from "next/link";
 import home_header_img from "@/assets/home/home_header/home_header.png"
 import Image from "next/image";
 
-const HomeHeader = () => {
+const HomeHeader = (dict) => {
     const [scrollY, setScrollY] = useState(0);
 
     useEffect(() => {

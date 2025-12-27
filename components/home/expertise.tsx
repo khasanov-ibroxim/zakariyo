@@ -15,7 +15,7 @@ interface ServiceProp {
     image: string | StaticImageData;
 }
 
-const Expertise = () => {
+const Expertise = (dict) => {
     const [selectedService, setSelectedService] = useState<ServiceProp | null>(null);
 
     const services: ServiceProp[] = [

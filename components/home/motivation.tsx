@@ -4,7 +4,7 @@ import check from "@/assets/home/motivation/motivation_check.png"
 import bg from "@/assets/home/motivation/motivation_bottom_img.jpg"
 import Image from "next/image";
 
-const Motivation = () => {
+const Motivation = (dict) => {
     const [scrollY, setScrollY] = useState(0);
     const [windowHeight, setWindowHeight] = useState(0);
     const imageRef = React.useRef<HTMLDivElement>(null);

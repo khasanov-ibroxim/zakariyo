@@ -5,13 +5,13 @@ import {ThemeToggle} from "@/components/ThemeToggle.tsx";
 import {motion, Variants} from "framer-motion";
 import Link from "next/link";
 
-const Navbar = ({dict}) => {
+const Navbar = ({dict , lang}) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const navLinks = [
-        {name: dict.nav.home, path: "/"},
-        {name: dict.nav.about, path: "/about"},
-        {name: dict.nav.contact, path: "/contact"},
+        {name: dict.nav.home, path: ""},
+        {name: dict.nav.work, path: "work"},
+        {name: dict.nav.contact, path: "contact"},
     ];
 
 
@@ -19,7 +19,7 @@ const Navbar = ({dict}) => {
         <>
             {/* NAVBAR */}
             <div
-                className="absolute z-50 w-full sm:py-10  sm:px-10 py-5 px-5 flex items-center justify-between border-b border-b-[rgba(0,0,0,0.16)] dark:border-b-[rgba(255,255,255,0.16)]">
+                className="absolute z-50 w-full sm:py-10  sm:px-10 py-5 px-5 flex items-center justify-between border-b border-b-black/30 dark:border-b-[rgba(255,255,255,0.16)]">
                 <ThemeToggle/>
                 <Mail
                     size={30}
@@ -27,6 +27,7 @@ const Navbar = ({dict}) => {
   origin-top-left
   transition-transform duration-700 ease-in-out
   hover:rotate-[40deg] hover:scale-110
+
   "
                 />
 
@@ -89,7 +90,7 @@ const Navbar = ({dict}) => {
                     {navLinks.map((link) => (
                         <FlipLink
                             key={link.path}
-                            href={"/public"}
+                            href={`/${lang}/${link.path}`}
                             animation={"asd"}
                         >
                             {link.name}

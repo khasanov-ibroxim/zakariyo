@@ -6,6 +6,7 @@ import AosAnimate from "@/components/AOS_animate";
 import SlowScroll from "@/components/SlowScroll";
 import Cursor from "@/components/cursor";
 
+
 const instrumentSans = Instrument_Sans({
     variable: "--font-instrument-sans",
     subsets: ["latin"],
@@ -23,11 +24,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
                                        children,
-                                   }: Readonly<{
+                                   }: {
     children: React.ReactNode;
-}>) {
+}) {
     return (
-        <html lang="ru" suppressHydrationWarning>
+        <html suppressHydrationWarning>
         <body
             className={`${instrumentSans.variable} ${interTight.variable} antialiased`}
             suppressHydrationWarning

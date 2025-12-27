@@ -8,7 +8,7 @@ import icon_4 from "@/assets/home/favorite/icon_4.png"
 import icon_5 from "@/assets/home/favorite/icon_5.png"
 
 
-const FavoriteStack = () => {
+const FavoriteStack = (dict) => {
     const stackItems = [
         {
             icon: <Image src={icon_1} className="w-12 h-12 rounded-2xl" alt="Favorite Stack Icon" />,
@@ -61,14 +61,14 @@ const FavoriteStack = () => {
                         {stackItems.map((item, index) => (
                             <div
                                 key={index}
-                                className="relative p-5 dark:bg-[#f5f5f8] rounded-2xl flex lg:flex-row flex-col gap-3  border-[1px] border-[rgba(0, 0, 0, .04)] dark:border-[#1d1d1d]"
+                                className="relative p-5 bg-gray-100 dark:bg-[#0d0d0d] rounded-2xl flex lg:flex-row flex-col gap-3  border-[1px] border-[rgba(0, 0, 0, .04)] dark:border-[#1d1d1d]"
                             >
                                 <div className="w-full lg:w-1/5 flex justify-start items-start ">
-                                    <div className="dark:bg-[#0d0d0d] bg-[#f5f5f8] rounded-2xl border-[rgba(0, 0, 0, .04)] dark:border-[#1d1d1d] border-[1px]  p-2">
+                                    <div className="dark:bg-[#0d0d0d] bg-gray-300 rounded-2xl border-[rgba(0, 0, 0, .04)] dark:border-[#1d1d1d] border-[1px]  p-2">
                                         {item.icon}
                                     </div>
                                 </div>
-                                <div className="w-4/3 bg-[#f5f5f8] dark:bg-[#0d0d0d] rounded-2xl border-[1px] border-[rgba(0, 0, 0, .04)] dark:border-[#1d1d1d]  p-5">
+                                <div className="w-4/3 bg-gray-300 dark:bg-[#0d0d0d] rounded-2xl border-[1px] border-[rgba(0, 0, 0, .04)] dark:border-[#1d1d1d]  p-5">
                                     {/* Company Name */}
                                     <h3 className="text-3xl font-instrument-sans md:text-2xl font-bold mb-6 tracking-tight">
                                         {item.stack}

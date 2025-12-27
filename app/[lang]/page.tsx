@@ -1,6 +1,5 @@
-
 import {getDictionary} from "@/lib/dictionary.ts";
-import {Locale} from "@/i18n-config.ts";
+import {i18n, Locale} from "@/i18n-config.ts";
 import HomeHeader from "@/components/home/home_header.tsx";
 import FeaturedWork from "@/components/home/Featured_Work.tsx";
 import HomeAbout from "@/components/home/home_about.tsx";
@@ -11,28 +10,29 @@ import FavoriteStack from "@/components/home/FavoriteStack.tsx";
 import Awwards from "@/components/home/awwards.tsx";
 import Trusted from "@/components/home/trusted.tsx";
 import Questions from "@/components/home/questions.tsx";
+import {projects} from "@/data/portfolio.data.ts";
 
 
 interface HomeProps {
     params: Promise<{ lang: Locale }>;
 }
 
-export default async function Home({params}:HomeProps){
-    const { lang } = await params;
+export default async function Home({params}: HomeProps) {
+    const {lang} = await params;
     const dict = await getDictionary(lang);
 
-    return(
+    return (
         <>
-            <HomeHeader/>
-            <FeaturedWork/>
-            <HomeAbout/>
-            <Expertise/>
-            <Motivation/>
-            <Experience/>
-            <FavoriteStack/>
-            <Awwards/>
-            <Trusted/>
-            <Questions/>
+            <HomeHeader dict={dict}/>
+            <FeaturedWork dict={dict} lang={lang}/>
+            <HomeAbout dict={dict}/>
+            <Expertise dict={dict}/>
+            <Motivation dict={dict}/>
+            <Experience dict={dict}/>
+            <FavoriteStack dict={dict}/>
+            <Awwards dict={dict}/>
+            <Trusted dict={dict}/>
+            <Questions dict={dict}/>
         </>
     )
 }

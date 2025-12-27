@@ -1,6 +1,10 @@
 "use client"
 import React, { useState } from 'react';
-import { Plus, X } from 'lucide-react';
+import {ArrowUpRight, Plus, X} from 'lucide-react';
+import Image from "next/image";
+import home_about_index from "@/assets/footer/footer.png";
+import Link from "next/link";
+import {motion} from "framer-motion";
 
 const questionsData = [
     {
@@ -25,7 +29,7 @@ const questionsData = [
     }
 ];
 
-const Questions = () => {
+const Questions = (dict) => {
     const [openIndex, setOpenIndex] = useState<number>(0);
 
     const toggleQuestion = (index: number) => {
@@ -82,6 +86,83 @@ const Questions = () => {
                         </div>
                     ))}
                 </div>
+            </div>
+
+
+            <div className="pt-10 sm:pt-32">
+                <div
+                    className="font-inter-tight w-full flex flex-col items-center justify-center font-bold text-5xl sm:text-8xl text-center">
+                    LET`S WORK
+                    <br/> TOGETHER
+                    <div
+                        className="
+            relative overflow-hidden
+            font-inter-tight cursor-pointer
+            border-2 border-border
+            font-bold uppercase
+            sm:text-[18px]
+            sm:py-4 sm:px-8
+            text-[14px]
+            py-3 px-6
+            mt-10
+            rounded-3xl
+            dark:bg-white bg-black
+            text-white dark:text-black
+            transition-colors duration-500
+
+            before:absolute before:inset-0 before:z-0
+            dark:before:bg-black  before:bg-white
+            before:origin-bottom before:scale-y-0
+            before:transition-transform before:duration-500
+            before:content-['']
+
+            hover:before:scale-y-100
+            dark:hover:text-white hover:text-black
+          "
+                    >
+                        <span className="relative z-10 uppercase">Contact Now</span>
+                    </div>
+                </div>
+                <div className="w-full flex items-center justify-center mt-10 flex-col">
+                    <div
+                        className="w-[420px] h-[630px] lg:w-[350px] lg:h-[500px] rounded-[40%] overflow-hidden shadow-2xl">
+                        <Image
+                            src={home_about_index}
+                            alt="Profile"
+                            className="w-full h-full object-cover object-center"
+                        />
+                    </div>
+                    <div className="w-full px-5 sm:w-1/2 text-center mt-10 text-lg uppercase font-bold">
+                        BASED IN TOKYO, I AM AN INNOVATIVE DESIGNER AND DIGITAL ARTIST. MY
+                        PASSION FOR MINIMALIST AESTHETICS, ELEGANT TYPOGRAPHY, AND
+                        INTUITIVE DESIGN IS EVIDENT IN MY WORK.
+                    </div>
+                    <div
+                        className=" mt-10 bottom-10  text-[18px] uppercase font-bold flex flex-col justify-center items-center gap-5 sm:flex-row sm:right-[20px]">
+                        {["Instagram", "Dribble", "Twitter"].map((name) => (
+                            <Link
+                                key={name}
+                                href="#"
+                                className="
+                                relative flex items-center gap-2
+                                after:content-['']
+                                after:absolute after:left-0 after:-bottom-1
+                                after:h-[1px] after:w-[80%]  dark:after:bg-white after:bg-black
+                                after:scale-x-0 after:origin-left
+                                after:transition-transform after:duration-700
+                                hover:after:scale-x-100
+                                "
+                            >
+                                <motion.div
+                                    className={'flex'}>
+                                    {name} <ArrowUpRight/>
+                                </motion.div>
+                            </Link>
+                        ))}
+                    </div>
+
+                </div>
+
             </div>
         </section>
     );

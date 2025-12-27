@@ -5,9 +5,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { projects } from '@/data/portfolio.data';
 
+interface FeaturedWorkProps {
+    dict: { [key: string]: unknown };
+    lang: string;
+}
 
-
-const FeaturedWork = (dict:{[key:string] : unknown}, lang:string ) => {
+const FeaturedWork = ({ dict, lang }: FeaturedWorkProps) => {
     const fadeInScale: Variants = {
         hidden: { opacity: 0, scale: 0.95 },
         visible: {

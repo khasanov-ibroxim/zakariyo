@@ -1,11 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // ✅ STATIC EXPORT - Bu eng muhim qism!
+  // ✅ STATIC EXPORT
   output: 'export',
 
-  // ✅ Images configuration for static export
+  // ✅ Images configuration - unoptimized for static export
   images: {
-    unoptimized: true, // Static export uchun zarur
+    unoptimized: true,
   },
 
   // ✅ Trailing slash
@@ -15,12 +15,6 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   reactStrictMode: true,
-
-  // ✅ CRITICAL: Turbopack config (empty to silence warning)
-  turbopack: {},
-
-  // ⚠️ IMPORTANT: Static export bilan headers, redirects ishlamaydi
-  // Ularni hostingda sozlash kerak (Vercel, Netlify va h.k.)
 };
 
 module.exports = nextConfig;

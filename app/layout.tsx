@@ -1,15 +1,14 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono , Instrument_Sans , Inter_Tight} from "next/font/google";
+import type {Metadata} from "next";
+import {Instrument_Sans, Inter_Tight} from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "../components/ThemeProvider";
-import AosAnimate from "@/components/AOS_animate.tsx";
-import SlowScroll from "@/components/SlowScroll.tsx";
-import Cursor from "@/components/cursor.tsx";
+import {ThemeProvider} from "../components/ThemeProvider";
+import AosAnimate from "@/components/AOS_animate";
+import SlowScroll from "@/components/SlowScroll";
+import Cursor from "@/components/cursor";
 
 const instrumentSans = Instrument_Sans({
     variable: "--font-instrument-sans",
     subsets: ["latin"],
-
 });
 
 const interTight = Inter_Tight({
@@ -28,13 +27,17 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="ru"  suppressHydrationWarning>
-        <body className={`${instrumentSans.variable} ${interTight.variable} antialiased scroll-smooth`} suppressHydrationWarning>
+        <html lang="ru" suppressHydrationWarning>
+        <body
+            className={`${instrumentSans.variable} ${interTight.variable} antialiased`}
+            suppressHydrationWarning
+        >
         <ThemeProvider>
-            <SlowScroll/>
-            <Cursor/>
-            {children}
-            <AosAnimate/>
+            <SlowScroll>
+                <Cursor/>
+                {children}
+                <AosAnimate/>
+            </SlowScroll>
         </ThemeProvider>
         </body>
         </html>

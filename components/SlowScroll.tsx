@@ -1,22 +1,35 @@
 "use client"
-import { useEffect } from "react";
+import React, {useEffect} from 'react';
+import Lenis from "lenis";
+import 'lenis/dist/lenis.css'; // Agar CSS kerak bo'lsa
 
-export default function SlowScroll() {
+const SlowScroll: React.FC<{children: React.ReactNode}> = ({children}) => {
     useEffect(() => {
-        const handleWheel = (e: WheelEvent) => {
-            e.preventDefault();
-            window.scrollBy({
-                top: e.deltaY * 0.7, // 0.3 → scrollni sekinlashtiradi
-                behavior: "auto",
-            });
-        };
+        const lenis = new Lenis({
+            duration: 4, // Scroll tezligi (katta = sekinroq)
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Easing function
+            orientation: 'vertical', // vertical yoki horizontal
+            gestureOrientation: 'vertical',
+            smoothWheel: true,
+            wheelMultiplier: 0.8, // Mouse wheel sensitivligi
+            touchMultiplier: 2,
+            infinite: false,
+        });
 
-        window.addEventListener("wheel", handleWheel, { passive: false });
+        function raf(time: number) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
 
+        requestAnimationFrame(raf);
+
+        // Cleanup
         return () => {
-            window.removeEventListener("wheel", handleWheel);
+            lenis.destroy();
         };
     }, []);
 
-    return null;
-}
+    return <>{children}</>;
+};
+
+export default SlowScroll;

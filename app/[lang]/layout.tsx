@@ -1,6 +1,7 @@
 import { i18n, Locale } from "@/i18n-config";
 import {getDictionary} from "@/lib/dictionary";
 import Navbar from "@/components/navbar.tsx";
+import Footer from "@/components/footer.tsx";
 
 
 export async function generateStaticParams() {
@@ -16,5 +17,6 @@ export default async function LangLayout({children, params}: {
     return(<>
         <Navbar dict={dict}/>
         {children}
+        <Footer/>
     </>)
 }

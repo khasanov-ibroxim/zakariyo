@@ -50,7 +50,7 @@ const HomeAbout = () => {
     return (
         <>
             {/* Desktop Version - Scroll Animation */}
-            <div ref={containerRef} className="hidden md:block relative min-h-[200vh] lg:min-h-[220vh] bg-black text-white">
+            <div ref={containerRef} className="hidden md:block relative min-h-[200vh] lg:min-h-[220vh] ">
                 <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
 
                     {/* Text */}
@@ -91,7 +91,7 @@ const HomeAbout = () => {
             </div>
 
             {/* Mobile Version - Static Layout */}
-            <div className="md:hidden bg-black text-white py-12 px-4">
+            <div className="md:hidden  py-12 px-4">
                 <div className="max-w-2xl mx-auto space-y-8">
                     {/* Text */}
                     <motion.div
@@ -128,7 +128,7 @@ const HomeAbout = () => {
             </div>
 
             {/* About Content */}
-            <div className="relative z-40 bg-black py-8 sm:py-12 md:py-16 lg:py-20 ">
+            <div className="relative z-40  py-8 sm:py-12 md:py-16 lg:py-20 ">
                 <div className="w-full">
                     <motion.div
                         initial={{ opacity: 0, y: 50 }}
@@ -143,7 +143,7 @@ const HomeAbout = () => {
                             AND INTUITIVE DESIGN SHINES THROUGH IN MY WORK.
                         </h2>
 
-                        <div className=" justify-center items-center flex  text-gray-300 max-w-screen-lg">
+                        <div className=" justify-center items-center flex   max-w-screen-lg">
                             <p className={"text-[14px] md:text-[18px] w-full leading-relaxed"}>
                                 I`m on the cutting edge of no-code tools that allow me to bring my creative visions to
                                 life. Though my methods may be unconventional, my dedication to the craft is
@@ -155,9 +155,29 @@ const HomeAbout = () => {
                         <motion.button
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="bg-white text-black  py-3 sm:px-8 sm:py-4 rounded-full text-sm sm:text-base md:text-lg font-semibold hover:bg-gray-200 transition-colors"
+                            className=" relative overflow-hidden
+            font-inter-tight cursor-pointer
+            border-2 border-border
+            font-bold uppercase
+            sm:text-[18px]
+            sm:py-2 sm:px-6
+            text-[14px]
+            py-1 px-4
+            rounded-3xl
+            dark:bg-transparent bg-black
+            text-white
+            transition-colors duration-500
+
+            before:absolute before:inset-0 before:z-0
+            dark:before:bg-white before:bg-white
+            before:origin-bottom before:scale-y-0
+            before:transition-transform before:duration-500
+            before:content-['']
+
+            hover:before:scale-y-100
+            dark:hover:text-black hover:text-black"
                         >
-                            DOWNLOAD RESUME
+                           <span className={"relative z-10"}>DOWNLOAD RESUME</span>
                         </motion.button>
                     </motion.div>
 
@@ -196,7 +216,7 @@ const HomeAbout = () => {
             sm:w-[150px] sm:h-[150px]
             md:w-[180px] md:h-[180px]
             lg:w-[200px] lg:h-[200px]
-            bg-zinc-900 rounded-2xl
+            bg-[#0A0A0A] rounded-2xl
             flex items-center justify-center
             ${rotateClass}
           `}

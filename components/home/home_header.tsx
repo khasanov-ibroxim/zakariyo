@@ -22,8 +22,8 @@ const HomeHeader = () => {
         <>
             <div className={"w-full h-[95vh] relative flex items-center sm:justify-end justify-center flex-col gap-20 px-10 pb-5"}>
                 <div className="text-center font-instrument-sans font-bold ">
-                    <div className="text-[18px] w-full justify-center text-[rgba(255,255,255,.6)] mb-10 flex items-center gap-2">
-                        <span className="rounded-full bg-[#00B803] w-[15px] h-[15px] animate-pulse"></span>
+                    <div className="text-[18px] w-full justify-center  mb-10 flex items-center gap-2">
+                        <span className="rounded-full bg-[#00B803] w-[15px] h-[15px] animate-pulse text-black dark:text-[rgba(255,255,255,.6)]"></span>
                         AVAILABLE FOR FREELANCE
                     </div>
                     <h1 className={" text-[50px] leading-[40px] md:text-[100px] md:leading-[90px] lg:text-[140px] lg:leading-[120px]"}>MECHEALE <br/>BEAUREGARD</h1>
@@ -31,7 +31,7 @@ const HomeHeader = () => {
                 <div className="w-full flex justify-between font-bold text-[14px] absolute bottom-10 px-3 sm:static">
                     <div className="text-left">BASED IN CALIFORNIA, LA</div>
                     <div className="text-right">DIGITAL DESIGNER
-                        <Link href={"#"} className={"text-[rgba(255,255,255,.6)]"}>+ WEBFLOW DEVELOPER</Link> </div>
+                        <Link href={"#"} className={"text-[rgba(0,0,0,0.6)] dark:text-[rgba(255,255,255,.6)]"}>+ WEBFLOW DEVELOPER</Link> </div>
                 </div>
             </div>
 

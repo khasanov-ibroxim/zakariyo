@@ -13,31 +13,24 @@ const Navbar = ({dict}) => {
         {name: dict.nav.about, path: "/about"},
         {name: dict.nav.contact, path: "/contact"},
     ];
-    // Pastdan yuqoriga animatsiya
-    const bottomToTop: Variants = {
-        hidden: {opacity: 0, y: "100%"}, // boshlanish holati: pastda
-        visible: {
-            opacity: 1,
-            y: "0%", // ekranda joylashadi
-            transition: {
-                staggerChildren: 0.2,
-                delayChildren: 0.3,
-                ease: "easeInOut",
-            },
-        },
-    };
+
 
     return (
         <>
             {/* NAVBAR */}
             <div
-                className="absolute w-full sm:py-10  sm:px-10 py-5 px-5 flex items-center justify-between border-b border-b-[rgba(0,0,0,0.16)] dark:border-b-[rgba(255,255,255,0.16)]">
+                className="absolute z-50 w-full sm:py-10  sm:px-10 py-5 px-5 flex items-center justify-between border-b border-b-[rgba(0,0,0,0.16)] dark:border-b-[rgba(255,255,255,0.16)]">
                 <ThemeToggle/>
-
                 <Mail
                     size={30}
-                    className="cursor-pointer  origin-top-left hover:rotate-[40deg] transition duration-700"
+                    className="cursor-pointer
+  origin-top-left
+  transition-transform duration-700 ease-in-out
+  hover:rotate-[40deg] hover:scale-110
+  "
                 />
+
+
 
                 {/* NAVIGATE BUTTON */}
                 <div
@@ -88,7 +81,7 @@ const Navbar = ({dict}) => {
                     onClick={() => setIsMenuOpen(false)}
                     className="absolute top-10   rounded-[50%] border-border border p-1 hover:rotate-180 transition duration-700 text-[#7A7A7A] bg-[#333336]  border-[#383838] dark:bg-transparent"
                 >
-                    <X size={32} />
+                    <X size={32}/>
                 </button>
 
                 {/* MENU LINKS */}
@@ -104,7 +97,8 @@ const Navbar = ({dict}) => {
                     ))}
                 </nav>
 
-                <div className="absolute bottom-10  text-[18px] uppercase font-bold flex flex-col justify-center items-center gap-5 sm:flex-row sm:right-[20px]">
+                <div
+                    className="absolute bottom-10  text-[18px] uppercase font-bold flex flex-col justify-center items-center gap-5 sm:flex-row sm:right-[20px]">
                     {["Instagram", "Dribble", "Twitter"].map((name) => (
                         <Link
                             key={name}
@@ -121,10 +115,6 @@ const Navbar = ({dict}) => {
                                 "
                         >
                             <motion.div
-                                initial="hidden"
-                                whileInView="visible"
-                                viewport={{once: false, amount: 1}}
-                                variants={bottomToTop}
                                 className={'flex'}>
                                 {name} <ArrowUpRight/>
                             </motion.div>

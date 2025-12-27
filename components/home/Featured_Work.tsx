@@ -6,7 +6,7 @@ import Link from "next/link";
 import { projects } from '@/data/portfolio.data';
 
 interface FeaturedWorkProps {
-    dict: { [key: string]: unknown };
+    dict: any; // Changed from { [key: string]: unknown }
     lang: string;
 }
 

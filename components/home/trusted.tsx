@@ -252,24 +252,26 @@ const Trusted = (dict) => {
             </div>
 
 
+
             <div
                 ref={imageRef}
-                className="w-full h-[60vh] md:h-screen overflow-hidden mt-32 relative"
+                className="w-full h-[60vh] md:h-screen mt-32 relative overflow-hidden"
             >
                 <div
                     className="w-full h-full absolute inset-0"
                     style={{
-                        transform: `scale(${scale})`,
+                        transform: `scale(${Math.min(scale, 1.15)})`, // ✅ Max scale cheklandi
+                        transformOrigin: "center center",
                         transition: "transform 0.1s linear",
-                        transformOrigin: "center center"
                     }}
                 >
                     <Image
                         src={bg}
-                        alt="motivation"
-                        className="w-full h-full object-cover object-center"
+                        alt="trusted"
                         fill
+                        className="object-cover object-center"
                         priority
+                        sizes="100vw"
                     />
                 </div>
             </div>

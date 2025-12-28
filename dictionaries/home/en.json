@@ -1,13 +1,13 @@
 {
   "hero": {
 
-    "name": "Yokubov  Shamsiddin",
+    "name": ["Yokubov","Shamsiddin"],
     "status": "AVAILABLE FOR FREELANCE",
     "location": "Ташкент, Узбекистан",
     "title": "Маркетолог стратег"
   },
   "about": {
-    "title": "MORE ABOUT MECHEALE©",
+    "title": ["Стратегия Подход" , "Экспорт"],
     "subtitle": "I'M AN INNOVATIVE DESIGNER AND DIGITAL ARTIST IN TOKYO",
     "description": "My passion for minimalist aesthetics, elegant typography, and intuitive design shines through in my work."
   },
@@ -18,18 +18,18 @@
     "title": "MOTIVATION"
   },
   "experience": {
-    "title": "EXPERIENCE"
+    "title": "Опыт"
   },
   "favoriteStack": {
     "title": "FAVOURITE STACK"
   },
   "awards": {
-    "title": "AWARDS"
+    "title": "Выставки"
   },
   "trusted": {
     "title": "TRUSTED BY INTERNATIONAL BRANDS"
   },
   "questions": {
-    "title": "FREQUENTLY ASKED QUESTIONS"
+    "title": ["Часто" , "задаваемые вопросы"]
   }
 }

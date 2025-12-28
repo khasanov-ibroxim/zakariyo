@@ -26,7 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     return (
         <html suppressHydrationWarning className="">
         <body
-            className={`${instrumentSans.variable} ${interTight.variable} antialiased `}
+            className={`${instrumentSans.variable} ${interTight.variable}  `}
             suppressHydrationWarning
         >
         <ThemeProvider>

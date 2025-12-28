@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 
-const Awwards = (dict) => {
+const Awwards = ({dict}) => {
     const experiences = [
         {
             period: "2024",
@@ -40,7 +40,7 @@ const Awwards = (dict) => {
             <div className="flex sm:flex-row flex-col  px-5">
                 {/* Left Side - Sticky Title */}
                 <div className="w-full sm:w-1/2 sm:pr-5  top-0 sm:sticky text-5xl md:text-5xl font-bold tracking-tight h-full pt-10 sm:flex items-center  ">
-                    AWARDS
+                    {dict.awards.title}
 
                 </div>
 

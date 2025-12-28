@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import home_about_index from "@/assets/home/home_about/home_about.png"
+import home_about_index from "@/assets/home/home_about/home_about.jpg"
 import Image from "next/image";
 import logo_1 from "@/assets/home/home_about/l1.svg"
 import logo_2 from "@/assets/home/home_about/l2.svg"
@@ -11,7 +11,7 @@ import logo_5 from "@/assets/home/home_about/l5.svg"
 import logo_6 from "@/assets/home/home_about/l6.svg"
 import logo_7 from "@/assets/home/home_about/l7.svg"
 
-const HomeAbout = (dict) => {
+const HomeAbout = ({dict}) => {
     const containerRef = useRef(null);
     const [isMobile, setIsMobile] = useState(false);
 
@@ -63,9 +63,7 @@ const HomeAbout = (dict) => {
                         className="absolute z-10 text-center px-4"
                     >
                         <h1 className="text-7xl lg:text-8xl xl:text-9xl font-bold tracking-tight leading-tight">
-                            MORE ABOUT
-                            <br />
-                            MECHEALE©
+                            {dict.about.title[0]} <br/> {dict.about.title[1]}
                         </h1>
                     </motion.div>
 
@@ -102,9 +100,8 @@ const HomeAbout = (dict) => {
                         className="text-center"
                     >
                         <h1 className="text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight leading-tight">
-                            MORE ABOUT
-                            <br />
-                            MECHEALE©
+                            {dict.about.title[0]} <br/> {dict.about.title[1]}
+
                         </h1>
                     </motion.div>
 

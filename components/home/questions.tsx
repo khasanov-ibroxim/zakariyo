@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import {ArrowUpRight, Plus, X} from 'lucide-react';
 import Image from "next/image";
-import home_about_index from "@/assets/footer/footer.png";
+import home_about_index from "@/assets/footer/footer.jpg";
 import Link from "next/link";
 import {motion} from "framer-motion";
 
@@ -29,7 +29,7 @@ const questionsData = [
     }
 ];
 
-const Questions = (dict) => {
+const Questions = ({dict}) => {
     const [openIndex, setOpenIndex] = useState<number>(0);
 
     const toggleQuestion = (index: number) => {
@@ -39,7 +39,7 @@ const Questions = (dict) => {
     return (
         <section className="min-h-screen py-20 px-5">
             <div className="font-inter-tight mb-10 w-full flex flex-col items-center justify-center font-bold text-5xl text-center">
-                FREQUENTLY <br/> ASKED QUESTIONS
+                {dict.questions.title[0]} <br/> {dict.questions.title[1]}
             </div>
 
             <div className="max-w-6xl mx-auto">

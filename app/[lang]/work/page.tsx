@@ -1,4 +1,3 @@
-// app/[lang]/work/page.tsx
 "use client"
 import React from 'react';
 import { motion, Variants } from "framer-motion";
@@ -16,12 +15,19 @@ const fadeInScale: Variants = {
     }
 };
 
+// ✅ Interface qo'shildi
+interface WorkDict {
+    period: string;
+    title: string;
+    moreWorks: string;
+}
+
 export default function WorkPage() {
     const params = useParams();
     const lang = params?.lang as string || 'en';
 
-    // ✅ Client component uchun dictionary
-    const [dict, setDict] = React.useState<unknown>(null);
+    // ✅ Type to'g'rilandi
+    const [dict, setDict] = React.useState<WorkDict | null>(null);
 
     React.useEffect(() => {
         import(`@/dictionaries/work/${lang}.json`).then((module) => {
@@ -34,6 +40,7 @@ export default function WorkPage() {
     return (
         <div>
             <div className="flex w-full h-[70vh] justify-end items-center flex-col font-inter-tight font-bold text-7xl sm:text-9xl">
+                {/* ✅ dict.period endi to'g'ri ishlaydi */}
                 <div className="text-[18px] mb-5 dark:text-white/60 text-black/60 font-instrument-sans">
                     {dict.period}
                 </div>

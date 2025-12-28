@@ -5,7 +5,7 @@ import {motion} from 'framer-motion';
 import {MapPin, Phone, Mail} from 'lucide-react';
 import bg from "@/assets/footer/footer.png"
 
-const ContactForm = () => {
+const ContactForm = ({dict}) => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',

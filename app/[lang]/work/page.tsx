@@ -1,3 +1,4 @@
+// app/[lang]/work/page.tsx
 "use client"
 import React from 'react';
 import { motion, Variants } from "framer-motion";
@@ -19,11 +20,22 @@ export default function WorkPage() {
     const params = useParams();
     const lang = params?.lang as string || 'en';
 
+    // ✅ Client component uchun dictionary
+    const [dict, setDict] = React.useState<unknown>(null);
+
+    React.useEffect(() => {
+        import(`@/dictionaries/work/${lang}.json`).then((module) => {
+            setDict(module.default);
+        });
+    }, [lang]);
+
+    if (!dict) return null;
+
     return (
         <div>
             <div className="flex w-full h-[70vh] justify-end items-center flex-col font-inter-tight font-bold text-7xl sm:text-9xl">
                 <div className="text-[18px] mb-5 dark:text-white/60 text-black/60 font-instrument-sans">
-                    (2021 - 2024)
+                    {dict.period}
                 </div>
                 <motion.div
                     viewport={{ once: false, amount: 0.5 }}

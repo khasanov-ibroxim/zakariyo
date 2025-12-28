@@ -47,7 +47,7 @@ const Motivation = (dict) => {
     const scale = 1 + Math.min(scrollProgress / maxScroll, 1) * 0.2; // 1 dan 1.5x gacha
 
     return (
-        <div className={"py-16"}>
+        <div className={"py-16 "}>
             <div className={"flex justify-between flex-col md:flex-row md:px-10  px-3"}>
                 <h3 className={"w-full mb-10 md:mb-0 md:w-2/4 font-bold text-4xl md:text-6xl"}>MOTIVATION</h3>
                 <div className="w-full md:w-2/4 flex flex-col text-lg md:text-2xl gap-10">
@@ -68,10 +68,10 @@ const Motivation = (dict) => {
 
             <div
                 ref={imageRef}
-                className="w-full h-[60vh] md:h-screen overflow-hidden mt-10 relative"
+                className="w-full h-[60vh] md:h-screen mt-10 relative overflow-hidden"
             >
                 <div
-                    className="w-full h-full absolute inset-0"
+                    className="w-full h-full absolute inset-0 overflow-hidden"
                     style={{
                         transform: `scale(${scale})`,
                         transition: "transform 0.1s linear",

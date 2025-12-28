@@ -1,5 +1,6 @@
+// app/[lang]/layout.tsx
 import { i18n, Locale } from "@/i18n-config";
-import { getDictionary } from "@/lib/dictionary";
+import { getCommonDictionary } from "@/lib/dictionary";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { notFound } from "next/navigation";
@@ -17,12 +18,11 @@ export default async function LangLayout({
 }) {
     const { lang } = await params;
 
-    // Validate locale
     if (!i18n.locales.includes(lang)) {
         notFound();
     }
 
-    const dict = await getDictionary(lang);
+    const dict = await getCommonDictionary(lang);
 
     return (
         <>

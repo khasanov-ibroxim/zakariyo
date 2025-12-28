@@ -1,18 +1,19 @@
-import {Locale} from "@/i18n-config.ts";
-import {getDictionary} from "@/lib/dictionary.ts";
-import ContactForm from "@/components/contact/form.tsx";
+// app/[lang]/contact/page.tsx
+import { Locale } from "@/i18n-config";
+import { getDictionary } from "@/lib/dictionary";
+import ContactForm from "@/components/contact/form";
 
-interface HomeProps {
+interface ContactProps {
     params: Promise<{ lang: Locale }>;
 }
 
-export default async function Page({params}: HomeProps) {
-    const {lang} = await params;
-    const dict = await getDictionary(lang);
+export default async function Page({ params }: ContactProps) {
+    const { lang } = await params;
+    const dict = await getDictionary(lang, 'contact');
+
     return (
         <div>
-            <ContactForm/>
+            <ContactForm dict={dict} />
         </div>
     );
 }
-

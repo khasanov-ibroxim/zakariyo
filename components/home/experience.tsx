@@ -41,7 +41,7 @@ const Experience = ({dict}) => {
 
                                 {exp.description.map((descItem , index) => (
                                     <p key={index} className=" text-black dark:text-[rgba(255,255,255,.6)] text-base md:text-lg leading-relaxed">
-                                       - {descItem}
+                                        {descItem && `- ${descItem} `}
                                     </p>
                                 ))}
                             </div>

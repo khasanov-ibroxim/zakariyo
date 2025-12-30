@@ -29,7 +29,7 @@ const Experience = ({dict}) => {
                                 </h3>
 
                                 {/* Position */}
-                                <div className="text-2xl flex justify-between items-center md:text-2xl font-bold mb-4 tracking-wide">
+                                <div className="text-2xl flex justify-between items-center md:text-2xl font-light mb-4 tracking-wide">
                                     {exp.position}
 
                                     <span className="">

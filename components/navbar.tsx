@@ -11,6 +11,7 @@ import Link from "next/link";
 interface NavbarProps {
     dict: {
         nav: {
+            menu: string;
             home: string;
             work: string;
             contact: string;
@@ -33,7 +34,7 @@ const Navbar = ({ dict, lang }: NavbarProps) => {
             {/* NAVBAR */}
             <div className="absolute z-50 w-full sm:py-10 sm:px-10 py-5 px-1 flex items-center justify-between border-b border-b-black/30 dark:border-b-[rgba(255,255,255,0.16)]">
                 <div className="flex items-center gap-4">
-                    <ThemeToggle />
+                    <ThemeToggle dict={dict}/>
                     <LanguageSwitcher />  {/* ✅ Til almashtirish tugmasi */}
                 </div>
 
@@ -48,7 +49,7 @@ const Navbar = ({ dict, lang }: NavbarProps) => {
                     onClick={() => setIsMenuOpen(true)}
                     className="relative overflow-hidden font-inter-tight cursor-pointer border-2 border-border font-bold uppercase sm:text-[18px] sm:py-2 sm:px-6 text-[14px] py-1 px-4 rounded-3xl dark:bg-transparent bg-black text-white transition-colors duration-500 before:absolute before:inset-0 before:z-0 dark:before:bg-white before:bg-white before:origin-bottom before:scale-y-0 before:transition-transform before:duration-500 before:content-[''] hover:before:scale-y-100 dark:hover:text-black hover:text-black"
                 >
-                    <span className="relative z-10">Navigate Here</span>
+                    <span className="relative z-10">{dict.nav.menu}</span>
                 </div>
             </div>
 

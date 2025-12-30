@@ -27,7 +27,7 @@ const Awwards = ({dict}) => {
                                 </h3>
 
                                 {/* Position */}
-                                <div className="text-2xl flex justify-between items-center md:text-2xl font-bold mb-8 tracking-wide">
+                                <div className="text-2xl flex justify-between items-center md:text-2xl font-light mb-8 tracking-wide">
                                     {aw.position}
 
                                     <span className="">

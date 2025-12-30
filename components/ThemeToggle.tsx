@@ -3,7 +3,7 @@
 import { useTheme } from "next-themes";
 import React, { useEffect, useState } from "react";
 
-export function ThemeToggle() {
+export function ThemeToggle({dict}) {
     const { theme, setTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
 
@@ -12,7 +12,6 @@ export function ThemeToggle() {
     }, []);
 
     if (!mounted) return null;
-
     return (
         <button
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
@@ -40,7 +39,7 @@ export function ThemeToggle() {
             "
         >
             <span className="relative z-10">
-                {theme === "dark" ? "Light" : "Dark"}
+                {theme === "dark" ? dict.nav.theme[0] : dict.nav.theme[1]}
             </span>
         </button>
     );

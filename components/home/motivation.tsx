@@ -4,7 +4,7 @@ import check from "@/assets/home/motivation/motivation_check.png"
 import bg from "@/assets/home/motivation/motivation_bottom_img.jpg"
 import Image from "next/image";
 
-const Motivation = (dict) => {
+const Motivation = ({dict}) => {
     const [scrollY, setScrollY] = useState(0);
     const [windowHeight, setWindowHeight] = useState(0);
     const imageRef = React.useRef<HTMLDivElement>(null);
@@ -49,20 +49,29 @@ const Motivation = (dict) => {
     return (
         <div className={"py-16 "}>
             <div className={"flex justify-between flex-col md:flex-row md:px-10  px-3"}>
-                <h3 className={"w-full mb-10 md:mb-0 md:w-2/4 font-bold text-4xl md:text-6xl"}>MOTIVATION</h3>
-                <div className="w-full md:w-2/4 flex flex-col text-lg md:text-2xl gap-10">
-                    <p>More than a job, web design is an outlet for your vision. You have the power to take an idea from
-                        concept to reality. Your sites can tell a story, <i>show off a brand</i>, or change lives. As the
-                        web expands, so do the possibilities. You also have the flexibility to work remotely or in a fun agency
-                        setting. And nothing beats the rush of seeing your live sites in action.
-                    </p>
-                    <p>As a web designer, you get to blend art and technology to create <i>digital experiences</i> that
-                        inform, entertain, and inspire. Every day is different - one day you may be sketching site layouts on paper,
-                        the next you`re coding up responsive page templates. Web design keeps you on your toes!
-                    </p>
-                    <div className="w-32 md:w-48 h-32 md:h-48 rounded-lg flex items-center justify-center">
-                        <Image src={check} alt={"check"}/>
-                    </div>
+                <h3 className={"w-full mb-10 md:mb-0 md:w-2/4 font-bold text-4xl md:text-6xl"}>{dict.motivation.title}</h3>
+                <div className="w-full md:w-2/4 flex flex-col text-lg md:text-xl gap-5">
+                    <p>{dict.motivation.content.title_top[0]} <br/> {dict.motivation.content.title_top[1]}</p>
+                    <ol>
+                        <li>{dict.motivation.content.item_1_title}</li>
+                        {dict.motivation.content.item_1_content.map((item, index) => {
+                            return <li key={index}>- {item}</li>
+                        })}
+                    </ol>
+                    <p>{dict.motivation.content.title_2[0]} <br/> {dict.motivation.content.title_2[1]}</p>
+                    <ol>
+                        <li>{dict.motivation.content.item_2_title}</li>
+                        {dict.motivation.content.item_2_content.map((item, index) => {
+                            return <li key={index}>- {item}</li>
+                        })}
+                    </ol>
+                    <ol>
+                        <li>{dict.motivation.content.item_3_title}</li>
+                        {dict.motivation.content.item_3_content.map((item, index) => {
+                            return <li key={index}>- {item}</li>
+                        })}
+                    </ol>
+                    <p>{dict.motivation.content.title_3[0]} <br/> {dict.motivation.content.title_3[1]}</p>
                 </div>
             </div>
 

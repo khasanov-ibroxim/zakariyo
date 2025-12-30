@@ -3,38 +3,9 @@ import React from 'react';
 
 const Experience = ({dict}) => {
     const experiences = [
-        {
-            period: "2022 - PRESENT",
-            company: "CLAVMEN STUDIO",
-            position: "SENIOR UX DESIGNER",
-            description: "Clavmen inspires creativity and makes learning piano fun. The sleek, lightweight body fits easily into gig bags for portability."
-        },
-        {
-            period: "2013 - 2022",
-            company: "LOSIFY",
-            position: "LEAD PRODUCT DESIGNER",
-            description: "Fitness and well-being with personalized coaching and innovative wellness solutions."
-        },
-        {
-            period: "2013 - 2022",
-            company: "LOSIFY",
-            position: "LEAD PRODUCT DESIGNER",
-            description: "Fitness and well-being with personalized coaching and innovative wellness solutions."
-        },
-        {
-            period: "2013 - 2022",
-            company: "LOSIFY",
-            position: "LEAD PRODUCT DESIGNER",
-            description: "Fitness and well-being with personalized coaching and innovative wellness solutions."
-        },
-        {
-            period: "2013 - 2022",
-            company: "LOSIFY",
-            position: "LEAD PRODUCT DESIGNER",
-            description: "Fitness and well-being with personalized coaching and innovative wellness solutions."
-        }
-    ];
 
+    ];
+    console.log(dict)
     return (
         <section className="min-h-screen dark:bg-black dark:text-white relative">
             <div className="flex sm:flex-row flex-col  px-5">
@@ -46,7 +17,7 @@ const Experience = ({dict}) => {
                 {/* Right Side - Scrolling Content */}
                 <div className="w-full sm:w-3/3 py-10 sm:py-0  sm:pr-12 md:pr-20">
                     <div className="flex flex-col gap-5">
-                        {experiences.map((exp, index) => (
+                        {dict.experience.content.map((exp, index) => (
                             <div
                                 key={index}
                                 className="relative  border-border border-b-[1px] dark:border-b-[rgba(255,255,255,0.16)] border-b-[rgba(0, 0, 0, .04)] pb-10 "
@@ -67,9 +38,12 @@ const Experience = ({dict}) => {
                                 </div>
 
                                 {/* Description */}
-                                <p className=" text-black dark:text-[rgba(255,255,255,.6)] text-base md:text-lg leading-relaxed">
-                                    {exp.description}
-                                </p>
+
+                                {exp.description.map((descItem , index) => (
+                                    <p key={index} className=" text-black dark:text-[rgba(255,255,255,.6)] text-base md:text-lg leading-relaxed">
+                                       - {descItem}
+                                    </p>
+                                ))}
                             </div>
                         ))}
                     </div>

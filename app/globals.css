@@ -9,8 +9,6 @@ html {
 }
 
 body {
-
-    -webkit-font-smoothing: antialiased;
     font-family: var(--font-instrument-sans);
     margin: 0;
     padding: 0;

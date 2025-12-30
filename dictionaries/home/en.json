@@ -18,13 +18,113 @@
     "title": "MOTIVATION"
   },
   "experience": {
-    "title": "Опыт"
+    "title": "Опыт",
+    "content": [
+      {
+        "period": "2019- по н.в.",
+        "company": "WORLD TEXTILE MARKETING AGENCY",
+        "position": "Должность: Учредитель, Директор",
+        "description": ["Продвижение коллекций одежды и услуг центра"]
+      },
+      {
+        "period": "2019",
+        "company": "«TPMA» при Ассоциации «Узтекстильпром»",
+        "position": "Главный специалист отдела маркетинга",
+        "description": ["Анализ рынка, экспортных направлений и эффективности продвижения"]
+      },
+      {
+        "period": "2018-2019",
+        "company": "«Uztextile Export» при Ассоциации «Узтекстильпром»",
+        "position": "Ведущий специалист",
+        "description": ["Поиск и привлечение клиентов из стран ЕС","Ведение переговоров и сопровождение экспортных сделок"]
+      },
+      {
+        "period": "2017-2018",
+        "company": "«TPMA» при Ассоциации «Узтекстильпром»",
+        "position": "Главный специалист отдела маркетинга",
+        "description": ["Анализ рынка, экспортных направлений и эффективности продвижения"]
+      },
+      {
+        "period": "2016-2017",
+        "company": "Дизайн центр «Шарк Либослари» при Ассоциации «Узтекстильпром»",
+        "position": "Ведущий специалист отдела маркетинга.",
+        "description": ["Продвижение коллекций одежды и услуг центра"]
+      }
+    ]
   },
   "favoriteStack": {
     "title": "FAVOURITE STACK"
   },
   "awards": {
-    "title": "Выставки"
+    "title": "Выставки",
+    "content": [
+      {
+        "period": "2025",
+        "company": "Heimtextil",
+        "position": "Узбекистан, Ташкент"
+
+      },
+      {
+        "period": "2025",
+        "company": "UzTextile Expo",
+        "position": "Узбекистан, Ташкент"
+      },
+      {
+        "period": "2024",
+        "company": "Heimtextil",
+        "position": "Узбекистан, Ташкент"
+      },
+      {
+        "period": "2024",
+        "company": "UzTextile Expo",
+        "position": "Узбекистан, Ташкент"
+      },
+      {
+        "period": "2023",
+        "company": "UzTextile Expo",
+        "position": "Узбекистан, Ташкент"
+      },
+      {
+        "period": "2022",
+        "company": "BEE TOGETHER",
+        "position": "Россия, Москва."
+      },
+      {
+        "period": "2019",
+        "company": "FAST TEXTILE",
+        "position": "Польша, Варшава."
+      },
+      {
+        "period": "2019",
+        "company": "CJF - Детская мода",
+        "position": "Россия, Москва."
+      },
+      {
+        "period": "2019",
+        "company": "Мир Детство и Детская мода",
+        "position": "Казахстан, Алматы."
+      },
+      {
+        "period": "2018",
+        "company": "Мир Детство и Детская мода",
+        "position": "Казахстан, Алматы."
+      },
+      {
+        "period": "2018",
+        "company": "International Istanbul Yarn Fair",
+        "position": "Турция, Стамбул."
+      },
+      {
+        "period": "2018",
+        "company": "Yarn and Fabrics Sourcing Fair",
+        "position": "Бангладеш, Дакка."
+      },
+      {
+        "period": "2017",
+        "company": "TEX WORLD USA",
+        "position": "США, Нью-Йорк."
+      }
+    ]
   },
   "trusted": {
     "title": "TRUSTED BY INTERNATIONAL BRANDS"

@@ -29,7 +29,7 @@ const questionsData = [
     }
 ];
 
-const Questions = ({dict}) => {
+const Questions = ({dict , lang}) => {
     const [openIndex, setOpenIndex] = useState<number>(0);
 
     const toggleQuestion = (index: number) => {
@@ -92,9 +92,9 @@ const Questions = ({dict}) => {
             <div className="pt-10 sm:pt-32">
                 <div
                     className="font-inter-tight w-full flex flex-col items-center justify-center font-bold text-5xl sm:text-8xl text-center">
-                    LET`S WORK
-                    <br/> TOGETHER
-                    <div
+                    {dict.questions.footer_title[0]}
+                    <br/> {dict.questions.footer_title[1]}
+                    <Link href={`/${lang}/contact`}
                         className="
             relative overflow-hidden
             font-inter-tight cursor-pointer
@@ -120,8 +120,8 @@ const Questions = ({dict}) => {
             dark:hover:text-white hover:text-black
           "
                     >
-                        <span className="relative z-10 uppercase">Contact Now</span>
-                    </div>
+                        <span className="relative z-10 uppercase">{dict.questions.btn}</span>
+                    </Link>
                 </div>
                 <div className="w-full flex items-center justify-center mt-10 flex-col">
                     <div

@@ -32,7 +32,7 @@ export default async function Home({ params }: HomeProps) {
             <FavoriteStack dict={dict} />
             <Awwards dict={dict} />
             <Trusted dict={dict} />
-            <Questions dict={dict} />
+            <Questions dict={dict} lang={lang} />
         </>
     );
 }

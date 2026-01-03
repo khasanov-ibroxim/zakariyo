@@ -236,6 +236,8 @@
     "title": "TRUSTED BY INTERNATIONAL BRANDS"
   },
   "questions": {
-    "title": ["Часто" , "задаваемые вопросы"]
+    "title": ["Часто" , "задаваемые вопросы"],
+    "footer_title": ["НУЖЕН АУДИТ" , "РЫНОК И КЛИЕНТЫ"],
+    "btn": "СВЯЗАТЬСЯ"
   }
 }

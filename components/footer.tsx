@@ -3,7 +3,7 @@ import React from 'react';
 import {motion} from "framer-motion";
 
 
-const Footer = (dict) => {
+const Footer = ({dict}) => {
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,
@@ -28,7 +28,7 @@ const Footer = (dict) => {
                         transition={{ duration: 0.8, ease: "easeOut" }}
                         className="text-4xl md:text-6xl lg:text-8xl font-bold text-center"
                     >
-                        BEAUREGARD
+                        {dict.footer.footer_title}
                     </motion.div>
                 </div>
 

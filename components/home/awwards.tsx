@@ -22,12 +22,12 @@ const Awwards = ({dict}) => {
                             >
 
                                 {/* Company Name */}
-                                <h3 className="text-4xl font-instrument-sans md:text-3xl font-bold mb-6 tracking-tight">
+                                <h3 className="text-4xl font-instrument-sans md:text-3xl font-bold mb-3 tracking-tight">
                                     {aw.company}
                                 </h3>
 
                                 {/* Position */}
-                                <div className="text-2xl flex justify-between items-center md:text-2xl font-light mb-8 tracking-wide">
+                                <div className="text-2xl flex justify-between items-center md:text-2xl font-light mb-4 tracking-wide">
                                     {aw.position}
 
                                     <span className="">

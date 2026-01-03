@@ -17,7 +17,79 @@
     "description": "Моя страсть к минималистичной эстетике, элегантной типографике и интуитивному дизайну проявляется в моих работах."
   },
   "expertise": {
-    "title": "МОЙ ОПЫТ"
+    "title": "МОЙ ОПЫТ",
+    "content": [
+      {
+        "id": 1,
+        "number": "(1)",
+        "title": "Аудит",
+        "description": "Craft intuitive navigation that makes features accessible. Choose layouts and graphics that fit your app's personality.",
+        "price": "$3,999",
+        "fullDescription": "App design is one my high end skill that i give to my customers.",
+        "features": [
+          "Web Application Design",
+          "Responsive Design",
+          "Animation Effects"
+        ],
+        "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop"
+      },
+      {
+        "id": 2,
+        "number": "(2)",
+        "title": "Анализ рынка",
+        "description": "Craft intuitive navigation that makes features accessible. Choose layouts and graphics that fit your app's personality.",
+        "price": "$3,999",
+        "fullDescription": "App design is one my high end skill that i give to my customers.",
+        "features": [
+          "Web Application Design",
+          "Responsive Design",
+          "Animation Effects"
+        ],
+        "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop"
+      },
+      {
+        "id": 3,
+        "number": "(3)",
+        "title": "Продвижение продукции",
+        "description": "Craft intuitive navigation that makes features accessible. Choose layouts and graphics that fit your app's personality.",
+        "price": "$3,999",
+        "fullDescription": "App design is one my high end skill that i give to my customers.",
+        "features": [
+          "Web Application Design",
+          "Responsive Design",
+          "Animation Effects"
+        ],
+        "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop"
+      },
+      {
+        "id": 4,
+        "number": "(4)",
+        "title": "Экспорт продукции",
+        "description": "Craft intuitive navigation that makes features accessible. Choose layouts and graphics that fit your app's personality.",
+        "price": "$3,999",
+        "fullDescription": "App design is one my high end skill that i give to my customers.",
+        "features": [
+          "Web Application Design",
+          "Responsive Design",
+          "Animation Effects"
+        ],
+        "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop"
+      },
+      {
+        "id": 5,
+        "number": "(5)",
+        "title": "Переговоры и сопровождение сделок",
+        "description": "Craft intuitive navigation that makes features accessible. Choose layouts and graphics that fit your app's personality.",
+        "price": "$3,999",
+        "fullDescription": "App design is one my high end skill that i give to my customers.",
+        "features": [
+          "Web Application Design",
+          "Responsive Design",
+          "Animation Effects"
+        ],
+        "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop"
+      }
+    ]
   },
   "motivation": {
     "title": "АУДИТ",

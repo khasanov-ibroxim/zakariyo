@@ -90,7 +90,7 @@ const Expertise = ({dict}) => {
             image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800&h=600&fit=crop"
         }
     ];
-
+    console.log(dict)
     return (
         <div className="py-16 px-3 md:px-10 bg  min-h-screen">
             {/* Header */}
@@ -117,9 +117,9 @@ const Expertise = ({dict}) => {
 
             {/* Services Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5  ">
-                {services.map((service, index) => (
+                {dict.expertise.content.map((service, index) => (
                     <motion.div
-                        key={service.id}
+                        key={index}
                        data-aos="fade-up"
                         className="relative dark:bg-[#0A0A0A] bg-[#F5F5F7] rounded-3xl p-8 border border-black/10 hover:border-black/50 transition-all group"
                     >

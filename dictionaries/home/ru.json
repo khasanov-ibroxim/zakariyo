@@ -17,19 +17,20 @@
     "description": "Моя страсть к минималистичной эстетике, элегантной типографике и интуитивному дизайну проявляется в моих работах."
   },
   "expertise": {
-    "title": "МОЙ ОПЫТ",
+    "title": "Экспертность",
+    "key_fueters": "Основные направления",
     "content": [
       {
         "id": 1,
         "number": "(1)",
         "title": "Аудит",
-        "description": "Craft intuitive navigation that makes features accessible. Choose layouts and graphics that fit your app's personality.",
-        "price": "$3,999",
-        "fullDescription": "App design is one my high end skill that i give to my customers.",
+        "description": "Провожу глубокий разбор бизнеса, маркетинга и продаж.\nНахожу точки потерь, системные ошибки и скрытые возможности роста.\nАудит даёт чёткое понимание, что именно мешает бизнесу зарабатывать больше.",
+        "price": "Только по запросу ",
+        "fullDescription": "Я разбираю маркетинг, продажи и стратегию, чтобы точно понять, где бизнес теряет деньги и что мешает росту выручки.",
         "features": [
-          "Web Application Design",
-          "Responsive Design",
-          "Animation Effects"
+          "Аудит маркетинга и продаж",
+          "Анализ позиционирования и ценности",
+          "Выявление точек роста выручки"
         ],
         "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop"
       },
@@ -37,13 +38,13 @@
         "id": 2,
         "number": "(2)",
         "title": "Анализ рынка",
-        "description": "Craft intuitive navigation that makes features accessible. Choose layouts and graphics that fit your app's personality.",
-        "price": "$3,999",
-        "fullDescription": "App design is one my high end skill that i give to my customers.",
+        "description": "Изучаю рынок, конкурентов и поведение клиентов.\nОпределяю реальный спрос, ценовые коридоры и точки дифференциации.\nАнализ рынка — основа для сильных решений и устойчивого роста.",
+        "price": "Только по запросу ",
+        "fullDescription": "Анализ рынка — это основа всех стратегических решений.\nЯ изучаю спрос, конкурентов и логику выбора клиентов,\nчтобы бизнес принимал решения на основе фактов, а не ощущений.",
         "features": [
-          "Web Application Design",
-          "Responsive Design",
-          "Animation Effects"
+          "Анализ спроса и рыночных ниш",
+          "Оценка конкурентов и ценовых моделей",
+          "Определение точек дифференциации"
         ],
         "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop"
       },
@@ -51,13 +52,13 @@
         "id": 3,
         "number": "(3)",
         "title": "Продвижение продукции",
-        "description": "Craft intuitive navigation that makes features accessible. Choose layouts and graphics that fit your app's personality.",
-        "price": "$3,999",
-        "fullDescription": "App design is one my high end skill that i give to my customers.",
+        "description": "Выстраиваю стратегию продвижения, ориентированную на выручку, а не охваты.\nФормирую позиционирование, сообщения и каналы, которые приводят клиентов.\nМаркетинг как инструмент продаж, а не расход.",
+        "price": "Только по запросу",
+        "fullDescription": "Продвижение продукции — это не реклама ради охватов.\nЯ выстраиваю маркетинг, который приводит клиентов\nи напрямую влияет на выручку бизнеса.",
         "features": [
-          "Web Application Design",
-          "Responsive Design",
-          "Animation Effects"
+          "тратегия продвижения и позиционирование",
+          "Сообщения и каналы продаж",
+          "Фокус на действиях, приносящих выручку"
         ],
         "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop"
       },
@@ -65,13 +66,13 @@
         "id": 4,
         "number": "(4)",
         "title": "Экспорт продукции",
-        "description": "Craft intuitive navigation that makes features accessible. Choose layouts and graphics that fit your app's personality.",
-        "price": "$3,999",
-        "fullDescription": "App design is one my high end skill that i give to my customers.",
+        "description": "Помогаю подготовить бизнес к выходу на зарубежные рынки.\nАнализирую страны, требования, риски и точки входа.\nЭкспорт — это система, а не случайная сделка.",
+        "price": "Только по запросу ",
+        "fullDescription": "Экспорт продукции — это система, а не разовая сделка.\nЯ помогаю подготовить бизнес к выходу на внешние рынки,\nснизив риски и повысив шансы на устойчивые контракты.",
         "features": [
-          "Web Application Design",
-          "Responsive Design",
-          "Animation Effects"
+          "Анализ стран и рынков сбыта",
+          "Оценка готовности продукта к экспорту",
+          "Формирование стратегии выхода на рынок"
         ],
         "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop"
       },
@@ -79,13 +80,13 @@
         "id": 5,
         "number": "(5)",
         "title": "Переговоры и сопровождение сделок",
-        "description": "Craft intuitive navigation that makes features accessible. Choose layouts and graphics that fit your app's personality.",
-        "price": "$3,999",
-        "fullDescription": "App design is one my high end skill that i give to my customers.",
+        "description": "Сопровождаю переговоры с партнёрами и покупателями.\nПомогаю выстроить позицию, аргументацию и защитить интересы бизнеса.\nРезультат — понятные условия и долгосрочные контракты.",
+        "price": "Только по запросу",
+        "fullDescription": "Переговоры — это точка, где решается судьба сделки.\nЯ сопровождаю бизнес на ключевых этапах общения с партнёрами,\nпомогая сохранить позицию, условия и результат.",
         "features": [
-          "Web Application Design",
-          "Responsive Design",
-          "Animation Effects"
+          "Подготовка к переговорам и стратегия позиции",
+          "Сопровождение ключевых переговоров",
+          "Контроль условий и фиксация договорённостей"
         ],
         "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop"
       }

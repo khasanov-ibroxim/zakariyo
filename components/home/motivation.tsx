@@ -48,7 +48,7 @@ const Motivation = ({dict}) => {
 
     return (
         <div className={"py-16 "}>
-            <div className={"flex justify-between flex-col md:flex-row md:px-10  px-3"}>
+            <div className={"flex justify-between flex-col md:flex-row md:px-10 pb-16 px-3"}>
                 <h3 className={"w-full mb-10 md:mb-0 md:w-2/4 font-bold text-4xl md:text-6xl"}>{dict.motivation.title}</h3>
                 <div className="w-full md:w-2/4 flex flex-col text-lg md:text-xl gap-5">
                     <p>{dict.motivation.content.title_top[0]} <br/> {dict.motivation.content.title_top[1]}</p>

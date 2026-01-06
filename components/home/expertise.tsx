@@ -102,17 +102,9 @@ const Expertise = ({dict}) => {
                     transition={{ duration: 0.8, ease: "easeInOut" }}
                     className="overflow-hidden"
                 >
-                    MY
+                    {dict.expertise.title}
                 </motion.div>
-                <motion.div
-                    viewport={{ once: true, amount: 0.5 }}
-                    initial={{ y: "100%", opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.8, ease: "easeInOut" }}
-                    className="overflow-hidden"
-                >
-                    EXPERTISE
-                </motion.div>
+
             </div>
 
             {/* Services Grid */}
@@ -177,7 +169,7 @@ const Expertise = ({dict}) => {
                                 {/* Header */}
                                 <div className="mb-8">
                                     <span className="inline-block px-4 py-2 bg-black text-white dark:bg-white dark:text-black rounded-full text-sm font-semibold mb-4">
-                                        STARTS AT {selectedService.price}
+                                         {selectedService.price}
                                     </span>
                                     <h2 className="text-4xl md:text-5xl font-bold mb-4">
                                         {selectedService.title}
@@ -191,7 +183,7 @@ const Expertise = ({dict}) => {
                                         <p className="text-zinc-400 text-lg mb-2">
                                             {selectedService.fullDescription}
                                         </p>
-                                        <h3 className="text-2xl font-bold mb-6">KEY FEATURES</h3>
+                                        <h3 className="text-2xl font-bold mb-6">{dict.expertise.key_fueters}</h3>
                                         <div className="space-y-4">
                                             {selectedService.features.map((feature, index) => (
                                                 <div key={index} className="flex items-start gap-3">
@@ -213,12 +205,14 @@ const Expertise = ({dict}) => {
 
                                 {/* Buttons */}
                                 <div className="flex flex-wrap gap-4">
-                                    <button className="px-8 py-4 dark:bg-white dark:text-black bg-black text-white rounded-full font-semibold hover:bg-black/80 transition-colors">
-                                        GET STARTED
-                                    </button>
-                                    <button className="px-8 py-4 border-2 dark:border-white border-black rounded-full font-semibold dark:hover:bg-white hover:bg-black hover:text-white dark:hover:text-black transition-colors">
+                                    <a href={"https://t.me/DrTex"} target={"_blank"} className="px-8 py-4 dark:bg-white dark:text-black bg-black text-white rounded-full font-semibold hover:bg-black/80 transition-colors">
+                                        Telegram
+                                    </a>
+                                    <a href={"mailto:shams.yokubov@mail.ru"} target={"_blank"}
+                                       className="px-8 py-4 border-2 dark:border-white border-black rounded-full font-semibold dark:hover:bg-white
+                                       hover:bg-black hover:text-white dark:hover:text-black transition-colors">
                                         E-MAIL
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                         </motion.div>

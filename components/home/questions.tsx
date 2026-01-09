@@ -139,9 +139,10 @@ const Questions = ({dict , lang}) => {
                     </div>
                     <div
                         className=" mt-10 bottom-10  text-[18px] uppercase font-bold flex flex-col justify-center items-center gap-5 sm:flex-row sm:right-[20px]">
-                        {["Instagram", "Dribble", "Twitter"].map((name) => (
+                        {[{name:"Instagram" , href:"https://www.instagram.com/yokubovsmarketing?igsh=OXpoNzh6a3d1bXN3&utm_source=qr"}, {name:"Telegram" , href:"https://t.me/DrTex"}, {name:"Facebook" , href:"https://www.facebook.com/share/1DQEYrQj6o/?mibextid=wwXIfr"}]
+                            .map((item,index) => (
                             <Link
-                                key={name}
+                                key={index}
                                 href="#"
                                 className="
                                 relative flex items-center gap-2
@@ -153,10 +154,11 @@ const Questions = ({dict , lang}) => {
                                 hover:after:scale-x-100
                                 "
                             >
-                                <motion.div
+                                <motion.a
+                                    href={item.href}
                                     className={'flex'}>
-                                    {name} <ArrowUpRight/>
-                                </motion.div>
+                                    {item.name} <ArrowUpRight/>
+                                </motion.a>
                             </Link>
                         ))}
                     </div>

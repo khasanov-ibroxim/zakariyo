@@ -135,17 +135,12 @@ const HomeAbout = ({dict}) => {
                         className="space-y-6 sm:space-y-8 px-5 text-center flex-col flex justify-center items-center"
                     >
                         <h2 className="text-[18px] md:text-[25px] font-bold leading-tight max-w-screen-lg">
-                            I`M AN INNOVATIVE DESIGNER AND DIGITAL ARTIST IN TOKYO.
-                            MY PASSION FOR MINIMALIST AESTHETICS, ELEGANT TYPOGRAPHY,
-                            AND INTUITIVE DESIGN SHINES THROUGH IN MY WORK.
+                            {dict.about.subtitle}
                         </h2>
 
                         <div className=" justify-center items-center flex   max-w-screen-lg">
                             <p className={"text-[14px] md:text-[18px] w-full leading-relaxed"}>
-                                I`m on the cutting edge of no-code tools that allow me to bring my creative visions to
-                                life. Though my methods may be unconventional, my dedication to the craft is
-                                unparalleled. I thrive on finding <em className="italic">unexpected solutions</em> and believe that with the
-                                right perspective, design can elevate the human experience.
+                                {dict.about.description[0]} <br/> {dict.about.description[1]}
                             </p>
                         </div>
 
@@ -174,7 +169,7 @@ const HomeAbout = ({dict}) => {
             hover:before:scale-y-100
             dark:hover:text-black hover:text-black"
                         >
-                           <span className={"relative z-10"}>DOWNLOAD RESUME</span>
+                           <span className={"relative z-10"}>{dict.about.btn}</span>
                         </motion.button>
                     </motion.div>
 

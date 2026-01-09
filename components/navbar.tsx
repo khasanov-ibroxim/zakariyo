@@ -75,17 +75,28 @@ const Navbar = ({ dict, lang }: NavbarProps) => {
                 </nav>
 
                 <div className="absolute bottom-10 text-[18px] uppercase font-bold flex flex-col justify-center items-center gap-5 sm:flex-row sm:right-[20px]">
-                    {["Instagram", "Dribble", "Twitter"].map((name) => (
-                        <Link
-                            key={name}
-                            href="#"
-                            className="relative flex items-center gap-2 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[1px] after:w-[80%] dark:after:bg-white after:bg-black after:scale-x-0 after:origin-left after:transition-transform after:duration-700 hover:after:scale-x-100"
-                        >
-                            <motion.div className={'flex'}>
-                                {name} <ArrowUpRight />
-                            </motion.div>
-                        </Link>
-                    ))}
+                    {[{name:"Instagram" , href:"https://www.instagram.com/yokubovsmarketing?igsh=OXpoNzh6a3d1bXN3&utm_source=qr"}, {name:"Telegram" , href:"https://t.me/DrTex"}, {name:"Facebook" , href:"https://www.facebook.com/share/1DQEYrQj6o/?mibextid=wwXIfr"}]
+                        .map((item,index) => (
+                            <Link
+                                key={index}
+                                href="#"
+                                className="
+                                relative flex items-center gap-2
+                                after:content-['']
+                                after:absolute after:left-0 after:-bottom-1
+                                after:h-[1px] after:w-[80%]  dark:after:bg-white after:bg-black
+                                after:scale-x-0 after:origin-left
+                                after:transition-transform after:duration-700
+                                hover:after:scale-x-100
+                                "
+                            >
+                                <motion.a
+                                    href={item.href}
+                                    className={'flex'}>
+                                    {item.name} <ArrowUpRight/>
+                                </motion.a>
+                            </Link>
+                        ))}
                 </div>
             </div>
         </>

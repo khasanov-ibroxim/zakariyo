@@ -1,5 +1,5 @@
 import type {Metadata} from "next";
-import {Instrument_Sans, Inter_Tight} from "next/font/google";
+import {Instrument_Sans, Inter_Tight , Montserrat} from "next/font/google";
 import "./globals.css";
 import {ThemeProvider} from "../components/ThemeProvider";
 import AosAnimate from "@/components/AOS_animate";
@@ -9,6 +9,11 @@ import Cursor from "@/components/cursor";
 
 const instrumentSans = Instrument_Sans({
     variable: "--font-instrument-sans",
+    subsets: ["latin"],
+});
+
+const montserrat = Montserrat({
+    variable: "--font-montserrat",
     subsets: ["latin"],
 });
 
@@ -26,12 +31,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     return (
         <html suppressHydrationWarning className="">
         <body
-            className={`${instrumentSans.variable} ${interTight.variable}  `}
+            className={`${montserrat.variable} `}
             suppressHydrationWarning
         >
+
         <ThemeProvider>
             <SlowScroll>
-
                     <Cursor />
                     {children}
                     <AosAnimate />

@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import Image from 'next/image';
 import {motion} from 'framer-motion';
 import {MapPin, Phone, Mail} from 'lucide-react';
-import bg from "@/assets/footer/footer.png"
+import bg from "@/assets/footer/footer.jpg"
 
 const ContactForm = ({dict}) => {
     const [formData, setFormData] = useState({
@@ -26,33 +26,33 @@ const ContactForm = ({dict}) => {
 
     const contactInfo = [
         {
-            title: 'SOCIAL',
+            title: 'Соцсети',
             items: [
-                {label: 'INSTAGRAM', link: '#'},
-                {label: 'DRIBBBLE', link: '#'},
-                {label: 'TWITTER', link: '#'}
+                {label: 'INSTAGRAM', link: 'https://www.instagram.com/yokubovsmarketing?igsh=OXpoNzh6a3d1bXN3&utm_source=qr'},
+                {label: 'TELEGRAM', link: 'https://t.me/DrTex'},
+                {label: 'FACEBOOK', link: 'https://www.facebook.com/share/1DQEYrQj6o/?mibextid=wwXIfr'}
             ]
         },
         {
-            title: 'CURRENT LOCATION',
+            title: 'Адрес',
             items: [
-                {label: '49TH ST. LOS ANGELES,'},
-                {label: 'CALIFORNIA(CA), 90011'},
-                {label: 'UNITED STATES'}
+                {label: 'Узбекистан'},
+                {label: ' г. Ташкент'},
+                {label: ' Ул.Кукча Дарвоза 314'}
             ]
         },
         {
-            title: 'PHONE',
+            title: 'Телефон',
             items: [
-                {label: 'USA', value: '+1 13945 88734'},
-                {label: 'AUS', value: '+1 14945 78297'}
+                { value: '+99890 925 62 35', link: 'tel:+998909256235'},
+                {value: '+99893 809 99 98', link: 'tel:+998938099998'}
             ]
         },
         {
-            title: 'EMAIL',
+            title: 'Почта',
             items: [
-                {label: 'HELLO@MECEALLE.DESIGN'},
-                {label: 'ZENY@MECHEALLE.COM'}
+                {label: 'shams.yokubov@mail.ru' , link: 'mailto:shams.yokubov@mail.ru'},
+                {label: 'shamsyokubov25@gmail.com' , link: 'mailto:shamsyokubov25@gmail.com'}
             ]
         }
     ];
@@ -208,12 +208,12 @@ const ContactForm = ({dict}) => {
                                             {item.link ? (
                                                 <a
                                                     href={item.link}
-                                                    className="text-lg sm:text-xl lg:text-2xl font-bold text-black dark:text-white hover:text-black/60 dark:hover:text-white/60 transition-colors duration-300 block"
+                                                    className="text-lg sm:text-xl lg:text-2xl font-light text-black dark:text-white hover:text-black/60 dark:hover:text-white/60 transition-colors duration-300 block"
                                                 >
                                                     {item.label}
                                                 </a>
                                             ) : (
-                                                <p className="text-lg sm:text-xl lg:text-2xl font-bold text-black dark:text-white">
+                                                <p className="text-lg sm:text-xl lg:text-2xl font-light text-black dark:text-white">
                                                     {item.value ? (
                                                         <>
                                                             <span
@@ -226,6 +226,17 @@ const ContactForm = ({dict}) => {
                                                     )}
                                                 </p>
                                             )}
+
+
+
+                                            {item.link && item.value && (
+                                                <a
+                                                    href={item.link}
+                                                    className="text-lg sm:text-xl lg:text-2xl font-light text-black dark:text-white"
+                                                >
+                                                    {item.value}
+                                                </a>
+                                            ) }
                                         </div>
                                     ))}
                                 </div>

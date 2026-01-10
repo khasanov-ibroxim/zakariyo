@@ -1,11 +1,11 @@
 "use client";
 import React from 'react';
 import Image from "next/image";
-import icon_1 from "@/assets/home/favorite/icon_1.png"
-import icon_2 from "@/assets/home/favorite/icon_2.png"
-import icon_3 from "@/assets/home/favorite/icon_3.png"
-import icon_4 from "@/assets/home/favorite/icon_4.png"
-import icon_5 from "@/assets/home/favorite/icon_5.png"
+import icon_1 from "@/assets/home/favorite/free-icon-uzbekistan-197416.png"
+import icon_2 from "@/assets/home/favorite/free-icon-russia-5315463.png"
+import icon_3 from "@/assets/home/favorite/free-icon-united-kingdom-9906532.png"
+import icon_4 from "@/assets/home/favorite/free-icon-turkey-6157597.png"
+import icon_5 from "@/assets/home/favorite/free-icon-france-197560.png"
 
 
 const FavoriteStack = (dict) => {
@@ -52,7 +52,7 @@ const FavoriteStack = (dict) => {
             <div className="flex lg:flex-row flex-col  px-5">
                 {/* Left Side - Sticky Title */}
                 <div className="w-full lg:w-1/2 sm:pr-5  top-0 lg:sticky text-5xl md:text-5xl font-bold tracking-tight h-full pt-10 sm:flex items-center  ">
-                    FAVOURITE <br/>STACK
+                   Знание <br/> языков
                 </div>
 
                 {/* Right Side - Scrolling Content */}

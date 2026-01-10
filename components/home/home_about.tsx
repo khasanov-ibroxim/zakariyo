@@ -132,22 +132,22 @@ const HomeAbout = ({dict}) => {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                         viewport={{ once: true }}
-                        className="space-y-6 sm:space-y-8 px-5 text-center flex-col flex justify-center items-center"
+                        className=" px-5 text-center flex-col flex justify-center items-center"
                     >
-                        <h2 className="text-[18px] md:text-[25px] font-bold leading-tight max-w-screen-lg">
+                        <h2 className="text-[14px] md:text-[18px]  leading-tight max-w-screen-lg">
                             {dict.about.subtitle}
                         </h2>
-
+<br/>
                         <div className=" justify-center items-center flex   max-w-screen-lg">
                             <p className={"text-[14px] md:text-[18px] w-full leading-relaxed"}>
-                                {dict.about.description[0]} <br/> {dict.about.description[1]}
+                                {dict.about.description[0]} <br/> <br/>{dict.about.description[1]}
                             </p>
                         </div>
 
                         <motion.button
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className=" relative overflow-hidden
+                            className=" relative overflow-hidden mt-10
             font-inter-tight cursor-pointer
             border-2 border-border
             font-bold uppercase

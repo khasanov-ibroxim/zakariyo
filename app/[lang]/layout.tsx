@@ -4,6 +4,7 @@ import { getCommonDictionary } from "@/lib/dictionary";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { notFound } from "next/navigation";
+import GoToTop from "@/components/goToTop.tsx";
 
 export async function generateStaticParams() {
     return i18n.locales.map((locale) => ({ lang: locale }));
@@ -26,6 +27,7 @@ export default async function LangLayout({
 
     return (
         <>
+            <GoToTop/>
             <Navbar dict={dict} lang={lang}/>
             {children}
             <Footer dict={dict}/>

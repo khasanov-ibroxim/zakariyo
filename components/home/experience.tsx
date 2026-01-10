@@ -24,7 +24,7 @@ const Experience = ({dict}) => {
                             >
 
                                 {/* Company Name */}
-                                <h3 className="text-4xl font-instrument-sans md:text-3xl font-bold mb-10 tracking-tight">
+                                <h3 className="text-4xl font-instrument-sans md:text-3xl font-bold mb-2 tracking-tight">
                                     {exp.company}
                                 </h3>
 

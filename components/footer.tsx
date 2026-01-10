@@ -5,10 +5,17 @@ import {motion} from "framer-motion";
 
 const Footer = ({dict}) => {
     const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
+        const lenis = (window as any).lenis;
+
+        if (lenis) {
+            lenis.scrollTo(0, {
+                duration: 0.8,
+                easing: (t: number) => 1 - Math.pow(1 - t, 3),
+            });
+        } else {
+            // Fallback agar Lenis yo‘q bo‘lsa
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
     };
     return (
         <>

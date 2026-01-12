@@ -72,7 +72,7 @@ const Footer = ({dict}) => {
                             className="cursor-pointer hover:opacity-70 transition-opacity"
                             onClick={scrollToTop}
                         >
-                            GO BACK TO TOP
+
                         </motion.div>
                     </div>
                 </div>

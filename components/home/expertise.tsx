@@ -94,7 +94,7 @@ const Expertise = ({dict}) => {
     return (
         <div className="py-16 px-3 md:px-10 bg  min-h-screen">
             {/* Header */}
-            <div className="flex w-full md:w-2/4 flex-col font-bold text-6xl md:text-8xl mb-16">
+            <div className="flex w-full  flex-col font-bold text-4xl md:text-7xl mb-16">
                 <motion.div
                     viewport={{ once: true, amount: 0.5 }}
                     initial={{ y: "100%", opacity: 0 }}

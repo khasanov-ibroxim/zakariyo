@@ -70,16 +70,15 @@ const ContactForm = ({dict}) => {
                     >
                         <div className="space-y-4 mb-20">
                             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold font-instrument-sans">
-                                SAY HELLO!
+                                По делу!
                             </h1>
                             <p className="text-lg font-inter-tight md:text-2xl dark:text-white/60 text-black/60">
-                                My creative spirit comes alive in the digital realm. With nimble fingers flying across
-                                the keyboard.
+                                Я работаю на стыке маркетинга, бизнеса и производства. Помогаю компаниям выстраивать коммуникацию, находить партнёров и выходить на новые рынки.
                             </p>
                         </div>
 
                         <form onSubmit={handleSubmit} className="space-y-6">
-                            <h3 className="text-xl font-bold uppercase">FILL THIS FORM OUT</h3>
+                            <h3 className="text-xl font-bold uppercase">Заполнить заявку</h3>
 
                             {/* Name Input */}
                             <div>
@@ -88,7 +87,7 @@ const ContactForm = ({dict}) => {
                                     name="name"
                                     value={formData.name}
                                     onChange={handleChange}
-                                    placeholder="Name"
+                                    placeholder="Имя"
                                     required
                                     className="w-full rounded-xl bg-[#F5F5F7] dark:bg-[#0F0F0F] py-5
                                          text-black dark:text-white placeholder-[#737373] font-bold px-5
@@ -104,7 +103,7 @@ const ContactForm = ({dict}) => {
                                     name="email"
                                     value={formData.email}
                                     onChange={handleChange}
-                                    placeholder="Email"
+                                    placeholder="Почта"
                                     required
                                     className="w-full rounded-xl bg-[#F5F5F7] dark:bg-[#0F0F0F] py-5
                                          text-black dark:text-white placeholder-[#737373] font-bold px-5
@@ -119,7 +118,7 @@ const ContactForm = ({dict}) => {
                                     name="message"
                                     value={formData.message}
                                     onChange={handleChange}
-                                    placeholder="Message"
+                                    placeholder="Сообщение"
                                     required
                                     rows={5}
                                     className="w-full rounded-xl bg-[#F5F5F7] dark:bg-[#0F0F0F] py-5
@@ -155,7 +154,7 @@ const ContactForm = ({dict}) => {
                                     hover:before:scale-y-100
                                     hover:text-black dark:hover:text-white"
                             >
-                                <span className="relative z-10">SEND EMAIL</span>
+                                <span className="relative z-10">Отправить</span>
                             </motion.button>
                         </form>
                     </motion.div>
@@ -208,12 +207,12 @@ const ContactForm = ({dict}) => {
                                             {item.link ? (
                                                 <a
                                                     href={item.link}
-                                                    className="text-lg sm:text-xl lg:text-2xl font-light text-black dark:text-white hover:text-black/60 dark:hover:text-white/60 transition-colors duration-300 block"
+                                                    className="text-lg font-light text-black dark:text-white hover:text-black/60 dark:hover:text-white/60 transition-colors duration-300 block"
                                                 >
                                                     {item.label}
                                                 </a>
                                             ) : (
-                                                <p className="text-lg sm:text-xl lg:text-2xl font-light text-black dark:text-white">
+                                                <p className="text-lg font-light text-black dark:text-white">
                                                     {item.value ? (
                                                         <>
                                                             <span
@@ -232,7 +231,7 @@ const ContactForm = ({dict}) => {
                                             {item.link && item.value && (
                                                 <a
                                                     href={item.link}
-                                                    className="text-lg sm:text-xl lg:text-2xl font-light text-black dark:text-white"
+                                                    className="text-lg font-light text-black dark:text-white"
                                                 >
                                                     {item.value}
                                                 </a>

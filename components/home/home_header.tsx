@@ -42,7 +42,7 @@ const HomeHeader = ({ dict }) => {
                         <br /> {dict.hero.name[1]}
                     </h1>
                 </div>
-                <div className="w-full flex justify-between font-bold text-[14px] absolute bottom-10 px-3 sm:static">
+                <div className="w-full flex justify-between  text-[14px] absolute bottom-10 px-3 sm:static">
                     <div className="text-left text-xl">{dict.hero.location}</div>
                     <div className="text-right text-xl">{dict.hero.title}</div>
                 </div>

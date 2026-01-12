@@ -17,7 +17,7 @@ import human_5 from "@/assets/home/trusted/imgi_28_testimonial-5.png"
 import human_6 from "@/assets/home/trusted/imgi_29_testimonial-6.png"
 import bg from "@/assets/home/trusted/trusted_bottom_photo.jpg";
 
-const Trusted = (dict) => {
+const Trusted = ({dict}) => {
 
     const [scrollY, setScrollY] = useState(0);
     const [windowHeight, setWindowHeight] = useState(0);
@@ -108,9 +108,9 @@ const Trusted = (dict) => {
 
     ];
     return (
-        <div className={"py-16"}>
-            <div className="font-inter-tight w-full flex flex-col items-center justify-center font-bold text-5xl text-center">
-                TRUSTED BY <br/> INTERNATIONAL BRANDS
+        <div className={"py-16 "}>
+            <div className="font-inter-tight w-full flex flex-col items-center justify-center font-bold text-6xl text-center">
+                {dict.trusted.title[0]} <br/> {dict.trusted.title[1]}
             </div>
             <div className={"flex flex-col gap-5"}>
                 <div className="mt-16 sm:mt-20 md:mt-24 overflow-hidden">

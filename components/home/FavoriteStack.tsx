@@ -8,43 +8,44 @@ import icon_4 from "@/assets/home/favorite/free-icon-turkey-6157597.png"
 import icon_5 from "@/assets/home/favorite/free-icon-france-197560.png"
 
 
-const FavoriteStack = (dict) => {
+const FavoriteStack = ({dict}) => {
     const stackItems = [
         {
             icon: <Image src={icon_1} className="w-12 h-12 rounded-2xl" alt="Favorite Stack Icon" />,
-            stack: "WEBFLOW",
-            title: "WEB DESIGN PLATFORM",
-            proc:"95%",
-            description: "The internet is your canvas. WEBFLOW is where design and publish stunning sites based in Amsterdam."
+            stack: dict.favoriteStack.stack[0].stack,
+            title: dict.favoriteStack.stack[0].title,
+            proc:dict.favoriteStack.stack[0].proc,
+            description: dict.favoriteStack.stack[0].description,
         },
         {
             icon: <Image src={icon_2} className="w-12 h-12 rounded-2xl" alt="Favorite Stack Icon" />,
-            stack: "FIGMA",
-            title: "WEB DESIGN PLATFORM",
-            proc:"95%",
-            description: "The internet is your canvas. WEBFLOW is where design and publish stunning sites based in Amsterdam."
+            stack: dict.favoriteStack.stack[1].stack,
+            title: dict.favoriteStack.stack[1].title,
+            proc:dict.favoriteStack.stack[1].proc,
+            description: dict.favoriteStack.stack[1].description,
         },
         {
             icon: <Image src={icon_3} className="w-12 h-12 rounded-2xl" alt="Favorite Stack Icon" />,
-            stack: "JAVASCRIPT",
-            title: "WEB DESIGN PLATFORM",
-            proc:"95%",
-            description: "The internet is your canvas. WEBFLOW is where design and publish stunning sites based in Amsterdam."
-        },
-        {
-            icon: <Image src={icon_4} className="w-12 h-12 rounded-2xl" alt="Favorite Stack Icon" />,
-            stack: "APPLE",
-            title: "WEB DESIGN PLATFORM",
-            proc:"95%",
-            description: "The internet is your canvas. WEBFLOW is where design and publish stunning sites based in Amsterdam."
+            stack: dict.favoriteStack.stack[2].stack,
+            title: dict.favoriteStack.stack[2].title,
+            proc:dict.favoriteStack.stack[2].proc,
+            description: dict.favoriteStack.stack[2].description,
         },
         {
             icon: <Image src={icon_5} className="w-12 h-12 rounded-2xl" alt="Favorite Stack Icon" />,
-            stack: "NVIDIA",
-            title: "WEB DESIGN PLATFORM",
-            proc:"95%",
-            description: "The internet is your canvas. WEBFLOW is where design and publish stunning sites based in Amsterdam."
+            stack: dict.favoriteStack.stack[3].stack,
+            title: dict.favoriteStack.stack[3].title,
+            proc:dict.favoriteStack.stack[3].proc,
+            description: dict.favoriteStack.stack[3].description,
         },
+        {
+            icon: <Image src={icon_4} className="w-12 h-12 rounded-2xl" alt="Favorite Stack Icon" />,
+            stack: dict.favoriteStack.stack[4].stack,
+            title: dict.favoriteStack.stack[4].title,
+            proc:dict.favoriteStack.stack[4].proc,
+            description: dict.favoriteStack.stack[4].description,
+        },
+
     ];
 
     return (
@@ -52,7 +53,7 @@ const FavoriteStack = (dict) => {
             <div className="flex lg:flex-row flex-col  px-5">
                 {/* Left Side - Sticky Title */}
                 <div className="w-full lg:w-1/2 sm:pr-5  top-0 lg:sticky text-5xl md:text-5xl font-bold tracking-tight h-full pt-10 sm:flex items-center  ">
-                   Знание <br/> языков
+                    {dict.favoriteStack.title[0]} <br/> {dict.favoriteStack.title[1]}
                 </div>
 
                 {/* Right Side - Scrolling Content */}

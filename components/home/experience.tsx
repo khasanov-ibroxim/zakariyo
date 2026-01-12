@@ -2,9 +2,7 @@
 import React from 'react';
 
 const Experience = ({dict}) => {
-    const experiences = [
 
-    ];
     console.log(dict)
     return (
         <section className="min-h-screen dark:bg-black dark:text-white relative">

@@ -38,12 +38,7 @@ const Navbar = ({ dict, lang }: NavbarProps) => {
                     <LanguageSwitcher />  {/* ✅ Til almashtirish tugmasi */}
                 </div>
 
-                <Mail
-                    size={30}
-                    className="cursor-pointer
-                        sm:block hidden
-                    origin-top-left transition-transform duration-700 ease-in-out hover:rotate-[40deg] hover:scale-110"
-                />
+
 
                 <div
                     onClick={() => setIsMenuOpen(true)}

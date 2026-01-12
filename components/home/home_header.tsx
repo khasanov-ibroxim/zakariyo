@@ -32,12 +32,12 @@ const HomeHeader = ({ dict }) => {
     return (
         <>
             <div className="w-full h-[95vh] relative flex items-center sm:justify-end justify-center flex-col gap-20 px-10 pb-5">
-                <div className="text-center font-instrument-sans font-bold">
+                <div className="text-center font-instrument-sans ">
                     <div className="text-[18px] w-full justify-center mb-10 flex items-center gap-2">
                         <span className="rounded-full bg-[#00B803] w-[15px] h-[15px] animate-pulse"></span>
                         {dict.hero.status}
                     </div>
-                    <h1 className="text-[50px] leading-[40px] md:text-[100px] md:leading-[90px] lg:text-[140px] lg:leading-[120px]">
+                    <h1 className="text-[50px] font-bold leading-[40px] md:text-[100px] md:leading-[90px] lg:text-[140px] lg:leading-[120px]">
                         {dict.hero.name[0]}
                         <br /> {dict.hero.name[1]}
                     </h1>

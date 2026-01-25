@@ -1,27 +1,20 @@
 import {StaticImageData} from "next/image";
-import xiong_thumb from "@/assets/work/xiong-wall/xiong_thumb.png"
-import xiong_1 from "@/assets/work/xiong-wall/1.png"
-import xiong_2 from "@/assets/work/xiong-wall/2.png"
-import xiong_3 from "@/assets/work/xiong-wall/3.png"
-import xiong_4 from "@/assets/work/xiong-wall/4.png"
 
-import lightric_thumb from "@/assets/work/lightric-motors/lightric_thumb.png"
-import lightric_1 from "@/assets/work/lightric-motors/1.png"
-import lightric_2 from "@/assets/work/lightric-motors/2.png"
-import lightric_3 from "@/assets/work/lightric-motors/3.png"
-import lightric_4 from "@/assets/work/lightric-motors/4.png"
+import bakan_0 from "@/assets/work/bakan/bakan_0.jpg"
+import bakan_1 from "@/assets/work/bakan/bakan_1.jpg"
+import bakan_2 from "@/assets/work/bakan/bakan_2.jpg"
+import bakan_3 from "@/assets/work/bakan/bakan_3.jpg"
 
-import hideway_thumb from "@/assets/work/hideway/hideway_thumb.png"
+import osborn_0 from "@/assets/work/osborn/osborn_0.jpg"
+import osborn_1 from "@/assets/work/osborn/osborn_1.jpg"
+import osborn_2 from "@/assets/work/osborn/osborn_2.jpg"
+import osborn_3 from "@/assets/work/osborn/osborn_3.jpg"
 
-import califfo_thumb from "@/assets/work/califfo/califfo_thumb.png"
-import califfo_1 from "@/assets/work/califfo/1.jpg"
-import califfo_2 from "@/assets/work/califfo/2.png"
-import califfo_3 from "@/assets/work/califfo/3.jpg"
-import califfo_4 from "@/assets/work/califfo/4.jpg"
+import zelal_0 from "@/assets/work/zelal/zelal_0.jpg"
+import zelal_1 from "@/assets/work/zelal/zelal_1.jpg"
+import zelal_2 from "@/assets/work/zelal/zelal_2.jpg"
+import zelal_3 from "@/assets/work/zelal/zelal_3.jpg"
 
-import urban_thumb from "@/assets/work/urban-project/urban_thumb.png"
-
-import digital_thumb from "@/assets/work/digital-art/digital_thumb.png"
 
 export type ProjectSection =
     | {
@@ -60,8 +53,8 @@ export const projects: Project[] = [
         category: "MARKETPLACE",
         year: "2024",
         client: "Bakan Tex",
-        thumbnail: xiong_thumb,
-        heroImage: xiong_1,
+        thumbnail: bakan_2,
+        heroImage: bakan_0,
         description: "Step into a world of creativity and craftsmanship at Xiong Wall, where we bring together artisans from around the globe to showcase their unique creations. As a premier marketplace for artisanal goods.",
         sections: [
             {
@@ -82,7 +75,7 @@ export const projects: Project[] = [
 
             {
                 type: "image",
-                src: xiong_2,
+                src: bakan_1,
                 alt: "Portrait photography"
             },
             {
@@ -92,12 +85,12 @@ export const projects: Project[] = [
             },
             {
                 type: "image",
-                src: xiong_3,
+                src: bakan_2,
                 alt: "Laptop mockup"
             },
             {
                 type: "image",
-                src: xiong_4,
+                src: bakan_3,
                 alt: "Fluid design"
             }
         ],
@@ -115,8 +108,8 @@ export const projects: Project[] = [
         category: "PHOTOGRAPHY",
         year: "2024",
         client: "Osborn Textile",
-        thumbnail: lightric_thumb,
-        heroImage: lightric_1,
+        thumbnail: osborn_0,
+        heroImage: osborn_0,
         description: "A revolutionary automotive photography project capturing the essence of electric vehicle innovation and design.",
         sections: [
             {
@@ -137,7 +130,7 @@ export const projects: Project[] = [
 
             {
                 type: "image",
-                src: lightric_2,
+                src: osborn_1,
                 alt: "Portrait photography"
             },
             {
@@ -147,12 +140,12 @@ export const projects: Project[] = [
             },
             {
                 type: "image",
-                src: lightric_3,
+                src: osborn_2,
                 alt: "Laptop mockup"
             },
             {
                 type: "image",
-                src: lightric_4,
+                src: osborn_3,
                 alt: "Fluid design"
             }
         ],
@@ -167,14 +160,45 @@ export const projects: Project[] = [
         category: "WEB DESIGN",
         year: "2022",
         client: "Zelal Tekstil",
-        thumbnail: hideway_thumb,
-        heroImage: hideway_thumb,
+        thumbnail: zelal_0,
+        heroImage: zelal_0,
         description: "Modern web design project featuring abstract geometric shapes and minimalist aesthetics.",
         sections: [
             {
                 type: "text",
+                title: "RESEARCH",
+                content: "Informing decision-making: Research provides data and evidence to support design decisions. It helps designers make informed choices about layout, color schemes, typography, and other design elements, leading to more effective and user-friendly websites"
+            },
+            {
+                type: "text",
                 title: "DESIGN",
-                content: "Creating immersive digital experiences through innovative web design and user interface solutions."
+                content: "Usability and Accessibility: Good design considers the needs and preferences of users, ensuring that the website is easy to navigate and understand. Intuitive navigation, clear hierarchy, and logical organization of content enhance usability and accessibility, allowing users to find what they are looking for quickly and easily"
+            },
+            {
+                type: "text",
+                title: "DEVELOPMENT",
+                content: "Development optimizes the website's performance by optimizing code, reducing file sizes, and improving loading times. A fast-loading website enhances user experience, reduces bounce rates, and improves search engine rankings"
+            },
+
+            {
+                type: "image",
+                src: zelal_1,
+                alt: "Portrait photography"
+            },
+            {
+                type: "text",
+                title: "CONCEPT",
+                content: "Informing decision-making: Research provides data and evidence to support design decisions. It helps designers make informed choices about layout, color schemes, typography, and other design elements, leading to more effective and user-friendly websites"
+            },
+            {
+                type: "image",
+                src: zelal_2,
+                alt: "Laptop mockup"
+            },
+            {
+                type: "image",
+                src: zelal_3,
+                alt: "Fluid design"
             }
         ],
         gallery: [],
@@ -188,8 +212,8 @@ export const projects: Project[] = [
         category: "BRANDING",
         year: "2022",
         client: "Chust Textile",
-        thumbnail: califfo_thumb,
-        heroImage: califfo_1,
+        thumbnail: osborn_0,
+        heroImage: osborn_0,
         description: "Complete branding solution with emphasis on modern typography and clean visual identity.",
         sections: [
             {
@@ -210,7 +234,7 @@ export const projects: Project[] = [
 
             {
                 type: "image",
-                src: califfo_2,
+                src: osborn_0,
                 alt: "Portrait photography"
             },
             {
@@ -220,12 +244,12 @@ export const projects: Project[] = [
             },
             {
                 type: "image",
-                src: califfo_3,
+                src: osborn_0,
                 alt: "Laptop mockup"
             },
             {
                 type: "image",
-                src: califfo_4,
+                src: osborn_0,
                 alt: "Fluid design"
             }
         ],
@@ -240,8 +264,8 @@ export const projects: Project[] = [
         category: "ARCHITECTURE",
         year: "2024",
         client: "Artatex",
-        thumbnail: urban_thumb,
-        heroImage: urban_thumb,
+        thumbnail: osborn_0,
+        heroImage: osborn_0,
         description: "Architectural visualization project showcasing modern urban design and sustainable building practices.",
         sections: [
             {
@@ -261,8 +285,8 @@ export const projects: Project[] = [
         category: "ART DIRECTION",
         year: "2023",
         client: "Trend Tex",
-        thumbnail: digital_thumb,
-        heroImage: digital_thumb,
+        thumbnail: osborn_0,
+        heroImage: osborn_0,
         description: "Experimental digital art project exploring the boundaries between technology and creativity.",
         sections: [
             {

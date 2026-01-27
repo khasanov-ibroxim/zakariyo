@@ -2,12 +2,12 @@
 import React, {useEffect, useState} from 'react';
 import {motion} from "framer-motion";
 import Image from "next/image";
-import logo_1 from "@/assets/home/home_about/l1.svg";
-import logo_2 from "@/assets/home/home_about/l2.svg";
-import logo_3 from "@/assets/home/home_about/l3.svg";
-import logo_4 from "@/assets/home/home_about/l4.svg";
-import logo_5 from "@/assets/home/home_about/l5.svg";
-import logo_6 from "@/assets/home/home_about/l6.svg";
+import logo_1 from "@/assets/home/trusted/l1.svg";
+import logo_2 from "@/assets/home/trusted/l2.svg";
+import logo_3 from "@/assets/home/trusted/l3.svg";
+import logo_4 from "@/assets/home/trusted/l4.svg";
+import logo_5 from "@/assets/home/trusted/l5.svg";
+import logo_6 from "@/assets/home/trusted/l6.svg";
 
 import human_1 from "@/assets/home/trusted/imgi_24_testimonial-1.png"
 import human_2 from "@/assets/home/trusted/imgi_25_testimonial-2.png"

@@ -15,6 +15,21 @@ import zelal_1 from "@/assets/work/zelal/zelal_1.jpg"
 import zelal_2 from "@/assets/work/zelal/zelal_2.jpg"
 import zelal_3 from "@/assets/work/zelal/zelal_3.jpg"
 
+import yustex_0 from "@/assets/work/yustex/yustex_0.jpg"
+import yustex_1 from "@/assets/work/yustex/yustex_1.jpg"
+import yustex_2 from "@/assets/work/yustex/yustex_2.jpg"
+import yustex_3 from "@/assets/work/yustex/yustex_3.jpg"
+
+import chust_0 from "@/assets/work/chust/chust_0.jpg"
+import chust_1 from "@/assets/work/chust/chust_1.jpg"
+import chust_2 from "@/assets/work/chust/chust_2.jpg"
+import chust_3 from "@/assets/work/chust/chust_3.jpg"
+
+import zarhal_0 from "@/assets/work/zarhal/zarhal_0.jpg"
+import zarhal_1 from "@/assets/work/zarhal/zarhal_1.jpg"
+import zarhal_2 from "@/assets/work/zarhal/zarhal_2.jpg"
+import zarhal_3 from "@/assets/work/zarhal/zarhal_3.jpg"
+
 
 export type ProjectSection =
     | {
@@ -212,8 +227,8 @@ export const projects: Project[] = [
         category: "BRANDING",
         year: "2022",
         client: "Chust Textile",
-        thumbnail: osborn_0,
-        heroImage: osborn_0,
+        thumbnail: chust_0,
+        heroImage: chust_0,
         description: "Complete branding solution with emphasis on modern typography and clean visual identity.",
         sections: [
             {
@@ -234,7 +249,7 @@ export const projects: Project[] = [
 
             {
                 type: "image",
-                src: osborn_0,
+                src: chust_1,
                 alt: "Portrait photography"
             },
             {
@@ -244,12 +259,12 @@ export const projects: Project[] = [
             },
             {
                 type: "image",
-                src: osborn_0,
+                src: chust_2,
                 alt: "Laptop mockup"
             },
             {
                 type: "image",
-                src: osborn_0,
+                src: chust_3,
                 alt: "Fluid design"
             }
         ],
@@ -257,42 +272,104 @@ export const projects: Project[] = [
         liveUrl: "#"
     },
     {
-        id: "Artatex",
-        slug: "Artatex",
-        title: "Artatex",
+        id: "Yustex",
+        slug: "Yustex",
+        title: "Yustex",
         subtitle: "Architecture",
         category: "ARCHITECTURE",
         year: "2024",
-        client: "Artatex",
-        thumbnail: osborn_0,
-        heroImage: osborn_0,
+        client: "Yustex",
+        thumbnail: yustex_0,
+        heroImage: yustex_0,
         description: "Architectural visualization project showcasing modern urban design and sustainable building practices.",
         sections: [
             {
                 type: "text",
-                title: "VISUALIZATION",
-                content: "Creating photorealistic architectural renderings that bring design concepts to life."
+                title: "RESEARCH",
+                content: "Informing decision-making: Research provides data and evidence to support design decisions. It helps designers make informed choices about layout, color schemes, typography, and other design elements, leading to more effective and user-friendly websites"
+            },
+            {
+                type: "text",
+                title: "DESIGN",
+                content: "Usability and Accessibility: Good design considers the needs and preferences of users, ensuring that the website is easy to navigate and understand. Intuitive navigation, clear hierarchy, and logical organization of content enhance usability and accessibility, allowing users to find what they are looking for quickly and easily"
+            },
+            {
+                type: "text",
+                title: "DEVELOPMENT",
+                content: "Development optimizes the website's performance by optimizing code, reducing file sizes, and improving loading times. A fast-loading website enhances user experience, reduces bounce rates, and improves search engine rankings"
+            },
+
+            {
+                type: "image",
+                src: yustex_1,
+                alt: "Portrait photography"
+            },
+            {
+                type: "text",
+                title: "CONCEPT",
+                content: "Informing decision-making: Research provides data and evidence to support design decisions. It helps designers make informed choices about layout, color schemes, typography, and other design elements, leading to more effective and user-friendly websites"
+            },
+            {
+                type: "image",
+                src: yustex_2,
+                alt: "Laptop mockup"
+            },
+            {
+                type: "image",
+                src: yustex_3,
+                alt: "Fluid design"
             }
         ],
         gallery: [],
         liveUrl: "#"
     },
     {
-        id: "Trend_Tex",
-        slug: "Trend_Tex",
-        title: "Trend Tex",
+        id: "Zarhal_Group",
+        slug: "Zarhal_Group",
+        title: "Zarhal Group",
         subtitle: "Art Direction",
         category: "ART DIRECTION",
         year: "2023",
-        client: "Trend Tex",
-        thumbnail: osborn_0,
-        heroImage: osborn_0,
+        client: "Zarhal Group",
+        thumbnail: zarhal_0,
+        heroImage: zarhal_0,
         description: "Experimental digital art project exploring the boundaries between technology and creativity.",
         sections: [
             {
                 type: "text",
-                title: "CREATIVE",
-                content: "Pushing creative boundaries through innovative digital art and experimental design techniques."
+                title: "RESEARCH",
+                content: "Informing decision-making: Research provides data and evidence to support design decisions. It helps designers make informed choices about layout, color schemes, typography, and other design elements, leading to more effective and user-friendly websites"
+            },
+            {
+                type: "text",
+                title: "DESIGN",
+                content: "Usability and Accessibility: Good design considers the needs and preferences of users, ensuring that the website is easy to navigate and understand. Intuitive navigation, clear hierarchy, and logical organization of content enhance usability and accessibility, allowing users to find what they are looking for quickly and easily"
+            },
+            {
+                type: "text",
+                title: "DEVELOPMENT",
+                content: "Development optimizes the website's performance by optimizing code, reducing file sizes, and improving loading times. A fast-loading website enhances user experience, reduces bounce rates, and improves search engine rankings"
+            },
+
+            {
+                type: "image",
+                src: zarhal_1,
+                alt: "Portrait photography"
+            },
+            {
+                type: "text",
+                title: "CONCEPT",
+                content: "Informing decision-making: Research provides data and evidence to support design decisions. It helps designers make informed choices about layout, color schemes, typography, and other design elements, leading to more effective and user-friendly websites"
+            },
+            {
+                type: "image",
+                src: zarhal_2,
+                alt: "Laptop mockup"
+            },
+            {
+                type: "image",
+                src: zarhal_3,
+                alt: "Fluid design"
             }
         ],
         gallery: [],

@@ -1,21 +1,35 @@
 "use client";
-import React, { useEffect, useRef, useState } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import React, {useEffect, useRef, useState} from 'react';
+import {motion, useScroll, useTransform} from 'framer-motion';
 import home_about_index from "@/assets/home/home_about/home_about.jpg"
 import Image from "next/image";
-import logo_1 from "@/assets/home/home_about/l1.svg"
-import logo_2 from "@/assets/home/home_about/l2.svg"
-import logo_3 from "@/assets/home/home_about/l3.svg"
-import logo_4 from "@/assets/home/home_about/l4.svg"
-import logo_5 from "@/assets/home/home_about/l5.svg"
-import logo_6 from "@/assets/home/home_about/l6.svg"
-import logo_7 from "@/assets/home/home_about/l7.svg"
+import {useTheme} from "next-themes";
+
+import bakan_white from "@/assets/home/home_about/bakan_white.png"
+import bakan_black from "@/assets/home/home_about/bakan_black.png"
+import chust_white from "@/assets/home/home_about/chust_white.png"
+import chust_black from "@/assets/home/home_about/chust_black.png"
+import osborn_white from "@/assets/home/home_about/osborn_white.png"
+import osborn_black from "@/assets/home/home_about/osborn_black.png"
+import reybo_white from "@/assets/home/home_about/reybo_white.png"
+import reybo_black from "@/assets/home/home_about/reybo_black.png"
+import stampa_white from "@/assets/home/home_about/stampa_white.png"
+import stampa_black from "@/assets/home/home_about/stampa_black.png"
+import trend_white from "@/assets/home/home_about/trend_white.png"
+import trend_black from "@/assets/home/home_about/trend_black.png"
+import yustex_white from "@/assets/home/home_about/yustex_white.png"
+import yustex_black from "@/assets/home/home_about/yustex_black.png"
+import zarhal_white from "@/assets/home/home_about/zarhal_white.png"
+import zarhal_black from "@/assets/home/home_about/zarhal_black.png"
+
 
 const HomeAbout = ({dict}) => {
     const containerRef = useRef(null);
     const [isMobile, setIsMobile] = useState(false);
+    const {theme, setTheme} = useTheme();
+    console.log(theme)
 
-    const { scrollYProgress } = useScroll({
+    const {scrollYProgress} = useScroll({
         target: containerRef,
         offset: ["start end", "end start"]
     });
@@ -38,13 +52,15 @@ const HomeAbout = ({dict}) => {
     const imageOpacity = useTransform(scrollYProgress, [0.2, 0.4, 0.6], [1, 1, 1]);
 
     const companies = [
-        { name: 'HBO', logo: logo_1 },
-        { name: 'AMD', logo: logo_2 },
-        { name: 'AMD', logo: logo_3 },
-        { name: 'AMD', logo: logo_4 },
-        { name: 'AMD', logo: logo_5 },
-        { name: 'AMD', logo: logo_6 },
-        { name: 'AMD', logo: logo_7 },
+        {name: 'bakan', logo: theme === "dark" ? bakan_black : bakan_white},
+        {name: 'chust', logo: theme === "dark" ? chust_black : chust_white},
+        {name: 'osborn', logo: theme === "dark" ? osborn_black : osborn_white},
+        {name: 'reybon', logo: theme === "dark" ? reybo_black : reybo_white},
+        {name: 'stampa', logo: theme === "dark" ? stampa_black : stampa_white},
+        {name: 'trend', logo: theme === "dark" ? trend_black : trend_white},
+        {name: 'yustex', logo: theme === "dark" ? yustex_black : yustex_white},
+        {name: 'zarhal', logo: theme === "dark" ? zarhal_black : zarhal_white},
+
     ];
 
     return (
@@ -76,7 +92,8 @@ const HomeAbout = ({dict}) => {
                         }}
                         className="absolute z-20"
                     >
-                        <div className="w-[420px] h-[630px] lg:w-[500px] lg:h-[750px] rounded-[35%] overflow-hidden shadow-2xl">
+                        <div
+                            className="w-[420px] h-[630px] lg:w-[500px] lg:h-[750px] rounded-[35%] overflow-hidden shadow-2xl">
                             <Image
                                 src={home_about_index}
                                 alt="Profile"
@@ -93,10 +110,10 @@ const HomeAbout = ({dict}) => {
                 <div className="max-w-2xl mx-auto space-y-8">
                     {/* Text */}
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
-                        viewport={{ once: true }}
+                        initial={{opacity: 0, y: 20}}
+                        whileInView={{opacity: 1, y: 0}}
+                        transition={{duration: 0.6}}
+                        viewport={{once: true}}
                         className="text-center"
                     >
                         <h1 className="text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight leading-tight">
@@ -107,13 +124,14 @@ const HomeAbout = ({dict}) => {
 
                     {/* Image */}
                     <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.6, delay: 0.2 }}
-                        viewport={{ once: true }}
+                        initial={{opacity: 0, scale: 0.9}}
+                        whileInView={{opacity: 1, scale: 1}}
+                        transition={{duration: 0.6, delay: 0.2}}
+                        viewport={{once: true}}
                         className="flex justify-center"
                     >
-                        <div className="w-[240px] h-[360px] xs:w-[280px] xs:h-[420px] sm:w-[340px] sm:h-[510px] rounded-[35%] overflow-hidden shadow-2xl">
+                        <div
+                            className="w-[240px] h-[360px] xs:w-[280px] xs:h-[420px] sm:w-[340px] sm:h-[510px] rounded-[35%] overflow-hidden shadow-2xl">
                             <Image
                                 src={home_about_index}
                                 alt="Profile"
@@ -128,16 +146,16 @@ const HomeAbout = ({dict}) => {
             <div className="relative z-40  py-8 sm:py-12 md:py-16 lg:py-20 ">
                 <div className="w-full">
                     <motion.div
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
-                        viewport={{ once: true }}
+                        initial={{opacity: 0, y: 50}}
+                        whileInView={{opacity: 1, y: 0}}
+                        transition={{duration: 0.8}}
+                        viewport={{once: true}}
                         className=" px-5 text-center flex-col flex justify-center items-center"
                     >
                         <h2 className="text-[14px] md:text-[18px]  leading-tight max-w-screen-lg">
                             {dict.about.subtitle}
                         </h2>
-<br/>
+                        <br/>
                         <div className=" justify-center items-center flex   max-w-screen-lg">
                             <p className={"text-[14px] md:text-[18px] w-full leading-relaxed"}>
                                 {dict.about.description[0]} <br/> <br/>{dict.about.description[1]}
@@ -145,8 +163,8 @@ const HomeAbout = ({dict}) => {
                         </div>
 
                         <motion.button
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
+                            whileHover={{scale: 1.05}}
+                            whileTap={{scale: 0.95}}
                             className=" relative overflow-hidden mt-10
             font-inter-tight cursor-pointer
             border-2 border-border
@@ -169,7 +187,7 @@ const HomeAbout = ({dict}) => {
             hover:before:scale-y-100
             dark:hover:text-black hover:text-black"
                         >
-                           <span className={"relative z-10"}>{dict.about.btn}</span>
+                            <span className={"relative z-10"}>{dict.about.btn}</span>
                         </motion.button>
                     </motion.div>
 
@@ -208,13 +226,14 @@ const HomeAbout = ({dict}) => {
             sm:w-[150px] sm:h-[150px]
             md:w-[180px] md:h-[180px]
             lg:w-[200px] lg:h-[200px]
-            bg-[#0A0A0A] rounded-2xl
+            bg-[#0A0A0A] dark:bg-white rounded-2xl
             flex items-center justify-center
+            p-5
             ${rotateClass}
           `}
                                     >
           <span className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">
-            <Image src={company.logo} alt={company.name} />
+            <Image src={company.logo} alt={company.name}/>
           </span>
                                     </div>
                                 );

@@ -162,7 +162,8 @@ const HomeAbout = ({dict}) => {
                             </p>
                         </div>
 
-                        <motion.button
+                        <motion.a
+                            href={"/Диплом_Ёкубов_Ш.Ш.pdf"}
                             whileHover={{scale: 1.05}}
                             whileTap={{scale: 0.95}}
                             className=" relative overflow-hidden mt-10
@@ -188,7 +189,7 @@ const HomeAbout = ({dict}) => {
             dark:hover:text-black hover:text-black"
                         >
                             <span className={"relative z-10"}>{dict.about.btn}</span>
-                        </motion.button>
+                        </motion.a>
                     </motion.div>
 
                     {/* Companies Carousel */}

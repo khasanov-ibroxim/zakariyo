@@ -1,22 +1,22 @@
 "use client"
-import { motion, Variants } from 'framer-motion';
+import {motion, Variants} from 'framer-motion';
 import React from 'react';
 import Image from "next/image";
 import Link from "next/link";
-import { projects } from '@/data/portfolio.data';
+import {projects} from '@/data/portfolio.data';
 
 interface FeaturedWorkProps {
     dict: any; // Changed from { [key: string]: unknown }
     lang: string;
 }
 
-const FeaturedWork = ({ dict, lang }: FeaturedWorkProps) => {
+const FeaturedWork = ({dict, lang}: FeaturedWorkProps) => {
     const fadeInScale: Variants = {
-        hidden: { opacity: 0, scale: 0.95 },
+        hidden: {opacity: 0, scale: 0.95},
         visible: {
             opacity: 1,
             scale: 1,
-            transition: { duration: 1, ease: "easeOut" }
+            transition: {duration: 1, ease: "easeOut"}
         }
     };
 
@@ -25,26 +25,27 @@ const FeaturedWork = ({ dict, lang }: FeaturedWorkProps) => {
             <div className="w-full justify-between items-center flex flex-col md:flex-row">
                 <div className="flex w-full md:w-2/4 flex-col font-inter-tight font-bold text-6xl">
                     <motion.div
-                        viewport={{ once: false, amount: 0.5 }}
-                        initial={{ y: "100%", opacity: 0 }}
-                        whileInView={{ y: 0, opacity: 1 }}
-                        transition={{ duration: 0.8, ease: "easeInOut" }}
+                        viewport={{once: false, amount: 0.5}}
+                        initial={{y: "100%", opacity: 0}}
+                        whileInView={{y: 0, opacity: 1}}
+                        transition={{duration: 0.8, ease: "easeInOut"}}
                     >
-                        FEATURED
+                        Ключевые
                     </motion.div>
                     <motion.div
-                        viewport={{ once: false, amount: 0.5 }}
-                        initial={{ y: "100%", opacity: 0 }}
-                        whileInView={{ y: 0, opacity: 1 }}
-                        transition={{ duration: 0.8, ease: "easeInOut" }}
+                        viewport={{once: false, amount: 0.5}}
+                        initial={{y: "100%", opacity: 0}}
+                        whileInView={{y: 0, opacity: 1}}
+                        transition={{duration: 0.8, ease: "easeInOut"}}
                         className="overflow-hidden"
                     >
-                        WORK
+                        проекты
                     </motion.div>
                 </div>
                 <div className="font-inter-tight text-2xl w-full md:w-2/4">
-                    My creative spirit comes alive in the digital realm. With nimble fingers flying across the keyboard,
-                    I craft clear experiences out of nothing but ones and zeroes.
+                    Мой подход строится на глубоком понимании бизнеса, стратегии и реальных результатов. Я помогаю
+                    компаниям находить точки роста, выстраивать сильное позиционирование и создавать решения, которые
+                    работают не ради красивой картинки, а ради прибыли и устойчивого развития.
                 </div>
             </div>
 
@@ -54,9 +55,9 @@ const FeaturedWork = ({ dict, lang }: FeaturedWorkProps) => {
                         key={project.id}
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{ once: false, amount: 0.3 }}
+                        viewport={{once: false, amount: 0.3}}
                         variants={fadeInScale}
-                        transition={{ type: "spring", stiffness: 300 }}
+                        transition={{type: "spring", stiffness: 300}}
                     >
                         <Link
                             href={`/${lang}/work/${project.slug}`}
@@ -80,7 +81,8 @@ const FeaturedWork = ({ dict, lang }: FeaturedWorkProps) => {
                                         {project.subtitle}
                                     </p>
                                 </div>
-                                <div className="border-[#52526D] dark:border-[rgba(255,255,255,.2)] border px-3 py-2 rounded-2xl font-bold text-[#52526D] dark:text-[rgba(255,255,255,.5)]">
+                                <div
+                                    className="border-[#52526D] dark:border-[rgba(255,255,255,.2)] border px-3 py-2 rounded-2xl font-bold text-[#52526D] dark:text-[rgba(255,255,255,.5)]">
                                     {project.year}
                                 </div>
                             </div>

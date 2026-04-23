@@ -12,6 +12,7 @@ import FavoriteStack from "@/components/home/FavoriteStack";
 import Awwards from "@/components/home/awwards";
 import Trusted from "@/components/home/trusted";
 import Questions from "@/components/home/questions";
+import Trening from "@/components/home/trening.tsx";
 
 interface HomeProps {
     params: Promise<{ lang: Locale }>;
@@ -25,13 +26,14 @@ export default async function Home({ params }: HomeProps) {
         <>
             <HomeHeader dict={dict} />
             <FeaturedWork dict={dict} lang={lang} />
+
             <HomeAbout dict={dict} />
             <Expertise dict={dict} />
             <Motivation dict={dict} />
             <Experience dict={dict} />
             <FavoriteStack dict={dict} />
             <Awwards dict={dict} />
-            <Trusted dict={dict} />
+
             <Questions dict={dict} lang={lang} />
         </>
     );

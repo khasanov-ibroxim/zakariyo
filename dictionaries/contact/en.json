@@ -11,7 +11,12 @@
         "email": "Email",
         "message": "Message"
       },
-      "submit": "Send"
+      "submit": "Send",
+      "status": {
+        "loading": "Sending...",
+        "success": "Sent!",
+        "error": "Something went wrong. Please try again."
+      }
     },
     "info": {
       "socials": {

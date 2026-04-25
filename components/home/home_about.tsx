@@ -27,6 +27,8 @@ const HomeAbout = ({dict}) => {
     const containerRef = useRef(null);
     const [isMobile, setIsMobile] = useState(false);
     const {theme, setTheme} = useTheme();
+    const [mounted, setMounted] = useState(false);
+
     console.log(theme)
 
     const {scrollYProgress} = useScroll({
@@ -51,18 +53,25 @@ const HomeAbout = ({dict}) => {
     const imageScale = useTransform(scrollYProgress, [0.2, 0.5, 0.7], [0.7, 1, 1]);
     const imageOpacity = useTransform(scrollYProgress, [0.2, 0.4, 0.6], [1, 1, 1]);
 
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
     const companies = [
-        {name: 'bakan', logo: theme === "dark" ? bakan_black : bakan_white},
-        {name: 'chust', logo: theme === "dark" ? chust_black : chust_white},
-        {name: 'osborn', logo: theme === "dark" ? osborn_black : osborn_white},
-        {name: 'reybon', logo: theme === "dark" ? reybo_black : reybo_white},
-        {name: 'stampa', logo: theme === "dark" ? stampa_black : stampa_white},
-        {name: 'trend', logo: theme === "dark" ? trend_black : trend_white},
-        {name: 'yustex', logo: theme === "dark" ? yustex_black : yustex_white},
-        {name: 'zarhal', logo: theme === "dark" ? zarhal_black : zarhal_white},
-
-    ];
-
+        { name: 'bakan', light: bakan_black, dark: bakan_white },
+        { name: 'chust', light: chust_black, dark: chust_white },
+        { name: 'osborn', light: osborn_black, dark: osborn_white },
+        { name: 'reybon', light: reybo_black, dark: reybo_white },
+        { name: 'stampa', light: stampa_black, dark: stampa_white },
+        { name: 'trend', light: trend_black, dark: trend_white },
+        { name: 'yustex', light: yustex_black, dark: yustex_white },
+        { name: 'zarhal', light: zarhal_black, dark: zarhal_white }
+    ]
+    const getCompanyLogo = (company: typeof companies[0]) => {
+        if (!mounted) return company.dark; // Default: white fayl
+        return theme === "dark" ? company.light : company.dark;
+    };
     return (
         <>
             {/* Desktop Version - Scroll Animation */}
@@ -161,12 +170,13 @@ const HomeAbout = ({dict}) => {
                                 {dict.about.description[0]} <br/> <br/>{dict.about.description[1]}
                             </p>
                         </div>
-
-                        <motion.a
-                            href={"/Диплом_Ёкубов_Ш.Ш.pdf"}
-                            whileHover={{scale: 1.05}}
-                            whileTap={{scale: 0.95}}
-                            className=" relative overflow-hidden mt-10
+<div className="flex gap-4">
+    <motion.a
+        href={"/Диплом_Ёкубов_Ш.Ш.pdf"}
+        target={"_blank"}
+        whileHover={{scale: 1.05}}
+        whileTap={{scale: 0.95}}
+        className=" relative overflow-hidden mt-10
             font-inter-tight cursor-pointer
             border-2 border-border
             font-bold uppercase
@@ -187,60 +197,91 @@ const HomeAbout = ({dict}) => {
 
             hover:before:scale-y-100
             dark:hover:text-black hover:text-black"
-                        >
-                            <span className={"relative z-10"}>{dict.about.btn}</span>
-                        </motion.a>
+    >
+        <span className={"relative z-10"}>{dict.about.btn}</span>
+    </motion.a>
+    <motion.a
+        href={"/CV_Yokubov_Shamsiddin.pdf"}
+        target={"_blank"}
+        whileHover={{scale: 1.05}}
+        whileTap={{scale: 0.95}}
+        className=" relative overflow-hidden mt-10
+            font-inter-tight cursor-pointer
+            border-2 border-border
+            font-bold uppercase
+            sm:text-[18px]
+            sm:py-2 sm:px-6
+            text-[14px]
+            py-1 px-4
+            rounded-3xl
+            dark:bg-transparent bg-black
+            text-white
+            transition-colors duration-500
+
+            before:absolute before:inset-0 before:z-0
+            dark:before:bg-white before:bg-white
+            before:origin-bottom before:scale-y-0
+            before:transition-transform before:duration-500
+            before:content-['']
+
+            hover:before:scale-y-100
+            dark:hover:text-black hover:text-black"
+    >
+        <span className={"relative z-10"}>{dict.about.btn_cv}</span>
+    </motion.a>
+</div>
+
                     </motion.div>
 
                     {/* Companies Carousel */}
-                    <div className="mt-16 sm:mt-20 md:mt-24 overflow-hidden">
-                        <motion.div
-                            className="
-      flex
-      gap-4 sm:gap-6 md:gap-8 lg:gap-16
-      overflow-visible
-      py-8   /* 👈 tepaga-pastga joy */
-    "
-                            animate={{
-                                x: [0, -1000],
-                            }}
-                            transition={{
-                                x: {
-                                    repeat: Infinity,
-                                    repeatType: "loop",
-                                    duration: 20,
-                                    ease: "linear",
-                                },
-                            }}
-                        >
-                            {[...companies, ...companies, ...companies].map((company, index) => {
-                                const rotateClass =
-                                    index % 2 === 0 ? "rotate-[5deg]" : "rotate-[-5deg]";
+                    {mounted && (
+                        <div className="mt-16 sm:mt-20 md:mt-24 overflow-hidden">
+                            <motion.div
+                                className="flex gap-4 sm:gap-6 md:gap-8 lg:gap-16 overflow-visible py-8"
+                                animate={{
+                                    x: [0, -1000],
+                                }}
+                                transition={{
+                                    x: {
+                                        repeat: Infinity,
+                                        repeatType: "loop",
+                                        duration: 20,
+                                        ease: "linear",
+                                    },
+                                }}
+                            >
+                                {[...companies, ...companies, ...companies].map((company, index) => {
+                                    const rotateClass =
+                                        index % 2 === 0 ? "rotate-[5deg]" : "rotate-[-5deg]";
 
-                                return (
-                                    <div
-                                        key={index}
-                                        className={`
-            flex-shrink-0
-            w-[100px] h-[100px]
-            xs:w-[120px] xs:h-[120px]
-            sm:w-[150px] sm:h-[150px]
-            md:w-[180px] md:h-[180px]
-            lg:w-[200px] lg:h-[200px]
-            bg-[#0A0A0A] dark:bg-white rounded-2xl
-            flex items-center justify-center
-            p-5
-            ${rotateClass}
-          `}
-                                    >
-          <span className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">
-            <Image src={company.logo} alt={company.name}/>
-          </span>
-                                    </div>
-                                );
-                            })}
-                        </motion.div>
-                    </div>
+                                    return (
+                                        <div
+                                            key={`${company.name}-${index}`}
+                                            className={`
+                                                flex-shrink-0
+                                                w-[100px] h-[100px]
+                                                xs:w-[120px] xs:h-[120px]
+                                                sm:w-[150px] sm:h-[150px]
+                                                md:w-[180px] md:h-[180px]
+                                                lg:w-[200px] lg:h-[200px]
+                                                bg-[#0A0A0A] dark:bg-white rounded-2xl
+                                                flex items-center justify-center
+                                                p-5
+                                                transition-all duration-300
+                                                ${rotateClass}
+                                            `}
+                                        >
+                                            <Image
+                                                src={getCompanyLogo(company)}
+                                                alt={company.name}
+                                                className="w-full h-auto object-contain"
+                                            />
+                                        </div>
+                                    );
+                                })}
+                            </motion.div>
+                        </div>
+                    )}
                 </div>
             </div>
         </>

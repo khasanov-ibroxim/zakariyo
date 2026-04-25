@@ -2,10 +2,12 @@
 import React from 'react';
 import { motion, Variants } from "framer-motion";
 import { projects } from "@/data/portfolio.data";
-import { trenings } from "@/data/trening.data.ts";
+import { getTrenings } from "@/data/trening.data";
 import Link from "next/link";
-import Image from "next/image";
+import Image, {StaticImageData} from "next/image";
 import { useParams } from "next/navigation";
+import { Locale } from "@/i18n-config";
+import OtherSpheres from "@/components/ui/other_spheres.tsx";
 
 const fadeInScale: Variants = {
     hidden: { opacity: 0, scale: 0.95 },
@@ -23,10 +25,37 @@ interface WorkDict {
     title_2: string;
     moreWorks: string;
 }
+type SphereItem = {
+    id: string;
+    label: string;           // Har doim ko'rinadigan matn
+    image?: string | StaticImageData; // Ixtiyoriy rasm
+    accent?: boolean;        // Kulrang fon uchun (rasmdan ko'rgan)
+};
+
+
+const spheres: SphereItem[] = [
+    { id: "textile",    label: "Текстиль",          accent: false },
+    { id: "equipment",  label: "Оборудование",       accent: true  },
+    { id: "cosmetics",  label: "Косметика",          accent: false },
+    { id: "leather",    label: "Кожаные изделия",    accent: true  },
+    { id: "blinds",     label: "Жалюзи",             accent: true  },
+    { id: "logistics",  label: "Логистика",          accent: false },
+    { id: "printing",   label: "Типография",         accent: false },
+    { id: "building",   label: "Стройматериалы",     accent: false },
+    { id: "project",    label: "Проектные работы",   accent: false },
+    { id: "gas",        label: "Заправки (АЗС)",     accent: false },
+    { id: "food",       label: "Продукты питания",   accent: false },
+    { id: "it",         label: "IT",                 accent: true  },
+];
+
+
 
 export default function WorkPage() {
     const params = useParams();
-    const lang = params?.lang as string || 'en';
+    const lang = (params?.lang as Locale) || 'ru';
+
+    const trenings = React.useMemo(() => getTrenings(lang), [lang]);
+
 
     // ✅ Type to'g'rilandi
     const [dict, setDict] = React.useState<WorkDict | null>(null);
@@ -171,6 +200,9 @@ export default function WorkPage() {
                     </motion.div>
                 ))}
             </div>
+
+            <OtherSpheres title="Другие сферы" items={spheres} />
+
         </div>
     );
 }

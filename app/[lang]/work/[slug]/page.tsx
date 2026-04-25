@@ -131,7 +131,7 @@ export default async function WorkDetailPage({ params }: PageProps) {
                 {project.sections.map((section, index) => (
                     <ClientScrollAnimation key={index} delay={index * 0.1}>
                         {section.type === 'text' && (
-                            <div className="flex flex-col lg:flex-row gap-10">
+                            <div className="flex flex-col lg:flex-row gap-0 md:gap-10">
                                 <div className="lg:w-1/3">
                                     <h2 className="text-4xl font-bold lg:sticky lg:top-20">
                                         {section.title}
@@ -146,12 +146,12 @@ export default async function WorkDetailPage({ params }: PageProps) {
                         )}
 
                         {section.type === 'image' && section.src && section.alt && (
-                            <div className="relative w-full h-[60vh] md:h-[80vh] rounded-3xl overflow-hidden">
+                            <div className="relative w-full h-[50vh] md:h-[80vh] rounded-3xl overflow-hidden">
                                 <Image
                                     src={section.src}
                                     alt={section.alt}
                                     fill
-                                    className="object-cover"
+                                    className="object-contain md:object-cover"
                                     sizes="100vw"
                                 />
                             </div>

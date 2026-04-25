@@ -1,22 +1,42 @@
 "use client"
-import {motion, Variants} from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import React from 'react';
 import Image from "next/image";
 import Link from "next/link";
-import {projects} from '@/data/portfolio.data';
+import { getProjects } from '@/data/portfolio.data';
+import { getTrenings } from '@/data/trening.data';
+import { Locale } from '@/i18n-config';
 
 interface FeaturedWorkProps {
-    dict: any; // Changed from { [key: string]: unknown }
+    dict: any;
     lang: string;
+    // ✅ Ko'rsatiladigan loyihalar ID si — tartib saqlanadi
+    ids: string[];
 }
 
-const FeaturedWork = ({dict, lang}: FeaturedWorkProps) => {
+const FeaturedWork = ({ dict, lang, ids }: FeaturedWorkProps) => {
+    const locale = lang as Locale;
+
+    // ✅ Portfolio + trening dan barcha loyihalarni birlashtirish
+    const allProjects = React.useMemo(() => {
+        const portfolio = getProjects(locale);
+        const trenings = getTrenings(locale);
+        return [...portfolio, ...trenings];
+    }, [locale]);
+
+    // ✅ ids tartibini saqlagan holda loyihalarni topish
+    const featuredProjects = React.useMemo(() => {
+        return ids
+            .map(id => allProjects.find(p => p.id === id))
+            .filter(Boolean) as typeof allProjects;
+    }, [ids, allProjects]);
+
     const fadeInScale: Variants = {
-        hidden: {opacity: 0, scale: 0.95},
+        hidden: { opacity: 0, scale: 0.95 },
         visible: {
             opacity: 1,
             scale: 1,
-            transition: {duration: 1, ease: "easeOut"}
+            transition: { duration: 1, ease: "easeOut" }
         }
     };
 
@@ -25,35 +45,37 @@ const FeaturedWork = ({dict, lang}: FeaturedWorkProps) => {
             <div className="w-full justify-between items-center flex flex-col md:flex-row">
                 <div className="flex w-full md:w-2/4 flex-col font-inter-tight font-bold text-6xl">
                     <motion.div
-                        viewport={{once: false, amount: 0.5}}
-                        initial={{y: "100%", opacity: 0}}
-                        whileInView={{y: 0, opacity: 1}}
-                        transition={{duration: 0.8, ease: "easeInOut"}}
+                        viewport={{ once: false, amount: 0.5 }}
+                        initial={{ y: "100%", opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 0.8, ease: "easeInOut" }}
                     >
                         {dict.FeaturedWork.title[0]}
                     </motion.div>
                     <motion.div
-                        viewport={{once: false, amount: 0.5}}
-                        initial={{y: "100%", opacity: 0}}
-                        whileInView={{y: 0, opacity: 1}}
-                        transition={{duration: 0.8, ease: "easeInOut"}}
+                        viewport={{ once: false, amount: 0.5 }}
+                        initial={{ y: "100%", opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 0.8, ease: "easeInOut" }}
                         className="overflow-hidden"
                     >
                         {dict.FeaturedWork.title[1]}
                     </motion.div>
                 </div>
-                <div className="font-inter-tight text-2xl w-full md:w-2/4">{dict.FeaturedWork.desc}</div>
+                <div className="font-inter-tight text-2xl w-full md:w-2/4">
+                    {dict.FeaturedWork.desc}
+                </div>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 mt-20 gap-5">
-                {projects.map((project) => (
+                {featuredProjects.map((project) => (
                     <motion.div
                         key={project.id}
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{once: false, amount: 0.3}}
+                        viewport={{ once: false, amount: 0.3 }}
                         variants={fadeInScale}
-                        transition={{type: "spring", stiffness: 300}}
+                        transition={{ type: "spring", stiffness: 300 }}
                     >
                         <Link
                             href={`/${lang}/work/${project.slug}`}
@@ -74,8 +96,7 @@ const FeaturedWork = ({dict, lang}: FeaturedWorkProps) => {
                                         {project.title}
                                     </h2>
                                 </div>
-                                <div
-                                    className="border-[#52526D] dark:border-[rgba(255,255,255,.2)] border px-3 py-2 rounded-2xl font-bold text-[#52526D] dark:text-[rgba(255,255,255,.5)]">
+                                <div className="border-[#52526D] dark:border-[rgba(255,255,255,.2)] border px-3 py-2 rounded-2xl font-bold text-[#52526D] dark:text-[rgba(255,255,255,.5)]">
                                     {project.year}
                                 </div>
                             </div>

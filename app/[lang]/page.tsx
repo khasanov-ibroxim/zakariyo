@@ -25,8 +25,16 @@ export default async function Home({ params }: HomeProps) {
     return (
         <>
             <HomeHeader dict={dict} />
-            <FeaturedWork dict={dict} lang={lang} />
-
+            <FeaturedWork
+                dict={dict}
+                lang={lang}
+                ids={[
+                    "zelal_tekstil",             // portfolio dan
+                    "chust_textile",       // portfolio dan
+                    "global_textile_days", // trening dan
+                    "titlp_2025_1",         // trening dan
+                ]}
+            />
             <HomeAbout dict={dict} />
             <Expertise dict={dict} />
             <Motivation dict={dict} />

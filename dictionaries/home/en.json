@@ -17,8 +17,8 @@
   },
   "about": {
     "title": [
-      "Стратегия Подход",
-      "Экспорт"
+      "Strategy Approach",
+      "Export"
     ],
     "subtitle": "I work with the textile business where marketing stops being just a presentation and starts influencing numbers, contracts, and responsibility. I am not a theorist or a “reach-focused marketer” — I understand production, cost structure, and export realities. My work begins with business diagnostics and ends with revenue growth, not reports based on likes.",
     "description": [
@@ -118,196 +118,196 @@
     ]
   },
   "motivation": {
-    "title": "АУДИТ",
+    "title": "AUDIT",
     "content": {
       "title_top": [
-        "Я не начинаю с рекламы.",
-        "Я начинаю с диагноза."
+        "I do not start with advertising.",
+        "I start with diagnosis."
       ],
-      "item_1_title": "Большинство фабрик приходят, когда:",
+      "item_1_title": "Most factories come when:",
       "item_1_content": [
-        "продажи не растут",
-        "рынок изменился",
-        "старые каналы не работают",
-        "маркетинг стал расходом, а не инструментом"
+        "sales are not growing",
+        "the market has changed",
+        "old channels no longer work",
+        "marketing has become an expense, not a business tool"
       ],
       "title_2": [
-        "В таких случаях «креатив» не лечит.",
-        "Нужен маркетинговый аудит."
+        "In such cases, “creativity” does not solve the problem.",
+        "A marketing audit is needed."
       ],
-      "item_2_title": "Я разбираю бизнес по системе:",
+      "item_2_title": "I analyze the business systematically:",
       "item_2_content": [
-        "PESTLE — что происходит с рынком и страной",
-        "SWOT — реальные сильные и слабые стороны",
-        "STP — кому вы на самом деле продаёте",
-        "воронка продаж — где теряются деньги",
-        "каналы и конкуренты — почему выбирают не вас",
-        "маркетинг-микс (4P / 6P+F) — где сломана логика"
+        "PESTLE — what is happening with the market and the country",
+        "SWOT — real strengths and weaknesses",
+        "STP — who you are actually selling to",
+        "Sales funnel — where money is being lost",
+        "Channels and competitors — why clients choose others instead of you",
+        "Marketing mix (4P / 6P+F) — where the logic is broken"
       ],
-      "item_3_title": "После аудита:",
+      "item_3_title": "After the audit:",
       "item_3_content": [
-        "появляется чёткая картина",
-        "уходят лишние действия",
-        "маркетинг становится управляемым",
-        "решения опираются на цифры, а не на «ощущения»"
+        "a clear picture appears",
+        "unnecessary actions are eliminated",
+        "marketing becomes manageable",
+        "decisions are based on numbers, not on “feelings”"
       ],
       "title_3": [
-        "Я не продаю рекламу.",
-        "Я ставлю диагноз и предлагаю лечение, которое даёт результат."
+        "I do not sell advertising.",
+        "I diagnose the problem and offer treatment that delivers results."
       ]
     }
   },
   "experience": {
-    "title": "Опыт",
+    "title": "Experience",
     "content": [
       {
-        "period": "2019- по н.в.",
+        "period": "2019- Present",
         "company": "WORLD TEXTILE MARKETING AGENCY",
-        "position": "Учредитель, Директор",
+        "position": "Founder, Director",
         "description": [
           ""
         ]
       },
       {
         "period": "2019",
-        "company": "«TPMA» при Ассоциации «Узтекстильпром»",
-        "position": "Главный специалист отдела маркетинга",
+        "company": "“TPMA” under the Association\n“Uztextileprom”",
+        "position": "Chief Marketing Department Specialist",
         "description": [
-          "Анализ рынка, экспортных направлений и эффективности продвижения"
+          "Market analysis, export directions, and promotion effectiveness evaluation"
         ]
       },
       {
         "period": "2018-2019",
-        "company": "«Uztextile Export» при Ассоциации «Узтекстильпром»",
-        "position": "Ведущий специалист",
+        "company": "“Uztextile Export” under the Association\n“Uztextileprom”",
+        "position": "Leading Specialist",
         "description": [
-          "Поиск и привлечение клиентов из стран ЕС",
-          "Ведение переговоров и сопровождение экспортных сделок"
+          "Searching for and attracting clients from EU countries",
+          "Conducting negotiations and supporting export deals"
         ]
       },
       {
         "period": "2017-2018",
-        "company": "«TPMA» при Ассоциации «Узтекстильпром»",
-        "position": "Главный специалист отдела маркетинга",
+        "company": "“TPMA” under the Association\n“Uztextileprom”",
+        "position": "Chief Marketing Department Specialist",
         "description": [
-          "Анализ рынка, экспортных направлений и эффективности продвижения"
+          "Market analysis, export directions, and promotion effectiveness evaluation"
         ]
       },
       {
         "period": "2016-2017",
-        "company": "Дизайн центр «Шарк Либослари» при Ассоциации «Узтекстильпром»",
-        "position": "Ведущий специалист отдела маркетинга.",
+        "company": "Design Center “Sharq Liboslari” under the Association “Uztextileprom”",
+        "position": "Leading Marketing Department Specialist",
         "description": [
-          "Продвижение коллекций одежды и услуг центра"
+          "Promotion of clothing collections and the center’s services"
         ]
       }
     ]
   },
   "favoriteStack": {
     "title": [
-      "Знание",
-      "языков"
+      "Language",
+      "Skills"
     ],
     "stack": [
       {
-        "stack": "Узбекский",
-        "title": "Родной язык",
+        "stack": "Uzbek",
+        "title": "Native Language ",
         "proc": "95%",
-        "description": "Говорю и думаю на узбекском. Легко нахожу общий язык с производствами, командами и партнёрами на месте."
+        "description": "I speak and think in Uzbek.\nI easily communicate with factories, teams, and local partners."
       },
       {
-        "stack": "Русский",
-        "title": "Свободно",
+        "stack": "Russian",
+        "title": "Fluent",
         "proc": "95%",
-        "description": "Мой основной рабочий язык. На нём веду переговоры, объясняю сложные вещи простым языком и выстраиваю доверие."
+        "description": "My main working language.\nI conduct negotiations, explain complex things in simple terms, and build trust."
       },
       {
-        "stack": "Английский",
-        "title": "Рабочий, без барьеров",
+        "stack": "English",
+        "title": "Professional Working Proficiency ",
         "proc": "95%",
-        "description": "Использую в общении с иностранными партнёрами: переписка, встречи, презентации и обсуждение условий сотрудничества."
+        "description": "I use it for communication with international partners:\ncorrespondence, meetings, presentations, and discussing cooperation terms."
       },
       {
-        "stack": "Французский",
-        "title": "Уверенный уровень",
+        "stack": "French",
+        "title": "Confident Level",
         "proc": "80%",
-        "description": "Использую в живом общении и переписке. Комфортно чувствую себя в диалогах и понимаю нюансы речи."
+        "description": "I use it in live communication and correspondence.\nI feel comfortable in conversations and understand speech nuances."
       },
       {
-        "stack": " Турецкий",
-        "title": "Средний уровень",
+        "stack": " Turkish",
+        "title": "Intermediate Level",
         "proc": "70%",
-        "description": "Общаюсь с турецкими руководителями фабрик во время визитов и рабочих встреч, без переводчиков."
+        "description": "I communicate with Turkish factory managers during visits and business meetings without interpreters."
       }
     ]
   },
   "awards": {
-    "title": "Выставки",
+    "title": "Exhibitions",
     "content": [
       {
         "period": "2025",
         "company": "Heimtextil",
-        "position": "Узбекистан, Ташкент"
+        "position": "Uzbekistan, Tashkent"
       },
       {
         "period": "2025",
         "company": "UzTextile Expo",
-        "position": "Узбекистан, Ташкент"
+        "position": "Uzbekistan, Tashkent"
       },
       {
         "period": "2024",
         "company": "Heimtextil",
-        "position": "Узбекистан, Ташкент"
+        "position": "Uzbekistan, Tashkent"
       },
       {
         "period": "2024",
         "company": "UzTextile Expo",
-        "position": "Узбекистан, Ташкент"
+        "position": "Uzbekistan, Tashkent"
       },
       {
         "period": "2023",
         "company": "UzTextile Expo",
-        "position": "Узбекистан, Ташкент"
+        "position": "Uzbekistan, Tashkent"
       },
       {
         "period": "2022",
         "company": "BEE TOGETHER",
-        "position": "Россия, Москва."
+        "position": "Russia, Moscow"
       },
       {
         "period": "2019",
         "company": "FAST TEXTILE",
-        "position": "Польша, Варшава."
+        "position": "Poland, Warsaw "
       },
       {
         "period": "2019",
-        "company": "CJF - Детская мода",
-        "position": "Россия, Москва."
+        "company": "CJF – Children’s Fashion",
+        "position": "Russia, Moscow"
       },
       {
         "period": "2019",
-        "company": "Мир Детство и Детская мода",
-        "position": "Казахстан, Алматы."
+        "company": "World of Childhood and Children’s Fashion",
+        "position": "Kazakhstan, Almaty "
       },
       {
         "period": "2018",
-        "company": "Мир Детство и Детская мода",
-        "position": "Казахстан, Алматы."
+        "company": "World of Childhood and Children’s Fashion",
+        "position": "Kazakhstan, Almaty "
       },
       {
         "period": "2018",
         "company": "International Istanbul Yarn Fair",
-        "position": "Турция, Стамбул."
+        "position": "Turkey, Istanbul"
       },
       {
         "period": "2018",
         "company": "Yarn and Fabrics Sourcing Fair",
-        "position": "Бангладеш, Дакка."
+        "position": "Bangladesh, Dhaka "
       },
       {
         "period": "2017",
         "company": "TEX WORLD USA",
-        "position": "США, Нью-Йорк."
+        "position": "USA, New York"
       }
     ]
   },
@@ -319,34 +319,36 @@
   },
   "questions": {
     "title": [
-      "Часто",
-      "задаваемые вопросы"
+      "Frequently",
+      "Asked Questions"
     ],
+    "desc": "I live marketing because it is about decisions, responsibility, and growth. Everything else is secondary.",
+
     "footer_title": [
-      "НУЖЕН АУДИТ",
-      "РЫНОК И КЛИЕНТЫ"
+      "Need an Audit of ",
+      "the Market and Clients"
     ],
-    "btn": "СВЯЗАТЬСЯ",
+    "btn": "Contact Me",
     "questionsData": [
       {
-        "question": "Чем вы отличаетесь от обычного маркетингового агентства?",
-        "answer": "Я не продаю универсальные решения. Я 10 лет работаю именно с текстильной отраслью и понимаю производство, себестоимость, экспорт и логику B2B-продаж. Маркетинг для меня — это инструмент роста бизнеса, а не просто красивая упаковка."
+        "question": "What makes you different from a regular marketing agency?",
+        "answer": "I do not sell universal solutions. I have been working specifically with the textile industry for 10 years and understand production, cost structure, export, and the logic of B2B sales. For me, marketing is a business growth tool, not just attractive packaging."
       },
       {
-        "question": "С какими текстильными компаниями вы работаете?",
-        "answer": "Я работаю с фабриками и брендами лёгкой промышленности: пряжа, трикотажное полотно, готовая одежда. В приоритете компании, которые думают стратегически и ориентированы на рост, экспорт и долгосрочные партнёрства."
+        "question": "What kind of textile companies do you work with?",
+        "answer": "I work with factories and brands in the light industry: yarn, knitted fabric, and ready-made garments. Priority is given to companies that think strategically and focus on growth, export, and long-term partnerships."
       },
       {
-        "question": "Вы занимаетесь продажами или только маркетингом?",
-        "answer": "Я работаю на стыке маркетинга и продаж. Моя задача — выстроить систему, которая помогает привлекать партнёров, усиливать доверие и поддерживать реальные переговоры, а не просто увеличивать охваты и лайки."
+        "question": "Do you handle sales or only marketing?",
+        "answer": "I work at the intersection of marketing and sales. My task is to build a system that helps attract partners, strengthen trust, and support real negotiations—not just increase reach and likes."
       },
       {
-        "question": "Можно ли с вами работать, если у компании нет сильного бренда?",
-        "answer": "Да. В большинстве случаев ко мне приходят именно с этой задачей. Я помогаю выстроить позиционирование с нуля: от смысла и стратегии — до материалов, коммуникации и выхода на рынок."
+        "question": "Can we work together if the company does not have a strong brand?",
+        "answer": "Yes. In most cases, clients come to me exactly with this challenge. I help build positioning from scratch: from meaning and strategy to materials, communication, and market entry."
       },
       {
-        "question": "Работаете ли вы с международными рынками?",
-        "answer": "Да. У меня есть опыт работы с компаниями, ориентированными на СНГ, Европу, США и Турцию. Я помогаю адаптировать маркетинг и коммуникацию под требования иностранных партнёров и байеров."
+        "question": "Do you work with international markets?",
+        "answer": "Yes. I have experience working with companies focused on the CIS, Europe, the USA, and Turkey. I help adapt marketing and communication to the requirements of international partners and buyers."
       }
     ]
   }

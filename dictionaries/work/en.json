@@ -1,10 +1,10 @@
 {
-  "title": ["Ключевые","проекты"],
+  "title": ["Key","Projects"],
   "period": "",
-  "moreWorks": "БОЛЬШЕ РАБОТ",
-  "visitSite": "ПОСЕТИТЬ САЙТ",
-  "client": "КЛИЕНТ",
-  "year": "ГОД",
-  "category": "КАТЕГОРИЯ",
-  "liveProject": "ЖИВОЙ ПРОЕКТ"
+  "moreWorks": "Other Cases",
+  "visitSite": "Visit Website",
+  "client": "Client",
+  "year": "Year",
+  "category": "Category",
+  "liveProject": "Visit Website"
 }

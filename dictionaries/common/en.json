@@ -1,13 +1,13 @@
 {
   "nav": {
     "home": "Home",
-    "work": "Портфолио",
+    "work": "Portfolio",
     "contact": "Contact",
     "theme": ["Light" , "Dark"],
     "menu": "Navigate Here"
   },
   "footer": {
-    "footer_title": "МАРКЕТИНГ",
+    "footer_title": "MARKETING",
     "copyright": "© 2026 ALL RIGHTS RESERVED",
     "backToTop": "GO BACK TO TOP"
   }

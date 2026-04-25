@@ -112,7 +112,7 @@ const Questions = ({dict, lang}) => {
                         />
                     </div>
                     <div className="w-full px-5 sm:w-1/2 text-center mt-10 text-lg uppercase font-bold">
-                        Я живу маркетингом, потому что он про решения, ответственность и рост. Всё остальное — вторично.
+                        {dict.questions.desc}
                     </div>
                     <div
                         className=" mt-10 bottom-10  text-[18px] uppercase font-bold flex flex-col justify-center items-center gap-5 sm:flex-row sm:right-[20px]">

@@ -95,9 +95,7 @@ export default function WorkPage() {
                                     <h2 className="font-inter-tight font-bold text-[20px]">
                                         {project.title}
                                     </h2>
-                                    <p className="font-inter-tight text-lg text-[#52526D] dark:text-[rgba(255,255,255,.6)]">
-                                        {project.subtitle}
-                                    </p>
+
                                 </div>
                                 <div className="border-[#52526D] dark:border-[rgba(255,255,255,.2)] border px-3 py-2 rounded-2xl font-bold text-[#52526D] dark:text-[rgba(255,255,255,.5)]">
                                     {project.year}
@@ -163,9 +161,6 @@ export default function WorkPage() {
                                     <h2 className="font-inter-tight font-bold text-[20px]">
                                         {project.title}
                                     </h2>
-                                    <p className="font-inter-tight text-lg text-[#52526D] dark:text-[rgba(255,255,255,.6)]">
-                                        {project.subtitle}
-                                    </p>
                                 </div>
                                 <div className="border-[#52526D] dark:border-[rgba(255,255,255,.2)] border px-3 py-2 rounded-2xl font-bold text-[#52526D] dark:text-[rgba(255,255,255,.5)]">
                                     {project.year}

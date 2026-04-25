@@ -30,7 +30,7 @@ const FeaturedWork = ({dict, lang}: FeaturedWorkProps) => {
                         whileInView={{y: 0, opacity: 1}}
                         transition={{duration: 0.8, ease: "easeInOut"}}
                     >
-                        Ключевые
+                        {dict.FeaturedWork.title[0]}
                     </motion.div>
                     <motion.div
                         viewport={{once: false, amount: 0.5}}
@@ -39,14 +39,10 @@ const FeaturedWork = ({dict, lang}: FeaturedWorkProps) => {
                         transition={{duration: 0.8, ease: "easeInOut"}}
                         className="overflow-hidden"
                     >
-                        проекты
+                        {dict.FeaturedWork.title[1]}
                     </motion.div>
                 </div>
-                <div className="font-inter-tight text-2xl w-full md:w-2/4">
-                    Мой подход строится на глубоком понимании бизнеса, стратегии и реальных результатов. Я помогаю
-                    компаниям находить точки роста, выстраивать сильное позиционирование и создавать решения, которые
-                    работают не ради красивой картинки, а ради прибыли и устойчивого развития.
-                </div>
+                <div className="font-inter-tight text-2xl w-full md:w-2/4">{dict.FeaturedWork.desc}</div>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 mt-20 gap-5">

@@ -4,31 +4,38 @@
       "Yokubov",
       "Shamsiddin"
     ],
-    "status": "Открыт к сотрудничеству",
-    "location": "Ташкент, Узбекистан",
-    "title": "Маркетолог стратег"
+    "status": "Open to Collaboration",
+    "location": "Tashkent, Uzbekistan",
+    "title": "Marketing Strategist"
+  },
+  "FeaturedWork": {
+    "title": [
+      "Key",
+      "Projects"
+    ],
+    "desc": "My approach is built on a deep understanding of business, strategy, and real results. I help companies identify growth opportunities, build strong positioning, and create solutions that work not for visual appeal alone, but for profit and sustainable development."
   },
   "about": {
     "title": [
       "Стратегия Подход",
       "Экспорт"
     ],
-    "subtitle": "Я работаю с текстильным бизнесом там, где маркетинг перестаёт быть презентацией и начинается влияние на цифры, контракты и ответственность. Я не теоретик и не «маркетолог по охватам» — я понимаю производство, себестоимость и экспортную реальность. Моя работа начинается с диагностики бизнеса и заканчивается ростом выручки, а не отчётами по лайкам.",
+    "subtitle": "I work with the textile business where marketing stops being just a presentation and starts influencing numbers, contracts, and responsibility. I am not a theorist or a “reach-focused marketer” — I understand production, cost structure, and export realities. My work begins with business diagnostics and ends with revenue growth, not reports based on likes.",
     "description": [
-      "Более 10 лет я занимаюсь развитием текстильных компаний и брендов, выстраиваю маркетинг под реальные бизнес-цели и сопровождаю экспорт продукции. Я участвовал в переговорах с партнёрами из Европы, США, Турции и Азии, работал с фабриками при выходе на внешние рынки и международные выставки, поэтому говорю с бизнесом на языке цифр, процессов и контрактов.",
-      "С 2019 года я возглавляю World Textile Marketing Agency — агентство, которое специализируется исключительно на лёгкой промышленности. Мы выстраиваем маркетинг как систему: позиционирование, продажи и выход на новые рынки, без «креатива ради креатива», с фокусом на устойчивый и прогнозируемый рост бизнеса."
+      "For more than 10 years, I have been developing textile companies and brands, building marketing strategies aligned with real business goals, and supporting product exports. I have participated in negotiations with partners from Europe, the USA, Turkey, and Asia, worked with factories entering foreign markets and international exhibitions, which is why I speak the language of numbers, processes, and contracts.",
+      "Since 2019, I have been leading World Textile Marketing Agency — an agency specializing exclusively in the light industry sector. We build marketing as a system: positioning, sales, and expansion into new markets, without “creativity for the sake of creativity,” but with a focus on sustainable and predictable business growth."
     ],
-    "btn": "Дипломы"
+    "btn": "DIPLOMAS"
   },
   "expertise": {
-    "title": "Экспертность",
+    "title": "Expertise",
     "key_fueters": "Основные направления",
     "content": [
       {
         "id": 1,
         "number": "(1)",
-        "title": "Аудит",
-        "description": "Провожу глубокий разбор бизнеса, маркетинга и продаж.\nНахожу точки потерь, системные ошибки и скрытые возможности роста.\nАудит даёт чёткое понимание, что именно мешает бизнесу зарабатывать больше.",
+        "title": "Audit",
+        "description": "I conduct a deep analysis of business, marketing, and sales. I identify loss points, systemic mistakes, and hidden growth opportunities. An audit provides a clear understanding of what exactly prevents a business from earning more.",
         "price": "Только по запросу ",
         "fullDescription": "Я разбираю маркетинг, продажи и стратегию, чтобы точно понять, где бизнес теряет деньги и что мешает росту выручки.",
         "features": [
@@ -41,8 +48,8 @@
       {
         "id": 2,
         "number": "(2)",
-        "title": "Анализ рынка",
-        "description": "Изучаю рынок, конкурентов и поведение клиентов.\nОпределяю реальный спрос, ценовые коридоры и точки дифференциации.\nАнализ рынка — основа для сильных решений и устойчивого роста.",
+        "title": "Market Analysis",
+        "description": "I study the market, competitors, and customer behavior. I identify real demand, pricing corridors, and differentiation points. Market analysis is the foundation for strong decisions and sustainable growth.",
         "price": "Только по запросу ",
         "fullDescription": "Анализ рынка — это основа всех стратегических решений.\nЯ изучаю спрос, конкурентов и логику выбора клиентов,\nчтобы бизнес принимал решения на основе фактов, а не ощущений.",
         "features": [
@@ -55,8 +62,8 @@
       {
         "id": 3,
         "number": "(3)",
-        "title": "Продвижение продукции",
-        "description": "Выстраиваю стратегию продвижения, ориентированную на выручку, а не охваты.\nФормирую позиционирование, сообщения и каналы, которые приводят клиентов.\nМаркетинг как инструмент продаж, а не расход.",
+        "title": "Product Promotion",
+        "description": "I build promotion strategies focused on revenue, not just reach. I create positioning, messaging, and channels that attract real clients. Marketing should be a sales tool, not just an expense.",
         "price": "Только по запросу",
         "fullDescription": "Продвижение продукции — это не реклама ради охватов.\nЯ выстраиваю маркетинг, который приводит клиентов\nи напрямую влияет на выручку бизнеса.",
         "features": [
@@ -69,8 +76,8 @@
       {
         "id": 4,
         "number": "(4)",
-        "title": "Экспорт продукции",
-        "description": "Помогаю подготовить бизнес к выходу на зарубежные рынки.\nАнализирую страны, требования, риски и точки входа.\nЭкспорт — это система, а не случайная сделка.",
+        "title": "Product Export",
+        "description": "I help businesses prepare for entering international markets. I analyze countries, requirements, risks, and entry points. Export is a system, not a random deal.",
         "price": "Только по запросу ",
         "fullDescription": "Экспорт продукции — это система, а не разовая сделка.\nЯ помогаю подготовить бизнес к выходу на внешние рынки,\nснизив риски и повысив шансы на устойчивые контракты.",
         "features": [
@@ -83,8 +90,8 @@
       {
         "id": 5,
         "number": "(5)",
-        "title": "Переговоры и сопровождение сделок",
-        "description": "Сопровождаю переговоры с партнёрами и покупателями.\nПомогаю выстроить позицию, аргументацию и защитить интересы бизнеса.\nРезультат — понятные условия и долгосрочные контракты.",
+        "title": "Negotiations and Deal Support",
+        "description": "I support negotiations with partners and buyers. I help build a strong position, clear argumentation, and protect business interests. The result is transparent terms and long-term contracts.",
         "price": "Только по запросу",
         "fullDescription": "Переговоры — это точка, где решается судьба сделки.\nЯ сопровождаю бизнес на ключевых этапах общения с партнёрами,\nпомогая сохранить позицию, условия и результат.",
         "features": [
@@ -97,8 +104,8 @@
       {
         "id": 6,
         "number": "(6)",
-        "title": "Тренинги и семинары",
-        "description": "Провожу практические тренинги и семинары для руководителей, отделов продаж и маркетинга, а также специалистов текстильной отрасли. Разбираем реальные кейсы, ошибки бизнеса, инструменты роста и современные подходы в B2B-продажах. Обучение направлено не на теорию, а на конкретные решения, которые можно внедрять сразу в работу.",
+        "title": "Trainings and Seminars",
+        "description": "I conduct practical trainings and seminars for business owners, sales and marketing departments, as well as specialists in the textile industry. We analyze real business cases, common mistakes, growth tools, and modern approaches in B2B sales. The training is focused not on theory, but on practical solutions that can be implemented immediately.",
         "price": "Только по запросу",
         "fullDescription": "Тренинги и семинары — это инструмент развития команды и усиления бизнеса. Провожу практические обучения для руководителей, отделов продаж, маркетинга и специалистов разных направлений, чтобы сотрудники принимали сильные решения и работали на результат, а не на процесс.",
         "features": [
@@ -197,36 +204,39 @@
     ]
   },
   "favoriteStack": {
-    "title": ["Знание" , "языков"],
+    "title": [
+      "Знание",
+      "языков"
+    ],
     "stack": [
       {
         "stack": "Узбекский",
         "title": "Родной язык",
-        "proc":"95%",
+        "proc": "95%",
         "description": "Говорю и думаю на узбекском. Легко нахожу общий язык с производствами, командами и партнёрами на месте."
       },
       {
         "stack": "Русский",
         "title": "Свободно",
-        "proc":"95%",
+        "proc": "95%",
         "description": "Мой основной рабочий язык. На нём веду переговоры, объясняю сложные вещи простым языком и выстраиваю доверие."
       },
       {
         "stack": "Английский",
         "title": "Рабочий, без барьеров",
-        "proc":"95%",
+        "proc": "95%",
         "description": "Использую в общении с иностранными партнёрами: переписка, встречи, презентации и обсуждение условий сотрудничества."
       },
       {
         "stack": "Французский",
         "title": "Уверенный уровень",
-        "proc":"80%",
+        "proc": "80%",
         "description": "Использую в живом общении и переписке. Комфортно чувствую себя в диалогах и понимаю нюансы речи."
       },
       {
         "stack": " Турецкий",
         "title": "Средний уровень",
-        "proc":"70%",
+        "proc": "70%",
         "description": "Общаюсь с турецкими руководителями фабрик во время визитов и рабочих встреч, без переводчиков."
       }
     ]
@@ -302,7 +312,10 @@
     ]
   },
   "trusted": {
-    "title": ["Коллеги по" , "цеху"]
+    "title": [
+      "Коллеги по",
+      "цеху"
+    ]
   },
   "questions": {
     "title": [

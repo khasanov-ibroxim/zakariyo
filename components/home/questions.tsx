@@ -2,7 +2,7 @@
 import React, {useState} from 'react';
 import {ArrowUpRight, Plus, X} from 'lucide-react';
 import Image from "next/image";
-import home_about_index from "@/assets/footer/footer.jpg";
+import home_about_index from "@/assets/footer/footer_2.jpg";
 import Link from "next/link";
 import {motion} from "framer-motion";
 
@@ -108,7 +108,7 @@ const Questions = ({dict, lang}) => {
                         <Image
                             src={home_about_index}
                             alt="Profile"
-                            className="w-full h-full object-cover object-center"
+                            className="w-full h-full object-cover object-bottom"
                         />
                     </div>
                     <div className="w-full px-5 sm:w-1/2 text-center mt-10 text-lg uppercase font-bold">

@@ -11,6 +11,8 @@ import ClientScrollAnimation from '@/components/ui/ClientScrollAnimation';
 import ClientAnimation from '@/components/ui/ClientAnimation';
 import { getDictionary } from "@/lib/dictionary.ts";
 
+import MoreWorksCarousel from '@/components/ui/MoreWorksCarousel';
+
 type WorkDictionary = {
     client: string;
     year: string;
@@ -54,7 +56,9 @@ function findProject(slug: string) {
 
 function getOtherProjects(currentSlug: string) {
     const all = [...projects, ...trenings];
-    return all.filter(p => p.slug !== currentSlug).slice(0, 2);
+    const filtered = all.filter(p => p.slug !== currentSlug);
+    console.log('Total items for carousel:', filtered.length); // ← shu raqamni ayting
+    return filtered;
 }
 
 export default async function WorkDetailPage({ params }: PageProps) {
@@ -168,33 +172,13 @@ export default async function WorkDetailPage({ params }: PageProps) {
                 ))}
             </div>
 
-            {/* More Works */}
+
             {otherProjects.length > 0 && (
-                <div className="container mx-auto px-5 pb-20">
-                    <h2 className="text-5xl font-bold mb-10">{dict.moreWorks}</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                        {otherProjects.map((work, index) => (
-                            <ClientScrollAnimation key={work.id} delay={index * 0.1}>
-                                <Link href={`/${lang}/work/${work.slug}`}>
-                                    <div className="relative h-[400px] rounded-3xl overflow-hidden group cursor-pointer">
-                                        <Image
-                                            src={work.thumbnail}
-                                            alt={work.title}
-                                            fill
-                                            className="object-cover transition-transform duration-700 group-hover:scale-110"
-                                            sizes="(max-width: 768px) 100vw, 50vw"
-                                        />
-                                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
-                                            <h3 className="text-white text-3xl font-bold mb-2">{work.title}</h3>
-                                            <p className="text-white/80 text-lg">{work.subtitle}</p>
-                                            <span className="text-white/60 text-sm mt-2">{work.year}</span>
-                                        </div>
-                                    </div>
-                                </Link>
-                            </ClientScrollAnimation>
-                        ))}
-                    </div>
-                </div>
+                <MoreWorksCarousel
+                    works={otherProjects}
+                    lang={lang}
+                    title={dict.moreWorks}
+                />
             )}
         </div>
     );

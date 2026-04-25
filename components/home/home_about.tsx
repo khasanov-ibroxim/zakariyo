@@ -97,7 +97,7 @@ const HomeAbout = ({dict}) => {
                             <Image
                                 src={home_about_index}
                                 alt="Profile"
-                                className="w-full h-full object-cover object-center"
+                                className="w-full h-full object-cover object-top"
                             />
                         </div>
                     </motion.div>

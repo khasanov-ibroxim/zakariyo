@@ -67,14 +67,14 @@ export const projects: Project[] = [
         subtitle: "",
         category: "Маркетинг",
         year: "2022",
-        client: "Ba kan Tex",
+        client: "Bakan Tex",
         thumbnail: bakan_2,
         heroImage: bakan_0,
         description: "Производственное предприятие, специализирующееся на выпуске хлопчатобумажной пряжи. Сотрудничество было выстроено в формате комплексного медийного и стратегического сопровождения.",
         sections: [
             {
                 type: "text",
-                title: "RESEARCH",
+                title: "КАТАЛОГ",
                 content: "Компания была представлена в каталогах выпусков 1, 2, 3 и 5 через интервью, экспертные статьи и имиджевые рекламные макеты. Это усилило позиционирование бренда, подчеркнуло производственный потенциал, технологическое оснащение и систему контроля качества, а также укрепило доверие к компании, стабильность продукции и репутацию предприятия в отрасли."
             },
             {
@@ -113,7 +113,7 @@ export const projects: Project[] = [
             "/images/gallery_1.png",
             "/images/gallery_2.png"
         ],
-        liveUrl: "https://wpriverthemes.com/bronx/work-detail2-dark/"
+        liveUrl: "https://bakantex.com/"
     },
     {
         id: "Osborn_Textile",
@@ -165,7 +165,7 @@ export const projects: Project[] = [
             }
         ],
         gallery: [],
-        liveUrl: "#"
+        liveUrl: "https://osborntextile.uz/"
     },
     {
         id: "Zelal_Tekstil",
@@ -217,7 +217,7 @@ export const projects: Project[] = [
             }
         ],
         gallery: [],
-        liveUrl: "#"
+        liveUrl: "https://zelaltekstil.uz/"
     },
     {
         id: "Chust_Textile",
@@ -233,12 +233,12 @@ export const projects: Project[] = [
         sections: [
             {
                 type: "text",
-                title: "Сайт",
+                title: "САЙТ",
                 content: "Для Chust Textile был разработан корпоративный сайт с современной структурой и удобной навигацией для B2B аудиторию. В рамках проекта были подробно раскрыты производственные возможности, ассортимент трикотажного полотна и готовой одежды, а также преимущества компании для партнёров и клиентов. Сайт стал эффективным инструментом продаж и презентации бренда. "
             },
             {
                 type: "text",
-                title: "Фото видео",
+                title: "ФОТО ВИДЕО",
                 content: "Для компании была организована профессиональная фото- и видеосъёмка производственных процессов, оборудования и готовой продукции. Основной акцент был сделан на качестве трикотажного полотна, деталях изделий и масштабе производства. Полученные материалы усилили визуальное позиционирование бренда и стали основой для маркетинговых инструментов компании."
             },
             {
@@ -269,7 +269,7 @@ export const projects: Project[] = [
             }
         ],
         gallery: [],
-        liveUrl: "#"
+        liveUrl: "https://chusttextile.uz/"
     },
     {
         id: "Yustex",
@@ -321,14 +321,14 @@ export const projects: Project[] = [
             }
         ],
         gallery: [],
-        liveUrl: "#"
+        liveUrl: "https://yustex.uz/"
     },
     {
         id: "Zarhal_Group",
         slug: "Zarhal_Group",
         title: "Zarhal Group",
         subtitle: "",
-        category: "",
+        category: "Маркетинг",
         year: "2025",
         client: "Zarhal Group",
         thumbnail: zarhal_0,
@@ -373,7 +373,7 @@ export const projects: Project[] = [
             }
         ],
         gallery: [],
-        liveUrl: "#"
+        liveUrl: "https://zarhalgroup.uz/"
     }
 ];
 

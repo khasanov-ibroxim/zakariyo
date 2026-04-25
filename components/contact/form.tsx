@@ -5,50 +5,46 @@ import { motion } from 'framer-motion';
 import bg from "@/assets/contact/IMG_9801.jpg"
 
 interface ContactFormDict {
-    contact: {
-        hero: {
+    hero: {
+        title: string
+        description: string
+    }
+    form: {
+        heading: string
+        fields: {
+            name: string
+            email: string
+            message: string
+        }
+        submit: string
+    }
+    info: {
+        socials: {
             title: string
-            description: string
+            instagram: string
+            telegram: string
+            facebook: string
         }
-        form: {
-            heading: string
-            fields: {
-                name: string
-                email: string
-                message: string
-            }
-            submit: string
+        address: {
+            title: string
+            country: string
+            city: string
+            street: string
         }
-        info: {
-            socials: {
-                title: string
-                instagram: string
-                telegram: string
-                facebook: string
-            }
-            address: {
-                title: string
-                country: string
-                city: string
-                street: string
-            }
-            phone: {
-                title: string
-            }
-            email: {
-                title: string
-            }
+        phone: {
+            title: string
+        }
+        email: {
+            title: string
         }
     }
 }
 
 interface Props {
-    dict: ContactFormDict
+    dict: any
 }
 
 const ContactForm = ({ dict }: Props) => {
-    const { contact } = dict
-
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -69,30 +65,30 @@ const ContactForm = ({ dict }: Props) => {
 
     const contactInfo = [
         {
-            title: contact.info.socials.title,
+            title: dict.info.socials.title,
             items: [
-                { label: contact.info.socials.instagram, link: 'https://www.instagram.com/yokubovsmarketing?igsh=OXpoNzh6a3d1bXN3&utm_source=qr' },
-                { label: contact.info.socials.telegram, link: 'https://t.me/DrTex' },
-                { label: contact.info.socials.facebook, link: 'https://www.facebook.com/share/1DQEYrQj6o/?mibextid=wwXIfr' }
+                { label: dict.info.socials.instagram, link: 'https://www.instagram.com/yokubovsmarketing?igsh=OXpoNzh6a3d1bXN3&utm_source=qr' },
+                { label: dict.info.socials.telegram, link: 'https://t.me/DrTex' },
+                { label: dict.info.socials.facebook, link: 'https://www.facebook.com/share/1DQEYrQj6o/?mibextid=wwXIfr' }
             ]
         },
         {
-            title: contact.info.address.title,
+            title: dict.info.address.title,
             items: [
-                { label: contact.info.address.country },
-                { label: contact.info.address.city },
-                { label: contact.info.address.street }
+                { label: dict.info.address.country },
+                { label: dict.info.address.city },
+                { label: dict.info.address.street }
             ]
         },
         {
-            title: contact.info.phone.title,
+            title: dict.info.phone.title,
             items: [
                 { value: '+99890 925 62 35', link: 'tel:+998909256235' },
                 { value: '+99893 809 99 98', link: 'tel:+998938099998' }
             ]
         },
         {
-            title: contact.info.email.title,
+            title: dict.info.email.title,
             items: [
                 { label: 'shams.yokubov@mail.ru', link: 'mailto:shams.yokubov@mail.ru' },
                 { label: 'shamsyokubov25@gmail.com', link: 'mailto:shamsyokubov25@gmail.com' }
@@ -113,16 +109,16 @@ const ContactForm = ({ dict }: Props) => {
                     >
                         <div className="space-y-4 mb-20">
                             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold font-instrument-sans">
-                                {contact.hero.title}
+                                {dict.hero.title}
                             </h1>
                             <p className="text-lg font-inter-tight md:text-2xl dark:text-white/60 text-black/60">
-                                {contact.hero.description}
+                                {dict.hero.description}
                             </p>
                         </div>
 
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <h3 className="text-xl font-bold uppercase">
-                                {contact.form.heading}
+                                {dict.form.heading}
                             </h3>
 
                             {/* Name Input */}
@@ -132,7 +128,7 @@ const ContactForm = ({ dict }: Props) => {
                                     name="name"
                                     value={formData.name}
                                     onChange={handleChange}
-                                    placeholder={contact.form.fields.name}
+                                    placeholder={dict.form.fields.name}
                                     required
                                     className="w-full rounded-xl bg-[#F5F5F7] dark:bg-[#0F0F0F] py-5
                                          text-black dark:text-white placeholder-[#737373] font-bold px-5
@@ -148,7 +144,7 @@ const ContactForm = ({ dict }: Props) => {
                                     name="email"
                                     value={formData.email}
                                     onChange={handleChange}
-                                    placeholder={contact.form.fields.email}
+                                    placeholder={dict.form.fields.email}
                                     required
                                     className="w-full rounded-xl bg-[#F5F5F7] dark:bg-[#0F0F0F] py-5
                                          text-black dark:text-white placeholder-[#737373] font-bold px-5
@@ -163,7 +159,7 @@ const ContactForm = ({ dict }: Props) => {
                                     name="message"
                                     value={formData.message}
                                     onChange={handleChange}
-                                    placeholder={contact.form.fields.message}
+                                    placeholder={dict.form.fields.message}
                                     required
                                     rows={5}
                                     className="w-full rounded-xl bg-[#F5F5F7] dark:bg-[#0F0F0F] py-5
@@ -199,7 +195,7 @@ const ContactForm = ({ dict }: Props) => {
                                     hover:before:scale-y-100
                                     hover:text-black dark:hover:text-white"
                             >
-                                <span className="relative z-10">{contact.form.submit}</span>
+                                <span className="relative z-10">{dict.form.submit}</span>
                             </motion.button>
                         </form>
                     </motion.div>

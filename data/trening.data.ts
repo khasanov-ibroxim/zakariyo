@@ -1,9 +1,9 @@
 import {StaticImageData} from "next/image";
 
-import bakan_0 from "@/assets/work/bakan/bakan_0.jpg"
-import bakan_1 from "@/assets/work/bakan/bakan_1.jpg"
-import bakan_2 from "@/assets/work/bakan/bakan_2.jpg"
-import bakan_3 from "@/assets/work/bakan/bakan_3.jpg"
+import bakan_0 from "@/assets/work/trening__global/DSC05567.jpg"
+import bakan_1 from "@/assets/work/trening__global/IMG_0671_2.jpg"
+import bakan_2 from "@/assets/work/trening__global/DSC05556.jpg"
+import bakan_3 from "@/assets/work/trening__global/DSC05540.jpg"
 
 import osborn_0 from "@/assets/work/osborn/osborn_0.jpg"
 import osborn_1 from "@/assets/work/osborn/osborn_1.jpg"
@@ -47,27 +47,27 @@ export const trenings: Project[] = [
         slug: "global_textile_days",
         title: "Global Textile Days",
         subtitle: "",
-        category: "",
+        category: "Семинар",
         year: "2025",
         client: "Global Textile Days",
-        thumbnail: bakan_2,
+        thumbnail: bakan_0,
         heroImage: bakan_0,
-        description: "Step into a world of creativity and craftsmanship at Xiong Wall, where we bring together artisans from around the globe to showcase their unique creations. As a premier marketplace for artisanal goods.",
+        description: "Данное мероприятие прошло в рамках международной выставки Textile Expo Uzbekistan, объединившей ведущих представителей текстильной отрасли, производителей, экспортёров и экспертов рынка для обсуждения новых возможностей развития, сотрудничества и масштабирования бизнеса.",
         sections: [
             {
                 type: "text",
                 title: "RESEARCH",
-                content: "Informing decision-making: Research provides data and evidence to support design decisions. It helps designers make informed choices about layout, color schemes, typography, and other design elements, leading to more effective and user-friendly websites"
+                content: "Участие в Global Textile Days стало важной возможностью для обмена опытом с представителями текстильной отрасли, руководителями фабрик и международными партнёрами. В рамках мероприятия была представлена тема «6P+F: Формула роста для фабрик», где основной акцент был сделан на системном развитии предприятий через маркетинг, позиционирование и стратегическое управление."
             },
             {
                 type: "text",
                 title: "DESIGN",
-                content: "Usability and Accessibility: Good design considers the needs and preferences of users, ensuring that the website is easy to navigate and understand. Intuitive navigation, clear hierarchy, and logical organization of content enhance usability and accessibility, allowing users to find what they are looking for quickly and easily"
+                content: "Во время выступления были рассмотрены ключевые инструменты масштабирования фабрик: построение сильного бренда, работа с экспортными рынками, цифровой маркетинг, повышение доверия со стороны клиентов и создание устойчивой бизнес-модели. Особое внимание было уделено тому, как фабрики могут выйти за рамки стандартного производства и стать полноценными конкурентоспособными игроками на международном рынке."
             },
             {
                 type: "text",
                 title: "DEVELOPMENT",
-                content: "Development optimizes the website's performance by optimizing code, reducing file sizes, and improving loading times. A fast-loading website enhances user experience, reduces bounce rates, and improves search engine rankings"
+                content: "Подобные мероприятия подтверждают, что современный текстильный бизнес требует не только производственных мощностей, но и сильной маркетинговой стратегии. Обмен практическими кейсами, профессиональный диалог и новые деловые связи становятся важной частью роста как для отдельных предприятий, так и для всей отрасли в целом."
             },
 
             {
@@ -78,7 +78,7 @@ export const trenings: Project[] = [
             {
                 type: "text",
                 title: "CONCEPT",
-                content: "Informing decision-making: Research provides data and evidence to support design decisions. It helps designers make informed choices about layout, color schemes, typography, and other design elements, leading to more effective and user-friendly websites"
+                content: "Участие в Global Textile Days стало важной площадкой для обмена опытом с представителями текстильной отрасли и международными партнёрами. Была представлена тема «6P+F: Формула роста для фабрик»,посвящённая маркетингу, позиционированию и стратегическому развитию предприятий."
             },
             {
                 type: "image",
@@ -95,7 +95,7 @@ export const trenings: Project[] = [
             "/images/gallery_1.png",
             "/images/gallery_2.png"
         ],
-        liveUrl: "https://wpriverthemes.com/bronx/work-detail2-dark/"
+        liveUrl: "#"
     },
     {
         id: "Heimtextil",

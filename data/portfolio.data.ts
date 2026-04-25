@@ -333,7 +333,7 @@ export const projects: Project[] = [
         client: "Zarhal Group",
         thumbnail: zarhal_0,
         heroImage: zarhal_0,
-        description: "Experimental digital art project exploring the boundaries between technology and creativity.",
+        description: "Для Zarhal Group был разработан современный корпоративный сайт",
         sections: [
             {
                 type: "text",
@@ -358,8 +358,8 @@ export const projects: Project[] = [
             },
             {
                 type: "text",
-                title: "CONCEPT",
-                content: "Informing decision-making: Research provides data and evidence to support design decisions. It helps designers make informed choices about layout, color schemes, typography, and other design elements, leading to more effective and user-friendly websites"
+                title: "РЕЗУЛЬТАТ",
+                content: "с удобной структурой и сильной визуальной подачей. Также была проведена профессиональная фотосессия и маркетинговая консультация, что помогло усилить бренд, повысить доверие клиентов и улучшить позиционирование компании."
             },
             {
                 type: "image",

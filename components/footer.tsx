@@ -51,7 +51,7 @@ const Footer = ({dict}) => {
                             className={"flex"}
                             transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
                         >
-                            © 2024 ALL RIGHTS RESERVED
+                            © 2026 ALL RIGHTS RESERVED
                         </motion.h3>
                     </div>
 

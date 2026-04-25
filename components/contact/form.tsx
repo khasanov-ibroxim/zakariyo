@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import bg from "@/assets/contact/IMG_9801.jpg"
 
-interface ContactFormDict {
+interface ContactDict {
     hero: {
         title: string
         description: string
@@ -41,10 +41,14 @@ interface ContactFormDict {
 }
 
 interface Props {
-    dict: any
+    dict: {
+        contact: ContactDict
+    }
 }
 
 const ContactForm = ({ dict }: Props) => {
+    const contact = dict.contact
+
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -65,30 +69,30 @@ const ContactForm = ({ dict }: Props) => {
 
     const contactInfo = [
         {
-            title: dict.info.socials.title,
+            title: contact.info.socials.title,
             items: [
-                { label: dict.info.socials.instagram, link: 'https://www.instagram.com/yokubovsmarketing?igsh=OXpoNzh6a3d1bXN3&utm_source=qr' },
-                { label: dict.info.socials.telegram, link: 'https://t.me/DrTex' },
-                { label: dict.info.socials.facebook, link: 'https://www.facebook.com/share/1DQEYrQj6o/?mibextid=wwXIfr' }
+                { label: contact.info.socials.instagram, link: 'https://www.instagram.com/yokubovsmarketing?igsh=OXpoNzh6a3d1bXN3&utm_source=qr' },
+                { label: contact.info.socials.telegram, link: 'https://t.me/DrTex' },
+                { label: contact.info.socials.facebook, link: 'https://www.facebook.com/share/1DQEYrQj6o/?mibextid=wwXIfr' }
             ]
         },
         {
-            title: dict.info.address.title,
+            title: contact.info.address.title,
             items: [
-                { label: dict.info.address.country },
-                { label: dict.info.address.city },
-                { label: dict.info.address.street }
+                { label: contact.info.address.country },
+                { label: contact.info.address.city },
+                { label: contact.info.address.street }
             ]
         },
         {
-            title: dict.info.phone.title,
+            title: contact.info.phone.title,
             items: [
                 { value: '+99890 925 62 35', link: 'tel:+998909256235' },
                 { value: '+99893 809 99 98', link: 'tel:+998938099998' }
             ]
         },
         {
-            title: dict.info.email.title,
+            title: contact.info.email.title,
             items: [
                 { label: 'shams.yokubov@mail.ru', link: 'mailto:shams.yokubov@mail.ru' },
                 { label: 'shamsyokubov25@gmail.com', link: 'mailto:shamsyokubov25@gmail.com' }
@@ -100,7 +104,6 @@ const ContactForm = ({ dict }: Props) => {
         <>
             <div className="min-h-screen pt-24 px-5 pb-10 sm:pt-52 sm:pb-16 sm:px-10 flex items-center justify-center">
                 <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-10">
-                    {/* Left Side - Form */}
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
@@ -109,26 +112,25 @@ const ContactForm = ({ dict }: Props) => {
                     >
                         <div className="space-y-4 mb-20">
                             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold font-instrument-sans">
-                                {dict.hero.title}
+                                {contact.hero.title}
                             </h1>
                             <p className="text-lg font-inter-tight md:text-2xl dark:text-white/60 text-black/60">
-                                {dict.hero.description}
+                                {contact.hero.description}
                             </p>
                         </div>
 
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <h3 className="text-xl font-bold uppercase">
-                                {dict.form.heading}
+                                {contact.form.heading}
                             </h3>
 
-                            {/* Name Input */}
                             <div>
                                 <input
                                     type="text"
                                     name="name"
                                     value={formData.name}
                                     onChange={handleChange}
-                                    placeholder={dict.form.fields.name}
+                                    placeholder={contact.form.fields.name}
                                     required
                                     className="w-full rounded-xl bg-[#F5F5F7] dark:bg-[#0F0F0F] py-5
                                          text-black dark:text-white placeholder-[#737373] font-bold px-5
@@ -137,14 +139,13 @@ const ContactForm = ({ dict }: Props) => {
                                 />
                             </div>
 
-                            {/* Email Input */}
                             <div>
                                 <input
                                     type="email"
                                     name="email"
                                     value={formData.email}
                                     onChange={handleChange}
-                                    placeholder={dict.form.fields.email}
+                                    placeholder={contact.form.fields.email}
                                     required
                                     className="w-full rounded-xl bg-[#F5F5F7] dark:bg-[#0F0F0F] py-5
                                          text-black dark:text-white placeholder-[#737373] font-bold px-5
@@ -153,13 +154,12 @@ const ContactForm = ({ dict }: Props) => {
                                 />
                             </div>
 
-                            {/* Message Textarea */}
                             <div>
                                 <textarea
                                     name="message"
                                     value={formData.message}
                                     onChange={handleChange}
-                                    placeholder={dict.form.fields.message}
+                                    placeholder={contact.form.fields.message}
                                     required
                                     rows={5}
                                     className="w-full rounded-xl bg-[#F5F5F7] dark:bg-[#0F0F0F] py-5
@@ -169,7 +169,6 @@ const ContactForm = ({ dict }: Props) => {
                                 />
                             </div>
 
-                            {/* Submit Button */}
                             <motion.button
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
@@ -185,22 +184,19 @@ const ContactForm = ({ dict }: Props) => {
                                     text-white dark:text-black
                                     transition-colors duration-500
                                     w-full sm:w-auto
-
                                     before:absolute before:inset-0 before:z-0
                                     before:bg-white dark:before:bg-black
                                     before:origin-bottom before:scale-y-0
                                     before:transition-transform before:duration-500
                                     before:content-['']
-
                                     hover:before:scale-y-100
                                     hover:text-black dark:hover:text-white"
                             >
-                                <span className="relative z-10">{dict.form.submit}</span>
+                                <span className="relative z-10">{contact.form.submit}</span>
                             </motion.button>
                         </form>
                     </motion.div>
 
-                    {/* Right Side - Image */}
                     <motion.div
                         initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
@@ -220,7 +216,6 @@ const ContactForm = ({ dict }: Props) => {
                 </div>
             </div>
 
-            {/* Address Section */}
             <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}

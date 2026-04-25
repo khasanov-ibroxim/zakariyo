@@ -3,10 +3,22 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 import { getProjectBySlug, projects } from '@/data/portfolio.data';
+// ✅ trening data import
+import { getTreningsBySlug, trenings } from '@/data/trening.data';
 import { notFound } from 'next/navigation';
 import { i18n, Locale } from '@/i18n-config';
 import ClientScrollAnimation from '@/components/ui/ClientScrollAnimation';
 import ClientAnimation from '@/components/ui/ClientAnimation';
+import { getDictionary } from "@/lib/dictionary.ts";
+
+type WorkDictionary = {
+    client: string;
+    year: string;
+    category: string;
+    liveProject: string;
+    visitSite: string;
+    moreWorks: string;
+};
 
 type PageProps = {
     params: Promise<{
@@ -15,49 +27,50 @@ type PageProps = {
     }>;
 }
 
-// ✅ CRITICAL: Return format must match [lang] and [slug] exactly
+// ✅ Barcha sluglar: portfolio + trening
 export async function generateStaticParams() {
     const params: Array<{ lang: string; slug: string }> = [];
 
-    // Generate for ALL combinations
+    const allSlugs = [
+        ...projects.map(p => p.slug),
+        ...trenings.map(t => t.slug),
+    ];
+
     for (const locale of i18n.locales) {
-        for (const project of projects) {
-            params.push({
-                lang: locale,
-                slug: project.slug,
-            });
+        for (const slug of allSlugs) {
+            params.push({ lang: locale, slug });
         }
     }
-
-    // Debug log
-    console.log('🚀 Generated Static Params:', params);
 
     return params;
 }
 
-// ✅ Disable dynamic params
 export const dynamicParams = false;
 
-// ✅ For static export
-export const dynamic = 'force-static';
+// ✅ Ikki data dan ham qidiradi
+function findProject(slug: string) {
+    return getProjectBySlug(slug) ?? getTreningsBySlug(slug);
+}
+
+function getOtherProjects(currentSlug: string) {
+    const all = [...projects, ...trenings];
+    return all.filter(p => p.slug !== currentSlug).slice(0, 2);
+}
 
 export default async function WorkDetailPage({ params }: PageProps) {
     const resolvedParams = await params;
     const { slug, lang } = resolvedParams;
 
-    console.log('📄 Rendering page:', { lang, slug });
+    const dict = await getDictionary(lang, 'work') as WorkDictionary;
 
-    const project = getProjectBySlug(slug);
+    // ✅ portfolio dan topa olmasa, treningdan qidiradi
+    const project = findProject(slug);
 
     if (!project) {
         notFound();
     }
 
-    // Get 2 random projects excluding current one
-    const otherProjects = projects
-        .filter(p => p.slug !== slug)
-        .sort(() => Math.random() - 0.5)
-        .slice(0, 2);
+    const otherProjects = getOtherProjects(slug);
 
     return (
         <div className="min-h-screen">
@@ -74,7 +87,7 @@ export default async function WorkDetailPage({ params }: PageProps) {
                     />
                 </div>
 
-                <div className="absolute inset-0  bg-black/70 flex items-end">
+                <div className="absolute inset-0 bg-black/70 flex items-end">
                     <div className="container mx-auto px-5 pb-20">
                         <ClientAnimation>
                             <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold text-white mb-6">
@@ -82,27 +95,27 @@ export default async function WorkDetailPage({ params }: PageProps) {
                             </h1>
                             <div className="flex flex-wrap gap-8 text-white">
                                 <div>
-                                    <p className="text-sm opacity-60 mb-1">CLIENT</p>
+                                    <p className="text-sm opacity-60 mb-1">{dict.client}</p>
                                     <p className="text-xl font-bold">{project.client}</p>
                                 </div>
                                 <div>
-                                    <p className="text-sm opacity-60 mb-1">YEAR</p>
+                                    <p className="text-sm opacity-60 mb-1">{dict.year}</p>
                                     <p className="text-xl font-bold">{project.year}</p>
                                 </div>
                                 <div>
-                                    <p className="text-sm opacity-60 mb-1">CATEGORY</p>
+                                    <p className="text-sm opacity-60 mb-1">{dict.category}</p>
                                     <p className="text-xl font-bold">{project.category}</p>
                                 </div>
                                 {project.liveUrl !== "#" && (
                                     <div>
-                                        <p className="text-sm opacity-60 mb-1">LIVE PROJECT</p>
+                                        <p className="text-sm opacity-60 mb-1">{dict.liveProject}</p>
                                         <Link
                                             href={project.liveUrl}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="text-xl font-bold flex items-center gap-2 hover:opacity-70 transition"
                                         >
-                                            VISIT SITE <ArrowUpRight size={20} />
+                                            {dict.visitSite} <ArrowUpRight size={20} />
                                         </Link>
                                     </div>
                                 )}
@@ -158,7 +171,7 @@ export default async function WorkDetailPage({ params }: PageProps) {
             {/* More Works */}
             {otherProjects.length > 0 && (
                 <div className="container mx-auto px-5 pb-20">
-                    <h2 className="text-5xl font-bold mb-10">MORE WORKS</h2>
+                    <h2 className="text-5xl font-bold mb-10">{dict.moreWorks}</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                         {otherProjects.map((work, index) => (
                             <ClientScrollAnimation key={work.id} delay={index * 0.1}>

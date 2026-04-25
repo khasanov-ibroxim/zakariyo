@@ -29,19 +29,19 @@
   },
   "expertise": {
     "title": "Expertise",
-    "key_fueters": "Основные направления",
+    "key_fueters": "Main Areas",
     "content": [
       {
         "id": 1,
         "number": "(1)",
         "title": "Audit",
         "description": "I conduct a deep analysis of business, marketing, and sales. I identify loss points, systemic mistakes, and hidden growth opportunities. An audit provides a clear understanding of what exactly prevents a business from earning more.",
-        "price": "Только по запросу ",
-        "fullDescription": "Я разбираю маркетинг, продажи и стратегию, чтобы точно понять, где бизнес теряет деньги и что мешает росту выручки.",
+        "price": "By Request Only",
+        "fullDescription": "I analyze marketing, sales, and strategy to clearly identify where the business is losing money and what prevents revenue growth.",
         "features": [
-          "Аудит маркетинга и продаж",
-          "Анализ позиционирования и ценности",
-          "Выявление точек роста выручки"
+          "Marketing and Sales Audit",
+          "Positioning and Value Analysis",
+          "Identifying Revenue Growth Points"
         ],
         "image": "/exp/audit.jpg"
       },
@@ -50,12 +50,12 @@
         "number": "(2)",
         "title": "Market Analysis",
         "description": "I study the market, competitors, and customer behavior. I identify real demand, pricing corridors, and differentiation points. Market analysis is the foundation for strong decisions and sustainable growth.",
-        "price": "Только по запросу ",
-        "fullDescription": "Анализ рынка — это основа всех стратегических решений.\nЯ изучаю спрос, конкурентов и логику выбора клиентов,\nчтобы бизнес принимал решения на основе фактов, а не ощущений.",
+        "price": "By Request Only",
+        "fullDescription": "Market analysis is the foundation of all strategic decisions. I study demand, competitors, and customer decision logic so that business decisions are based on facts, not assumptions.",
         "features": [
-          "Анализ спроса и рыночных ниш",
-          "Оценка конкурентов и ценовых моделей",
-          "Определение точек дифференциации"
+          "Demand and Market Niche Analysis",
+          "Competitor and Pricing Model Evaluation",
+          "Identifying Differentiation Points"
         ],
         "image": "/exp/analiz.jpg"
       },
@@ -64,12 +64,12 @@
         "number": "(3)",
         "title": "Product Promotion",
         "description": "I build promotion strategies focused on revenue, not just reach. I create positioning, messaging, and channels that attract real clients. Marketing should be a sales tool, not just an expense.",
-        "price": "Только по запросу",
-        "fullDescription": "Продвижение продукции — это не реклама ради охватов.\nЯ выстраиваю маркетинг, который приводит клиентов\nи напрямую влияет на выручку бизнеса.",
+        "price": "By Request Only",
+        "fullDescription": "Product promotion is not just advertising for reach. I build marketing that attracts clients and directly impacts business revenue.",
         "features": [
-          "тратегия продвижения и позиционирование",
-          "Сообщения и каналы продаж",
-          "Фокус на действиях, приносящих выручку"
+          "Promotion Strategy and Positioning",
+          "Sales Messages and Channels",
+          "Focus on Actions That Generate Revenue"
         ],
         "image": "/exp/prodvijeniya.jpg"
       },
@@ -78,12 +78,12 @@
         "number": "(4)",
         "title": "Product Export",
         "description": "I help businesses prepare for entering international markets. I analyze countries, requirements, risks, and entry points. Export is a system, not a random deal.",
-        "price": "Только по запросу ",
-        "fullDescription": "Экспорт продукции — это система, а не разовая сделка.\nЯ помогаю подготовить бизнес к выходу на внешние рынки,\nснизив риски и повысив шансы на устойчивые контракты.",
+        "price": "By Request Only",
+        "fullDescription": "Product export is a system, not a one-time deal. I help prepare businesses to enter foreign markets by reducing risks and increasing the chances of sustainable contracts.",
         "features": [
-          "Анализ стран и рынков сбыта",
-          "Оценка готовности продукта к экспорту",
-          "Формирование стратегии выхода на рынок"
+          "Analysis of Countries and Sales Markets",
+          "Product Export Readiness Evaluation",
+          "Market Entry Strategy Development"
         ],
         "image": "/exp/eksport.jpg"
       },
@@ -92,12 +92,12 @@
         "number": "(5)",
         "title": "Negotiations and Deal Support",
         "description": "I support negotiations with partners and buyers. I help build a strong position, clear argumentation, and protect business interests. The result is transparent terms and long-term contracts.",
-        "price": "Только по запросу",
-        "fullDescription": "Переговоры — это точка, где решается судьба сделки.\nЯ сопровождаю бизнес на ключевых этапах общения с партнёрами,\nпомогая сохранить позицию, условия и результат.",
+        "price": "By Request Only",
+        "fullDescription": "Negotiations are the point where the outcome of a deal is decided. I support businesses at key stages of communication with partners, helping preserve position, terms, and results.",
         "features": [
-          "Подготовка к переговорам и стратегия позиции",
-          "Сопровождение ключевых переговоров",
-          "Контроль условий и фиксация договорённостей"
+          "Negotiation Preparation and Position Strategy",
+          "Support for Key Negotiations",
+          "Control of Terms and Agreement Fixation"
         ],
         "image": "/exp/peregavori.jpg"
       },
@@ -106,12 +106,12 @@
         "number": "(6)",
         "title": "Trainings and Seminars",
         "description": "I conduct practical trainings and seminars for business owners, sales and marketing departments, as well as specialists in the textile industry. We analyze real business cases, common mistakes, growth tools, and modern approaches in B2B sales. The training is focused not on theory, but on practical solutions that can be implemented immediately.",
-        "price": "Только по запросу",
-        "fullDescription": "Тренинги и семинары — это инструмент развития команды и усиления бизнеса. Провожу практические обучения для руководителей, отделов продаж, маркетинга и специалистов разных направлений, чтобы сотрудники принимали сильные решения и работали на результат, а не на процесс.",
+        "price": "By Request Only",
+        "fullDescription": "Trainings and seminars are tools for team development and business growth. I conduct practical training for managers, sales departments, marketing teams, and specialists from different fields so employees make strong decisions and work for results, not just process.",
         "features": [
-          "Маркетинг и стратегия роста",
-          "Позиционирование и продвижение бизнеса",
-          "Брендинг, продажи и работа с клиентами"
+          "Marketing and Growth Strategy",
+          "Business Positioning and Promotion",
+          "Branding, Sales, and Client Relations"
         ],
         "image": "/exp/trening.jpg"
       }

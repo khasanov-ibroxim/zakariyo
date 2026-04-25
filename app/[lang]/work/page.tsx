@@ -20,6 +20,7 @@ const fadeInScale: Variants = {
 interface WorkDict {
     period: string;
     title: string;
+    title_2: string;
     moreWorks: string;
 }
 
@@ -119,7 +120,7 @@ export default function WorkPage() {
                         whileInView={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.8, ease: "easeInOut" }}
                     >
-                        Тренинги и
+                        {dict.title_2[0]}
                     </motion.div>
                     <motion.div
                         viewport={{ once: false, amount: 0.5 }}
@@ -128,7 +129,7 @@ export default function WorkPage() {
                         transition={{ duration: 0.8, ease: "easeInOut" }}
                         className="overflow-hidden"
                     >
-                        Семинары
+                        {dict.title_2[1]}
                     </motion.div>
                 </div>
 

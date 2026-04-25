@@ -1,11 +1,54 @@
 "use client"
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
-import {motion} from 'framer-motion';
-import {MapPin, Phone, Mail} from 'lucide-react';
-import bg from "@/assets/footer/footer.jpg"
+import { motion } from 'framer-motion';
+import bg from "@/assets/contact/IMG_9801.jpg"
 
-const ContactForm = ({dict}) => {
+interface ContactFormDict {
+    contact: {
+        hero: {
+            title: string
+            description: string
+        }
+        form: {
+            heading: string
+            fields: {
+                name: string
+                email: string
+                message: string
+            }
+            submit: string
+        }
+        info: {
+            socials: {
+                title: string
+                instagram: string
+                telegram: string
+                facebook: string
+            }
+            address: {
+                title: string
+                country: string
+                city: string
+                street: string
+            }
+            phone: {
+                title: string
+            }
+            email: {
+                title: string
+            }
+        }
+    }
+}
+
+interface Props {
+    dict: ContactFormDict
+}
+
+const ContactForm = ({ dict }: Props) => {
+    const { contact } = dict
+
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -26,33 +69,33 @@ const ContactForm = ({dict}) => {
 
     const contactInfo = [
         {
-            title: 'Соцсети',
+            title: contact.info.socials.title,
             items: [
-                {label: 'INSTAGRAM', link: 'https://www.instagram.com/yokubovsmarketing?igsh=OXpoNzh6a3d1bXN3&utm_source=qr'},
-                {label: 'TELEGRAM', link: 'https://t.me/DrTex'},
-                {label: 'FACEBOOK', link: 'https://www.facebook.com/share/1DQEYrQj6o/?mibextid=wwXIfr'}
+                { label: contact.info.socials.instagram, link: 'https://www.instagram.com/yokubovsmarketing?igsh=OXpoNzh6a3d1bXN3&utm_source=qr' },
+                { label: contact.info.socials.telegram, link: 'https://t.me/DrTex' },
+                { label: contact.info.socials.facebook, link: 'https://www.facebook.com/share/1DQEYrQj6o/?mibextid=wwXIfr' }
             ]
         },
         {
-            title: 'Адрес',
+            title: contact.info.address.title,
             items: [
-                {label: 'Узбекистан'},
-                {label: ' г. Ташкент'},
-                {label: ' Ул.Кукча Дарвоза 314'}
+                { label: contact.info.address.country },
+                { label: contact.info.address.city },
+                { label: contact.info.address.street }
             ]
         },
         {
-            title: 'Телефон',
+            title: contact.info.phone.title,
             items: [
-                { value: '+99890 925 62 35', link: 'tel:+998909256235'},
-                {value: '+99893 809 99 98', link: 'tel:+998938099998'}
+                { value: '+99890 925 62 35', link: 'tel:+998909256235' },
+                { value: '+99893 809 99 98', link: 'tel:+998938099998' }
             ]
         },
         {
-            title: 'Почта',
+            title: contact.info.email.title,
             items: [
-                {label: 'shams.yokubov@mail.ru' , link: 'mailto:shams.yokubov@mail.ru'},
-                {label: 'shamsyokubov25@gmail.com' , link: 'mailto:shamsyokubov25@gmail.com'}
+                { label: 'shams.yokubov@mail.ru', link: 'mailto:shams.yokubov@mail.ru' },
+                { label: 'shamsyokubov25@gmail.com', link: 'mailto:shamsyokubov25@gmail.com' }
             ]
         }
     ];
@@ -63,22 +106,24 @@ const ContactForm = ({dict}) => {
                 <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-10">
                     {/* Left Side - Form */}
                     <motion.div
-                        initial={{opacity: 0, x: -50}}
-                        animate={{opacity: 1, x: 0}}
-                        transition={{duration: 0.8}}
+                        initial={{ opacity: 0, x: -50 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8 }}
                         className="space-y-8 w-full"
                     >
                         <div className="space-y-4 mb-20">
                             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold font-instrument-sans">
-                                По делу!
+                                {contact.hero.title}
                             </h1>
                             <p className="text-lg font-inter-tight md:text-2xl dark:text-white/60 text-black/60">
-                                Я работаю на стыке маркетинга, бизнеса и производства. Помогаю компаниям выстраивать коммуникацию, находить партнёров и выходить на новые рынки.
+                                {contact.hero.description}
                             </p>
                         </div>
 
                         <form onSubmit={handleSubmit} className="space-y-6">
-                            <h3 className="text-xl font-bold uppercase">Заполнить заявку</h3>
+                            <h3 className="text-xl font-bold uppercase">
+                                {contact.form.heading}
+                            </h3>
 
                             {/* Name Input */}
                             <div>
@@ -87,7 +132,7 @@ const ContactForm = ({dict}) => {
                                     name="name"
                                     value={formData.name}
                                     onChange={handleChange}
-                                    placeholder="Имя"
+                                    placeholder={contact.form.fields.name}
                                     required
                                     className="w-full rounded-xl bg-[#F5F5F7] dark:bg-[#0F0F0F] py-5
                                          text-black dark:text-white placeholder-[#737373] font-bold px-5
@@ -103,7 +148,7 @@ const ContactForm = ({dict}) => {
                                     name="email"
                                     value={formData.email}
                                     onChange={handleChange}
-                                    placeholder="Почта"
+                                    placeholder={contact.form.fields.email}
                                     required
                                     className="w-full rounded-xl bg-[#F5F5F7] dark:bg-[#0F0F0F] py-5
                                          text-black dark:text-white placeholder-[#737373] font-bold px-5
@@ -118,7 +163,7 @@ const ContactForm = ({dict}) => {
                                     name="message"
                                     value={formData.message}
                                     onChange={handleChange}
-                                    placeholder="Сообщение"
+                                    placeholder={contact.form.fields.message}
                                     required
                                     rows={5}
                                     className="w-full rounded-xl bg-[#F5F5F7] dark:bg-[#0F0F0F] py-5
@@ -130,8 +175,8 @@ const ContactForm = ({dict}) => {
 
                             {/* Submit Button */}
                             <motion.button
-                                whileHover={{scale: 1.02}}
-                                whileTap={{scale: 0.98}}
+                                whileHover={{ scale: 1.02 }}
+                                whileTap={{ scale: 0.98 }}
                                 type="submit"
                                 className="relative overflow-hidden
                                     font-inter-tight cursor-pointer
@@ -154,16 +199,16 @@ const ContactForm = ({dict}) => {
                                     hover:before:scale-y-100
                                     hover:text-black dark:hover:text-white"
                             >
-                                <span className="relative z-10">Отправить</span>
+                                <span className="relative z-10">{contact.form.submit}</span>
                             </motion.button>
                         </form>
                     </motion.div>
 
                     {/* Right Side - Image */}
                     <motion.div
-                        initial={{opacity: 0, x: 50}}
-                        animate={{opacity: 1, x: 0}}
-                        transition={{duration: 0.8, delay: 0.2}}
+                        initial={{ opacity: 0, x: 50 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
                         className="hidden lg:block h-full min-h-[600px]"
                     >
                         <div className="relative h-full rounded-3xl overflow-hidden">
@@ -171,7 +216,7 @@ const ContactForm = ({dict}) => {
                                 src={bg}
                                 alt="Contact"
                                 fill
-                                className="object-cover"
+                                className="object-cover object-top"
                                 priority
                             />
                         </div>
@@ -181,10 +226,10 @@ const ContactForm = ({dict}) => {
 
             {/* Address Section */}
             <motion.div
-                initial={{opacity: 0, y: 50}}
-                whileInView={{opacity: 1, y: 0}}
-                transition={{duration: 0.8}}
-                viewport={{once: true}}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
                 className="px-5 sm:px-10 py-20 bg-white dark:bg-black"
             >
                 <div className="max-w-7xl mx-auto">
@@ -192,10 +237,10 @@ const ContactForm = ({dict}) => {
                         {contactInfo.map((section, index) => (
                             <motion.div
                                 key={section.title}
-                                initial={{opacity: 0, y: 20}}
-                                whileInView={{opacity: 1, y: 0}}
-                                transition={{duration: 0.5, delay: index * 0.1}}
-                                viewport={{once: true}}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                                viewport={{ once: true }}
                                 className="space-y-6"
                             >
                                 <h3 className="text-sm font-bold text-black/40 dark:text-white/40 tracking-wider">
@@ -209,33 +254,13 @@ const ContactForm = ({dict}) => {
                                                     href={item.link}
                                                     className="text-lg font-light text-black dark:text-white hover:text-black/60 dark:hover:text-white/60 transition-colors duration-300 block"
                                                 >
-                                                    {item.label}
+                                                    {item.label ?? item.value}
                                                 </a>
                                             ) : (
                                                 <p className="text-lg font-light text-black dark:text-white">
-                                                    {item.value ? (
-                                                        <>
-                                                            <span
-                                                                className="text-black/60 dark:text-white/60">{item.label}</span>
-                                                            {' '}
-                                                            <span>{item.value}</span>
-                                                        </>
-                                                    ) : (
-                                                        item.label
-                                                    )}
+                                                    {item.label}
                                                 </p>
                                             )}
-
-
-
-                                            {item.link && item.value && (
-                                                <a
-                                                    href={item.link}
-                                                    className="text-lg font-light text-black dark:text-white"
-                                                >
-                                                    {item.value}
-                                                </a>
-                                            ) }
                                         </div>
                                     ))}
                                 </div>

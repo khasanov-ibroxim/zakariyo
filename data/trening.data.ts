@@ -6,7 +6,7 @@ import bakan_1 from "@/assets/work/trening__global/IMG_0671_2.jpg"
 import bakan_2 from "@/assets/work/trening__global/DSC05556.jpg"
 import bakan_3 from "@/assets/work/trening__global/DSC05540.jpg"
 
-import osborn_0 from "@/assets/work/trening__heimtextil/138A6909.jpg"
+import osborn_0 from "@/assets/work/trening__heimtextil/SH_Y_Heimtextil.jpg"
 import osborn_1 from "@/assets/work/trening__heimtextil/SH_Y_Heimtextil.jpg"
 import osborn_2 from "@/assets/work/trening__heimtextil/138A6923.jpg"
 import osborn_3 from "@/assets/work/trening__heimtextil/138A6962.jpg"

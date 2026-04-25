@@ -1,10 +1,162 @@
 {
   "title": ["Key","Projects"],
-  "period": "",
-  "moreWorks": "Other Cases",
-  "visitSite": "Visit Website",
+  "title_2":["Trainings and ","Seminars"],
   "client": "Client",
   "year": "Year",
   "category": "Category",
-  "liveProject": "Visit Website"
+  "liveProject": "Live Project",
+  "visitSite": "Visit Site",
+  "moreWorks": "More Works",
+
+  "category_type": {
+    "marketing": "Marketing",
+    "seminar": "Seminar",
+    "lecture": "Lecture"
+  },
+
+  "projects": {
+    "bakan_tex": {
+      "client": "Bakan Tex",
+      "category": "marketing",
+      "description": "A manufacturing enterprise specializing in the production of cotton yarn. The collaboration was built in the format of comprehensive media and strategic support.",
+      "sections": [
+        {
+          "title": "CATALOG",
+          "content": "The company was featured in catalog issues 1, 2, 3, and 5 through interviews, expert articles, and image advertising layouts. This strengthened the brand positioning, highlighted production potential, technological equipment, and quality control systems, and reinforced trust in the company, product stability, and the enterprise's reputation in the industry."
+        },
+        {
+          "title": "WEBSITE",
+          "content": "A corporate website for BAKAN Tex was developed with a clear structure oriented toward B2B audiences. The project established a logic for presenting production advantages, detailed the technological processes and quality control system, and formed a modern visual style. The site became a full-fledged presentation tool for domestic and export partners."
+        },
+        {
+          "title": "BUSINESS TOUR",
+          "content": "An industry business tour was organized with participation from representatives of Rusvat and AIRR. The program included production visits, presentations of technological capacities, and negotiations with management. The format demonstrated the level of process organization and established direct business contacts, strengthening the enterprise's industry positioning."
+        },
+        {
+          "title": "RESULT",
+          "content": "The comprehensive work strengthened the company's market positioning, increased brand recognition, and formed a sustainable image as a reliable manufacturing partner. Through media presence, digital tools, and direct business communications, the enterprise reinforced trust from clients, partners, and international buyers."
+        }
+      ]
+    },
+
+    "osborn_textile": {
+      "client": "Osborn Textile",
+      "category": "marketing",
+      "description": "Today, OSBORN TEXTILE is one of the leading manufacturers of melange, dyed, and greige yarn.",
+      "sections": [
+        {
+          "title": "PHOTO",
+          "content": "A professional photo shoot of production processes, equipment, and finished products was organized for Osborn Textile. The main emphasis was on showcasing the scale of production, yarn quality, and the enterprise's technological level. The resulting materials strengthened the company's visual positioning and became the foundation for marketing and presentation tools."
+        },
+        {
+          "title": "WEBSITE",
+          "content": "A corporate website for Osborn Textile was developed with a modern structure and user-friendly navigation for B2B audiences. The project detailed production capabilities, the range of dyed and melange yarn, and the company's advantages for international partners. The site became a full-fledged sales tool and trust builder for clients."
+        },
+        {
+          "title": "SMM",
+          "content": "A social media presence strategy was built for the company with a focus on expertise, trust, and brand recognition. Content included production processes, product advantages, expert materials, and visual coverage of the enterprise. This strengthened the company's reputation and increased interest from potential partners and buyers."
+        },
+        {
+          "title": "RESULT",
+          "content": "The comprehensive work on photography, website development, and SMM promotion significantly strengthened Osborn Textile's market positioning. The company gained a modern visual identity, an effective tool for presenting products, and a stable presence in the digital environment."
+        }
+      ]
+    },
+
+    "zelal_tekstil": {
+      "client": "Zelal Tekstil",
+      "category": "marketing",
+      "description": "ZELAL TEKSTIL factory is one of the leading textile companies in knitted fabric production in Uzbekistan, founded in 2006 in Tashkent.",
+      "sections": [
+        {
+          "title": "PHOTO",
+          "content": "A professional photo shoot of production processes, equipment, and key manufacturing stages was organized for Zelal Tekstil. The main focus was on the scale of the enterprise, technological capabilities, and the quality of products. The resulting materials became an important part of the company's presentation for partners and clients."
+        },
+        {
+          "title": "WEBSITE",
+          "content": "Corporate websites were developed for Zelal Tekstil and Deniz Teks with modern structure and user-friendly navigation for B2B audiences. The projects detailed production capabilities, product ranges, and the key advantages of the companies in domestic and export markets."
+        },
+        {
+          "title": "VIDEO",
+          "content": "Professional video production of production processes, equipment, and key operational stages was conducted for Zelal Tekstil. The main emphasis was on showcasing the scale of production, technological capabilities, and the high level of process organization. The video became a powerful visual positioning tool for the company."
+        },
+        {
+          "title": "RESULT",
+          "content": "The comprehensive work on photography, video production, and website development for Zelal Tekstil and Deniz Teks significantly strengthened the companies' market positioning. The enterprises received modern tools for presenting production capabilities and effective digital platforms for client engagement."
+        }
+      ]
+    },
+
+    "chust_textile": {
+      "client": "Chust Textile",
+      "category": "marketing",
+      "description": "Chust Textile is a modern manufacturing enterprise specializing in the production of knitted fabric and ready-made clothing, combining quality, technology, and production stability.",
+      "sections": [
+        {
+          "title": "WEBSITE",
+          "content": "A corporate website was developed for Chust Textile with a modern structure and user-friendly navigation for B2B audiences. The project detailed production capabilities, the range of knitted fabric and ready-made clothing, and the company's advantages for partners and clients. The site became an effective sales and brand presentation tool."
+        },
+        {
+          "title": "PHOTO / VIDEO",
+          "content": "Professional photo and video production of manufacturing processes, equipment, and finished products was organized for the company. The main emphasis was on the quality of knitted fabric, product details, and the scale of production. The resulting materials strengthened the brand's visual positioning."
+        },
+        {
+          "title": "SMM",
+          "content": "A social media presence strategy was built for Chust Textile with a focus on expertise, trust, and brand recognition. Content included production processes, product advantages, visual coverage of the enterprise, and expert materials."
+        },
+        {
+          "title": "RESULT",
+          "content": "The comprehensive work on website development, photo and video production, and SMM promotion significantly strengthened Chust Textile's market positioning. The company gained a modern visual identity, effective sales tools, and a stable digital presence for working with clients and partners."
+        }
+      ]
+    },
+
+    "yustex": {
+      "client": "Yustex",
+      "category": "marketing",
+      "description": "Yustex is a manufacturer of modern knitwear, specializing in the production of quality products for domestic and international markets.",
+      "sections": [
+        {
+          "title": "PHOTO SHOOT",
+          "content": "A professional photo shoot of production processes, equipment, and finished knitwear was organized for Yustex. The main emphasis was on the quality of tailoring, product details, and the visual presentation of the brand. The resulting materials became the foundation for marketing tools, catalogs, and digital promotion."
+        },
+        {
+          "title": "WEBSITE",
+          "content": "A corporate website for Yustex was developed with a modern structure and user-friendly navigation for B2B and B2C audiences. The project detailed production capabilities, product range, and the company's advantages for partners and clients. The site became an effective sales tool and brand trust builder."
+        },
+        {
+          "title": "BRAND",
+          "content": "A separate website was developed for the AKYUS brand with an emphasis on premium positioning and modern product presentation. The visual concept, structure, and content were designed to highlight the brand's style, quality, and uniqueness. The site became an important part of building a strong AKYUS image in the market."
+        },
+        {
+          "title": "RESULT",
+          "content": "The comprehensive work on photography, corporate website development, and the AKYUS brand site significantly strengthened Yustex's market positioning. The company gained a strong visual identity, modern sales tools, and an effective digital platform for client and partner engagement."
+        }
+      ]
+    },
+
+    "zarhal_group": {
+      "client": "Zarhal Group",
+      "category": "marketing",
+      "description": "Zarhal Group is a modern full-cycle textile enterprise combining the production of cotton, yarn, fabrics, and finished products.",
+      "sections": [
+        {
+          "title": "WEBSITE",
+          "content": "A corporate website was created for Zarhal Group with a modern structure, user-friendly navigation, and strong visual presentation. The platform was developed to effectively showcase the company's products, increase brand trust, and improve communication with partners and clients in both local and international markets."
+        },
+        {
+          "title": "PHOTO SHOOT",
+          "content": "A branded photo shoot was organized that highlighted the production, team, and product quality of the company. High-quality visual content helps Zarhal Group strengthen its brand image, improve presentation materials, and establish a more professional presence on digital platforms and in marketing channels."
+        },
+        {
+          "title": "CONSULTING",
+          "content": "We conducted strategic marketing consultations focused on brand positioning, client perception, and increasing market recognition. Our recommendations helped strengthen client communication, reinforce the company's identity, and build a more effective long-term promotion strategy for business growth."
+        },
+        {
+          "title": "RESULT",
+          "content": "A modern corporate website with a user-friendly structure and strong visual presentation was developed for Zarhal Group. A professional photo shoot and marketing consultation were also conducted, helping to strengthen the brand, increase client trust, and improve the company's market positioning."
+        }
+      ]
+    }
+  }
 }

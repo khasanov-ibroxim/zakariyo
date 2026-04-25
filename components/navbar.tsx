@@ -1,12 +1,9 @@
-
-// components/navbar.tsx
 "use client";
 import React, { useState } from "react";
 import { Mail, X, ArrowUpRight } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
-import { LanguageSwitcher } from "@/components/LanguageSwitcher";  // ✅ Import
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { motion } from "framer-motion";
-import Link from "next/link";
 
 interface NavbarProps {
     dict: {
@@ -20,12 +17,18 @@ interface NavbarProps {
     lang: string;
 }
 
+const socialLinks = [
+    { name: "Instagram", href: "https://www.instagram.com/yokubovsmarketing?igsh=OXpoNzh6a3d1bXN3&utm_source=qr" },
+    { name: "Telegram",  href: "https://t.me/DrTex" },
+    { name: "Facebook",  href: "https://www.facebook.com/share/1DQEYrQj6o/?mibextid=wwXIfr" },
+];
+
 const Navbar = ({ dict, lang }: NavbarProps) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const navLinks = [
-        { name: dict.nav.home, path: "" },
-        { name: dict.nav.work, path: "work" },
+        { name: dict.nav.home,    path: "" },
+        { name: dict.nav.work,    path: "work" },
         { name: dict.nav.contact, path: "contact" },
     ];
 
@@ -34,11 +37,9 @@ const Navbar = ({ dict, lang }: NavbarProps) => {
             {/* NAVBAR */}
             <div className="absolute z-50 w-full sm:py-10 sm:px-10 py-5 px-1 flex items-center justify-between border-b border-b-black/30 dark:border-b-[rgba(255,255,255,0.16)]">
                 <div className="flex items-center gap-4">
-                    <ThemeToggle dict={dict}/>
-                    <LanguageSwitcher />  {/* ✅ Til almashtirish tugmasi */}
+                    <ThemeToggle dict={dict} />
+                    <LanguageSwitcher />
                 </div>
-
-
 
                 <div
                     onClick={() => setIsMenuOpen(true)}
@@ -51,7 +52,9 @@ const Navbar = ({ dict, lang }: NavbarProps) => {
             {/* FULLSCREEN MENU */}
             <div
                 className={`fixed inset-0 z-50 bg-white text-black dark:bg-black dark:text-white flex flex-col items-center justify-center transition-transform duration-700 ease-in-out w-full h-screen overflow-hidden ${
-                    isMenuOpen ? "translate-y-0 opacity-100 pointer-events-auto" : "translate-y-full opacity-0 pointer-events-none"
+                    isMenuOpen
+                        ? "translate-y-0 opacity-100 pointer-events-auto"
+                        : "translate-y-full opacity-0 pointer-events-none"
                 }`}
             >
                 <button
@@ -69,29 +72,28 @@ const Navbar = ({ dict, lang }: NavbarProps) => {
                     ))}
                 </nav>
 
+                {/* ✅ Link o'rniga motion.a — <a> ichida <a> bo'lmaydi */}
                 <div className="absolute bottom-10 text-[18px] uppercase font-bold flex flex-col justify-center items-center gap-5 sm:flex-row sm:right-[20px]">
-                    {[{name:"Instagram" , href:"https://www.instagram.com/yokubovsmarketing?igsh=OXpoNzh6a3d1bXN3&utm_source=qr"}, {name:"Telegram" , href:"https://t.me/DrTex"}, {name:"Facebook" , href:"https://www.facebook.com/share/1DQEYrQj6o/?mibextid=wwXIfr"}]
-                        .map((item,index) => (
-                            <Link
-                                key={index}
-                                href="#"
-                                className="
+                    {socialLinks.map((item, index) => (
+                        <motion.a
+                            key={index}
+                            href={item.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="
                                 relative flex items-center gap-2
                                 after:content-['']
                                 after:absolute after:left-0 after:-bottom-1
-                                after:h-[1px] after:w-[80%]  dark:after:bg-white after:bg-black
+                                after:h-[1px] after:w-[80%]
+                                dark:after:bg-white after:bg-black
                                 after:scale-x-0 after:origin-left
                                 after:transition-transform after:duration-700
                                 hover:after:scale-x-100
-                                "
-                            >
-                                <motion.a
-                                    href={item.href}
-                                    className={'flex'}>
-                                    {item.name} <ArrowUpRight/>
-                                </motion.a>
-                            </Link>
-                        ))}
+                            "
+                        >
+                            {item.name} <ArrowUpRight />
+                        </motion.a>
+                    ))}
                 </div>
             </div>
         </>
@@ -115,7 +117,7 @@ const FlipLink = ({ children, href }: { children: string; href: string }) => {
                 variants={{
                     initial: { y: "100%", opacity: 0 },
                     hovered: { y: "-100%" },
-                    inView: { y: 0, opacity: 1 },
+                    inView:  { y: 0, opacity: 1 },
                 }}
                 transition={{ duration: 0.7, ease: "easeInOut" }}
             >

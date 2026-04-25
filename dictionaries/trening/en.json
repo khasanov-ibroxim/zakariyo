@@ -1,0 +1,76 @@
+{
+  "global_textile_days": {
+    "title": "Global Textile Days",
+    "client": "Global Textile Days",
+    "category": "Seminar",
+    "description": "This event took place as part of the international Textile Expo Uzbekistan exhibition, bringing together leading representatives of the textile industry, manufacturers, exporters, and market experts to discuss new opportunities for development, collaboration, and business scaling.",
+    "sections": [
+      {
+        "content": "Participating in Global Textile Days was an important opportunity to exchange experience with representatives of the textile industry, factory managers, and international partners. The event featured the topic '6P+F: The Growth Formula for Factories,' with a focus on the systematic development of enterprises through marketing, positioning, and strategic management."
+      },
+      {
+        "content": "The presentation covered key tools for scaling factories: building a strong brand, working with export markets, digital marketing, increasing client trust, and creating a sustainable business model. Special attention was given to how factories can move beyond standard production and become fully competitive players in the international market."
+      },
+      {
+        "content": "Such events confirm that modern textile business requires not only production capacity but also a strong marketing strategy. Sharing practical cases, professional dialogue, and new business connections become an essential part of growth for both individual enterprises and the industry as a whole."
+      },
+      {
+        "content": "Participation in Global Textile Days became an important platform for exchanging experience with textile industry representatives and international partners. The topic '6P+F: The Growth Formula for Factories' was presented, dedicated to marketing, positioning, and strategic enterprise development."
+      }
+    ]
+  },
+  "heimtextil": {
+    "title": "Heimtextil",
+    "client": "Heimtextil",
+    "category": "Seminar",
+    "description": "The event brought together leading representatives of the textile industry, manufacturers, exporters, and international partners to exchange experience and explore new solutions.",
+    "sections": [
+      {
+        "content": "This event took place as part of the international exhibitions Heimtextil Uzbekistan, Apparel Sourcing Tashkent, and Texworld Tashkent, uniting leading textile industry representatives, manufacturers, exporters, and experts to discuss modern approaches to business development and digital transformation of enterprises."
+      },
+      {
+        "content": "The practical session focused on 'Digital Transformation of the Textile Business,' with an emphasis on implementing modern marketing tools, digital solutions, and promotion strategies for factories and manufacturing companies. Participants discussed how a digital approach helps strengthen brand positions, increase visibility, and build effective communication with international partners."
+      },
+      {
+        "content": "Special attention was paid to the systematic growth of enterprises: from creating strong positioning and brand packaging to entering export markets and increasing competitiveness. Such events serve as an important platform for sharing practical experience, professional dialogue, and creating new opportunities for the development of the textile industry."
+      },
+      {
+        "content": "The event took place within the international exhibitions Heimtextil Uzbekistan, Apparel Sourcing Tashkent, and Texworld Tashkent. The main topics were digital transformation of textile business, marketing, brand promotion, and factory development in international markets."
+      }
+    ]
+  },
+  "titlp_2025": {
+    "title": "TITLP November 11",
+    "client": "TITLP",
+    "category": "Lecture",
+    "description": "An open lecture for marketing students at the Tashkent Institute of Textile and Light Industry on the topic of digital transformation of the textile business.",
+    "sections": [
+      {
+        "content": "This event took place at the Tashkent Institute of Textile and Light Industry as an open lecture for marketing students, where the main topic was the digital transformation of the textile business. The session focused on how modern marketing tools help manufacturing companies adapt to new market conditions, strengthen their positions, and build competitive brands."
+      },
+      {
+        "content": "The lecture covered practical cases from the textile industry, issues of factory positioning, building a strong brand, and entering export markets. Special attention was paid to how digital marketing affects enterprise recognition, trust from international partners, and the development of a long-term growth strategy in both local and international markets."
+      },
+      {
+        "content": "An important part of the event was an open dialogue with students discussing real business challenges, modern industry issues, and the role of marketing in developing manufacturing enterprises. Such lectures help bridge education and practice, forming a new generation of specialists ready to develop Uzbekistan's textile industry at a modern level."
+      }
+    ]
+  },
+  "titlp_2025_1": {
+    "title": "TITLP November 18",
+    "client": "TITLP",
+    "category": "Lecture",
+    "description": "A practical lecture for 2nd, 3rd, and 4th year students on marketing and management in the textile industry.",
+    "sections": [
+      {
+        "content": "This event took place at the Tashkent Institute of Textile and Light Industry as a practical lecture for 2nd, 3rd, and 4th year students studying marketing and management in the textile industry. The main goal was to introduce future specialists to real business processes, modern promotion tools, and practical cases used in textile enterprises."
+      },
+      {
+        "content": "The lecture covered in detail the issues of brand building, factory positioning in domestic and international markets, and the role of digital marketing in developing manufacturing companies. Special attention was given to real examples from the textile sector where marketing strategy directly affects exports, sales, and enterprise recognition among clients and partners."
+      },
+      {
+        "content": "An additional value of the event came from the lively dialogue with students, their active participation in discussions, and interest in practical knowledge. Such meetings help form a new generation of specialists who will understand not only theory but also real industry challenges, and will be able to apply modern marketing approaches in their future professional activities."
+      }
+    ]
+  }
+}

@@ -2,15 +2,13 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
-import { getProjectBySlug, projects } from '@/data/portfolio.data';
-// ✅ trening data import
-import { getTreningsBySlug, trenings } from '@/data/trening.data';
+import { getProjectBySlug, getProjects } from '@/data/portfolio.data';
+import { getTreningBySlug, getTrenings } from '@/data/trening.data';
 import { notFound } from 'next/navigation';
 import { i18n, Locale } from '@/i18n-config';
 import ClientScrollAnimation from '@/components/ui/ClientScrollAnimation';
 import ClientAnimation from '@/components/ui/ClientAnimation';
-import { getDictionary } from "@/lib/dictionary.ts";
-
+import { getDictionary } from "@/lib/dictionary";
 import MoreWorksCarousel from '@/components/ui/MoreWorksCarousel';
 
 type WorkDictionary = {
@@ -29,16 +27,15 @@ type PageProps = {
     }>;
 }
 
-// ✅ Barcha sluglar: portfolio + trening
+// ✅ Barcha sluglar: portfolio + trening, barcha tillar uchun
 export async function generateStaticParams() {
     const params: Array<{ lang: string; slug: string }> = [];
 
-    const allSlugs = [
-        ...projects.map(p => p.slug),
-        ...trenings.map(t => t.slug),
-    ];
-
     for (const locale of i18n.locales) {
+        const portfolioSlugs = getProjects(locale).map(p => p.slug);
+        const treningSlugs = getTrenings(locale).map(t => t.slug);
+        const allSlugs = [...portfolioSlugs, ...treningSlugs];
+
         for (const slug of allSlugs) {
             params.push({ lang: locale, slug });
         }
@@ -49,32 +46,23 @@ export async function generateStaticParams() {
 
 export const dynamicParams = false;
 
-// ✅ Ikki data dan ham qidiradi
-function findProject(slug: string) {
-    return getProjectBySlug(slug) ?? getTreningsBySlug(slug);
-}
-
-function getOtherProjects(currentSlug: string) {
-    const all = [...projects, ...trenings];
-    const filtered = all.filter(p => p.slug !== currentSlug);
-    console.log('Total items for carousel:', filtered.length); // ← shu raqamni ayting
-    return filtered;
-}
-
 export default async function WorkDetailPage({ params }: PageProps) {
     const resolvedParams = await params;
     const { slug, lang } = resolvedParams;
 
     const dict = await getDictionary(lang, 'work') as WorkDictionary;
 
-    // ✅ portfolio dan topa olmasa, treningdan qidiradi
-    const project = findProject(slug);
+    // ✅ Avval portfolio dan qidiradi, topa olmasa trening dan
+    const project = getProjectBySlug(slug, lang) ?? getTreningBySlug(slug, lang);
 
     if (!project) {
         notFound();
     }
 
-    const otherProjects = getOtherProjects(slug);
+    // ✅ Barcha portfolio + trening (hozirgi slugsiz)
+    const portfolioItems = getProjects(lang);
+    const treningItems = getTrenings(lang);
+    const otherProjects = [...portfolioItems, ...treningItems].filter(p => p.slug !== slug);
 
     return (
         <div className="min-h-screen">
@@ -172,7 +160,7 @@ export default async function WorkDetailPage({ params }: PageProps) {
                 ))}
             </div>
 
-
+            {/* More Works Carousel - barcha portfolio + trening */}
             {otherProjects.length > 0 && (
                 <MoreWorksCarousel
                     works={otherProjects}

@@ -1,4 +1,5 @@
-import {StaticImageData} from "next/image";
+import { StaticImageData } from "next/image";
+import { Locale } from '@/i18n-config';
 
 import bakan_0 from "@/assets/work/bakan/bakan_0.jpg"
 import bakan_1 from "@/assets/work/bakan/bakan_1.jpg"
@@ -30,18 +31,9 @@ import zarhal_1 from "@/assets/work/zarhal/zarhal_1.jpg"
 import zarhal_2 from "@/assets/work/zarhal/zarhal_2.jpg"
 import zarhal_3 from "@/assets/work/zarhal/zarhal_3.jpg"
 
-
 export type ProjectSection =
-    | {
-    type: 'text';
-    title: string;
-    content: string;
-}
-    | {
-    type: 'image';
-    src: string | StaticImageData;
-    alt: string;
-};
+    | { type: 'text'; title: string; content: string }
+    | { type: 'image'; src: string | StaticImageData; alt: string };
 
 export interface Project {
     id: string;
@@ -59,337 +51,130 @@ export interface Project {
     liveUrl: string;
 }
 
-export const projects: Project[] = [
+// ✅ Til mustaqil config — faqat rasm va metama'lumotlar
+const projectsConfig = [
     {
-        id: "Bakan_Tex",
-        slug: "Bakan_Tex",
-        title: "Bakan Tex",
-        subtitle: "",
-        category: "Маркетинг",
+        id: "bakan_tex",
+        slug: "bakan-tex",
+        dictKey: "bakan_tex",
         year: "2022",
-        client: "Bakan Tex",
         thumbnail: bakan_2,
         heroImage: bakan_0,
-        description: "Производственное предприятие, специализирующееся на выпуске хлопчатобумажной пряжи. Сотрудничество было выстроено в формате комплексного медийного и стратегического сопровождения.",
-        sections: [
-            {
-                type: "text",
-                title: "КАТАЛОГ",
-                content: "Компания была представлена в каталогах выпусков 1, 2, 3 и 5 через интервью, экспертные статьи и имиджевые рекламные макеты. Это усилило позиционирование бренда, подчеркнуло производственный потенциал, технологическое оснащение и систему контроля качества, а также укрепило доверие к компании, стабильность продукции и репутацию предприятия в отрасли."
-            },
-            {
-                type: "text",
-                title: "САЙТ",
-                content: "Разработан корпоративный сайт BAKAN Tex с чёткой структурой, ориентированной на B2B-аудиторию. В рамках проекта была выстроена логика подачи производственных преимуществ, подробно раскрыты технологические процессы и система контроля качества, сформирован современный визуальный стиль. Сайт стал полноценным инструментом презентации компании для внутренних и экспортных партнёров."
-            },
-            {
-                type: "text",
-                title: "БИЗНЕС ТУР",
-                content: "Организован отраслевой бизнес-тур с участием представителей Русвата и АИРР. В рамках программы проведены визиты на производство, презентация технологических мощностей и переговоры с руководством. Формат позволил продемонстрировать уровень организации процессов и установить прямые деловые контакты, усилив позиционирование предприятия в отрасли."
-            },
-
-            {
-                type: "image",
-                src: bakan_1,
-                alt: "Portrait photography"
-            },
-            {
-                type: "text",
-                title: "РЕЗУЛЬТАТ",
-                content: "Комплексная работа позволила усилить позиционирование компании на рынке, повысить узнаваемость бренда и сформировать устойчивый имидж надёжного производственного партнёра. Через медийное присутствие, цифровые инструменты и прямые деловые коммуникации предприятие укрепило доверие со стороны клиентов, партнёров и международных покупателей, подтвердив свой статус стабильного и технологичного производителя."
-            },
-            {
-                type: "image",
-                src: bakan_2,
-                alt: "Laptop mockup"
-            },
-            {
-                type: "image",
-                src: bakan_3,
-                alt: "Fluid design"
-            }
-        ],
-        gallery: [
-            "/images/gallery_1.png",
-            "/images/gallery_2.png"
-        ],
-        liveUrl: "https://bakantex.com/"
+        liveUrl: "https://bakantex.com/",
+        images: [bakan_1, bakan_2, bakan_3],
     },
     {
-        id: "Osborn_Textile",
-        slug: "Osborn_Textile",
-        title: "Osborn Textile",
-        subtitle: "",
-        category: "Маркетинг",
+        id: "osborn_textile",
+        slug: "osborn-textile",
+        dictKey: "osborn_textile",
         year: "2023",
-        client: "Osborn Textile",
         thumbnail: osborn_0,
         heroImage: osborn_0,
-        description: "На сегодняшний день OSBORN TEXTILE является одним из ведущих производителей меланжевой, крашеной и суровой пряжи.",
-        sections: [
-            {
-                type: "text",
-                title: "Фото",
-                content: "Для Osborn Textile была организована профессиональная фотосессия производственных процессов, оборудования и готовой продукции. Основной акцент был сделан на демонстрации масштаба производства, качества пряжи и технологичности предприятия. Полученные материалы усилили визуальное позиционирование компании и стали основой для маркетинговых и презентационных инструментов."
-            },
-            {
-                type: "text",
-                title: "Сайт",
-                content: "Был разработан корпоративный сайт Osborn Textile с современной структурой и удобной навигацией для B2B-аудитории. В рамках проекта были подробно раскрыты производственные возможности, ассортимент крашеной и меланжевой пряжи, а также преимущества компании для международных партнёров. Сайт стал полноценным инструментом продаж и укрепления доверия со стороны клиентов."
-            },
-            {
-                type: "text",
-                title: "SMM",
-                content: "Для компании была выстроена стратегия присутствия в социальных сетях с акцентом на экспертность, доверие и узнаваемость бренда. Контент включал производственные процессы, преимущества продукции, экспертные материалы и визуальное сопровождение предприятия. Это позволило усилить репутацию компании и повысить интерес со стороны потенциальных партнёров и покупателей."
-            },
-
-            {
-                type: "image",
-                src: osborn_1,
-                alt: "Portrait photography"
-            },
-            {
-                type: "text",
-                title: "РЕЗУЛЬТАТ",
-                content: "Комплексная работа по фотосъёмке, разработке сайта и SMM-продвижению позволила значительно усилить позиционирование Osborn Textile на рынке. Компания получила современный визуальный образ, эффективный инструмент для презентации продукции и стабильное присутствие в digital-среде. Это укрепило доверие со стороны клиентов и партнёров, повысило узнаваемость бренда и усилило репутацию предприятия как надёжного и технологичного производителя."
-            },
-            {
-                type: "image",
-                src: osborn_2,
-                alt: "Laptop mockup"
-            },
-            {
-                type: "image",
-                src: osborn_3,
-                alt: "Fluid design"
-            }
-        ],
-        gallery: [],
-        liveUrl: "https://osborntextile.uz/"
+        liveUrl: "https://osborntextile.uz/",
+        images: [osborn_1, osborn_2, osborn_3],
     },
     {
-        id: "Zelal_Tekstil",
-        slug: "Zelal_Tekstil",
-        title: "Zelal Tekstil",
-        subtitle: "",
-        category: "Маркетинг",
+        id: "zelal_tekstil",
+        slug: "zelal-tekstil",
+        dictKey: "zelal_tekstil",
         year: "2023",
-        client: "Zelal Tekstil",
         thumbnail: zelal_0,
         heroImage: zelal_0,
-        description: "Фабрика \"ZELAL TEKSTIL\" - одна из лидирующих текстильных компаний по производству трикотажного полотна в Узбекистане, была основана в 2006 году в Ташкенте.",
-        sections: [
-            {
-                type: "text",
-                title: "Фото",
-                content: "Для Zelal Tekstil была организована профессиональная фотосессия производственных процессов, оборудования и ключевых этапов производства. Основной акцент был сделан на масштабе предприятия, технологичности и качестве выпускаемой продукции. Полученные материалы стали важной частью презентации компании для партнёров и клиентов."
-            },
-            {
-                type: "text",
-                title: "Сайт",
-                content: "Были разработаны корпоративные сайты для Zelal Tekstil и Deniz Teks с современной структурой и удобной навигацией для B2B-аудитории. В рамках проектов были подробно раскрыты производственные возможности, ассортимент продукции и ключевые преимущества компаний на внутреннем и экспортном рынках. Сайты стали полноценными инструментами продаж, презентации предприятий и укрепления доверия к брендам."
-            },
-            {
-                type: "text",
-                title: "Видео",
-                content: "Для Zelal Tekstil была проведена профессиональная видеосъёмка производственных процессов, оборудования и ключевых этапов работы предприятия. Основной акцент был сделан на демонстрации масштаба производства, технологичности и высокого уровня организации процессов. Видео стало сильным инструментом визуального позиционирования компании и повышения доверия со стороны партнёров и клиентов."
-            },
-
-            {
-                type: "image",
-                src: zelal_1,
-                alt: "Portrait photography"
-            },
-            {
-                type: "text",
-                title: "РЕЗУЛЬТАТ",
-                content: "Комплексная работа по фотосъёмке, видеопродакшену и разработке сайтов для Zelal Tekstil и Deniz Teks позволила значительно усилить позиционирование компаний на рынке. Предприятия получили современные инструменты для презентации производственных возможностей, эффективные digital-платформы для работы с клиентами и сильное визуальное сопровождение бренда. Это повысило узнаваемость, укрепило доверие партнёров и усилило репутацию компаний как надёжных и технологичных производителей."
-            },
-            {
-                type: "image",
-                src: zelal_2,
-                alt: "Laptop mockup"
-            },
-            {
-                type: "image",
-                src: zelal_3,
-                alt: "Fluid design"
-            }
-        ],
-        gallery: [],
-        liveUrl: "https://zelaltekstil.uz/"
+        liveUrl: "https://zelaltekstil.uz/",
+        images: [zelal_1, zelal_2, zelal_3],
     },
     {
-        id: "Chust_Textile",
-        slug: "Chust_Textile",
-        title: "Chust Textile",
-        subtitle: "",
-        category: "Маркетинг",
+        id: "chust_textile",
+        slug: "chust-textile",
+        dictKey: "chust_textile",
         year: "2024",
-        client: "Chust Textile",
         thumbnail: chust_0,
         heroImage: chust_0,
-        description: "Chust Textile — современное производственное предприятие, специализирующееся на выпуске трикотажного полотна и готовой одежды, сочетая качество, технологичность и стабильность производства.",
-        sections: [
-            {
-                type: "text",
-                title: "САЙТ",
-                content: "Для Chust Textile был разработан корпоративный сайт с современной структурой и удобной навигацией для B2B аудиторию. В рамках проекта были подробно раскрыты производственные возможности, ассортимент трикотажного полотна и готовой одежды, а также преимущества компании для партнёров и клиентов. Сайт стал эффективным инструментом продаж и презентации бренда. "
-            },
-            {
-                type: "text",
-                title: "ФОТО ВИДЕО",
-                content: "Для компании была организована профессиональная фото- и видеосъёмка производственных процессов, оборудования и готовой продукции. Основной акцент был сделан на качестве трикотажного полотна, деталях изделий и масштабе производства. Полученные материалы усилили визуальное позиционирование бренда и стали основой для маркетинговых инструментов компании."
-            },
-            {
-                type: "text",
-                title: "SMM",
-                content: "Для Chust Textile была выстроена стратегия присутствия в социальных сетях с акцентом на экспертность, доверие и узнаваемость бренда. Контент включал производственные процессы, преимущества продукции, визуальное сопровождение предприятия и экспертные материалы. Это позволило укрепить репутацию компании и повысить интерес со стороны потенциальных клиентов и партнёров."
-            },
-
-            {
-                type: "image",
-                src: chust_1,
-                alt: "Portrait photography"
-            },
-            {
-                type: "text",
-                title: "РЕЗУЛЬТАТ",
-                content: "Комплексная работа по разработке сайта, фото- и видеосъёмке, а также SMM-продвижению позволила значительно усилить позиционирование Chust Textile на рынке. Компания получила современный визуальный образ, эффективные инструменты продаж и стабильное digital-присутствие для работы с клиентами и партнёрами. Это повысило узнаваемость бренда, укрепило доверие аудитории и усилило репутацию предприятия как надёжного производителя трикотажного полотна и готовой одежды."
-            },
-            {
-                type: "image",
-                src: chust_2,
-                alt: "Laptop mockup"
-            },
-            {
-                type: "image",
-                src: chust_3,
-                alt: "Fluid design"
-            }
-        ],
-        gallery: [],
-        liveUrl: "https://chusttextile.uz/"
+        liveUrl: "https://chusttextile.uz/",
+        images: [chust_1, chust_2, chust_3],
     },
     {
-        id: "Yustex",
-        slug: "Yustex",
-        title: "Yustex",
-        subtitle: "",
-        category: "Маркетинг",
+        id: "yustex",
+        slug: "yustex",
+        dictKey: "yustex",
         year: "2025",
-        client: "Yustex",
         thumbnail: yustex_0,
         heroImage: yustex_0,
-        description: "Yustex — производитель современной трикотажной одежды, специализирующийся на выпуске качественных изделий для внутреннего и международного рынка. Компания сочетает производственные мощности, контроль качества и актуальный подход к созданию востребованной продукции.",
-        sections: [
-            {
-                type: "text",
-                title: "Фотосессия",
-                content: "Для Yustex была организована профессиональная фотосессия производственных процессов, оборудования и готовой трикотажной продукции. Основной акцент был сделан на качестве пошива, деталях изделий и визуальной презентации бренда. Полученные материалы стали основой для маркетинговых инструментов, каталога и digital-продвижения компании."
-            },
-            {
-                type: "text",
-                title: "САЙТ",
-                content: "Был разработан корпоративный сайт Yustex с современной структурой и удобной навигацией для B2B и B2C-аудитории. В рамках проекта были раскрыты производственные возможности, ассортимент продукции и преимущества компании для партнёров и клиентов. Сайт стал эффективным инструментом продаж и укрепления доверия к бренду."
-            },
-            {
-                type: "text",
-                title: "БРЕНД",
-                content: "Отдельно был разработан сайт для бренда AKYUS с акцентом на премиальное позиционирование и современную подачу продукта. Визуальная концепция, структура и контент были выстроены таким образом, чтобы подчеркнуть стиль, качество и уникальность бренда. Сайт стал важной частью формирования сильного имиджа AKYUS на рынке."
-            },
-
-            {
-                type: "image",
-                src: yustex_1,
-                alt: "Portrait photography"
-            },
-            {
-                type: "text",
-                title: "РЕЗУЛЬТАТ",
-                content: "Комплексная работа по фотосъёмке, разработке корпоративного сайта и созданию сайта для бренда AKYUS позволила значительно усилить позиционирование Yustex на рынке. Компания получила сильный визуальный образ, современные инструменты продаж и эффективную digital-платформу для работы с клиентами и партнёрами. Это повысило узнаваемость бренда, укрепило доверие аудитории и усилило репутацию предприятия как надёжного производителя качественной трикотажной одежды."
-            },
-            {
-                type: "image",
-                src: yustex_2,
-                alt: "Laptop mockup"
-            },
-            {
-                type: "image",
-                src: yustex_3,
-                alt: "Fluid design"
-            }
-        ],
-        gallery: [],
-        liveUrl: "https://yustex.uz/"
+        liveUrl: "https://yustex.uz/",
+        images: [yustex_1, yustex_2, yustex_3],
     },
     {
-        id: "Zarhal_Group",
-        slug: "Zarhal_Group",
-        title: "Zarhal Group",
-        subtitle: "",
-        category: "Маркетинг",
+        id: "zarhal_group",
+        slug: "zarhal-group",
+        dictKey: "zarhal_group",
         year: "2025",
-        client: "Zarhal Group",
         thumbnail: zarhal_0,
         heroImage: zarhal_0,
-        description: "Zarhal Group — это современное текстильное предприятие полного производственного цикла, объединяющее производство хлопка, пряжи, тканей и готовой продукции.",
-        sections: [
-            {
-                type: "text",
-                title: "Сайт",
-                content: "Для Zarhal Group был создан корпоративный сайт с современной структурой, удобной навигацией и сильной визуальной подачей. Платформа была разработана для того, чтобы эффективно представить продукцию компании, повысить доверие к бренду и улучшить коммуникацию с партнёрами и клиентами как на локальном, так и на международном рынке."
-            },
-            {
-                type: "text",
-                title: "Фотосессия",
-                content: "Была организована брендированная фотосессия, которая подчеркнула производство, команду и качество продукции компании. Качественный визуальный контент помогает Zarhal Group усиливать имидж бренда, улучшать презентационные материалы и формировать более профессиональное присутствие на digital-площадках и в маркетинговых каналах."
-            },
-            {
-                type: "text",
-                title: "Консультации",
-                content: "Мы провели стратегические маркетинговые консультации, направленные на позиционирование бренда, восприятие клиентов и повышение узнаваемости на рынке. Наши рекомендации помогли усилить коммуникацию с клиентами, укрепить идентичность компании и выстроить более эффективную долгосрочную стратегию продвижения для роста бизнеса."
-            },
-
-            {
-                type: "image",
-                src: zarhal_1,
-                alt: "Portrait photography"
-            },
-            {
-                type: "text",
-                title: "РЕЗУЛЬТАТ",
-                content: "Для Zarhal Group был разработан современный корпоративный сайт с удобной структурой и сильной визуальной подачей. Также была проведена профессиональная фотосессия и маркетинговая консультация, что помогло усилить бренд, повысить доверие клиентов и улучшить позиционирование компании."
-            },
-            {
-                type: "image",
-                src: zarhal_2,
-                alt: "Laptop mockup"
-            },
-            {
-                type: "image",
-                src: zarhal_3,
-                alt: "Fluid design"
-            }
-        ],
-        gallery: [],
-        liveUrl: "https://zarhalgroup.uz/"
-    }
+        liveUrl: "https://zarhalgroup.uz/",
+        images: [zarhal_1, zarhal_2, zarhal_3],
+    },
 ];
 
-// Helper function to get project by slug
-export const getProjectBySlug = (slug: string): Project | undefined => {
-    return projects.find(project => project.slug === slug);
+// ✅ Locale bo'yicha projectlarni olish
+export const getProjects = (locale: Locale): Project[] => {
+    const dict = require(`@/dictionaries/work/${locale}.json`);
+
+    return projectsConfig.map(config => {
+        const p = dict.projects[config.dictKey];
+
+        const textSections: ProjectSection[] = p.sections.map(
+            (s: { title: string; content: string }) => ({
+                type: 'text' as const,
+                title: s.title,
+                content: s.content,
+            })
+        );
+
+        const imageSections: ProjectSection[] = config.images.map((img, i) => ({
+            type: 'image' as const,
+            src: img,
+            alt: `${p.client} - Image ${i + 1}`,
+        }));
+
+        // Text va imagelarni navbat bilan joylashtirish
+        const combined: ProjectSection[] = [];
+        const maxLen = Math.max(textSections.length, imageSections.length);
+        for (let i = 0; i < maxLen; i++) {
+            if (textSections[i]) combined.push(textSections[i]);
+            if (imageSections[i]) combined.push(imageSections[i]);
+        }
+
+        return {
+            id: config.id,
+            slug: config.slug,
+            title: p.client,
+            subtitle: dict.category_type[p.category] ?? p.category,
+            category: dict.category_type[p.category] ?? p.category,
+            year: config.year,
+            client: p.client,
+            thumbnail: config.thumbnail,
+            heroImage: config.heroImage,
+            description: p.description,
+            sections: combined,
+            gallery: [],
+            liveUrl: config.liveUrl,
+        };
+    });
 };
 
-// Helper function to get next/previous projects
-export const getAdjacentProjects = (currentSlug: string) => {
-    const currentIndex = projects.findIndex(p => p.slug === currentSlug);
-    const prevIndex = currentIndex > 0 ? currentIndex - 1 : projects.length - 1;
-    const nextIndex = currentIndex < projects.length - 1 ? currentIndex + 1 : 0;
+// ✅ Default (ru) — client componentlar uchun
+export const projects = getProjects('ru');
 
-    return {
-        prev: projects[prevIndex],
-        next: projects[nextIndex]
-    };
+// ✅ Slug bo'yicha qidirish
+export const getProjectBySlug = (slug: string, locale: Locale = 'ru'): Project | undefined => {
+    return getProjects(locale).find(p => p.slug === slug);
+};
+
+// ✅ Oldingi / keyingi project
+export const getAdjacentProjects = (currentSlug: string, locale: Locale = 'ru') => {
+    const list = getProjects(locale);
+    const idx = list.findIndex(p => p.slug === currentSlug);
+    const prev = idx > 0 ? list[idx - 1] : list[list.length - 1];
+    const next = idx < list.length - 1 ? list[idx + 1] : list[0];
+    return { prev, next };
 };

@@ -158,5 +158,20 @@
         }
       ]
     }
-  }
+  },
+  "otherSphers_title": "Other areas",
+  "otherSphers": [
+    { "id": "textile",    "label": "Textile",          "accent": false },
+    { "id": "equipment",  "label": "Equipment",       "accent": true  },
+    { "id": "cosmetics",  "label": "Cosmetics",          "accent": false },
+    { "id": "leather",    "label": "Leather Goods",    "accent": true  },
+    { "id": "blinds",     "label": "Blinds",             "accent": true  },
+    { "id": "logistics",  "label": "Logistics",          "accent": false },
+    { "id": "printing",   "label": "Printing",         "accent": false },
+    { "id": "building",   "label": "Construction Materials",     "accent": false },
+    { "id": "project",    "label": "Project Works",   "accent": false },
+    { "id": "gas",        "label": "Gas Stations (Fuel Stations",     "accent": false },
+    { "id": "food",       "label": "Food Products",   "accent": false },
+    { "id": "it",         "label": "IT",                 "accent": true  }
+  ]
 }

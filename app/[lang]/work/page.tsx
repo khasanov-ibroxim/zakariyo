@@ -24,6 +24,8 @@ interface WorkDict {
     title: string;
     title_2: string;
     moreWorks: string;
+    otherSphers:[SphereItem],
+    otherSphers_title:string
 }
 type SphereItem = {
     id: string;
@@ -34,18 +36,7 @@ type SphereItem = {
 
 
 const spheres: SphereItem[] = [
-    { id: "textile",    label: "Текстиль",          accent: false },
-    { id: "equipment",  label: "Оборудование",       accent: true  },
-    { id: "cosmetics",  label: "Косметика",          accent: false },
-    { id: "leather",    label: "Кожаные изделия",    accent: true  },
-    { id: "blinds",     label: "Жалюзи",             accent: true  },
-    { id: "logistics",  label: "Логистика",          accent: false },
-    { id: "printing",   label: "Типография",         accent: false },
-    { id: "building",   label: "Стройматериалы",     accent: false },
-    { id: "project",    label: "Проектные работы",   accent: false },
-    { id: "gas",        label: "Заправки (АЗС)",     accent: false },
-    { id: "food",       label: "Продукты питания",   accent: false },
-    { id: "it",         label: "IT",                 accent: true  },
+
 ];
 
 
@@ -201,7 +192,7 @@ export default function WorkPage() {
                 ))}
             </div>
 
-            <OtherSpheres title="Другие сферы" items={spheres} />
+            <OtherSpheres title={dict.otherSphers_title} items={dict.otherSphers} />
 
         </div>
     );

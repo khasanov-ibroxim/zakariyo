@@ -33,7 +33,7 @@ const itemVariants = {
     },
 };
 
-export default function OtherSpheres({ title, items }: OtherSpheresProps) {
+export default function OtherSpheres({ title, items  }: OtherSpheresProps) {
     const [hovered, setHovered] = useState<string | null>(null);
 
     return (

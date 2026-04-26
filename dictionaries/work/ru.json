@@ -4,7 +4,7 @@
   "client": "Клиент",
   "year": "Год",
   "category": "Категория",
-  "liveProject": "Живой проект",
+  "liveProject": "Проект",
   "visitSite": "Посетить сайт",
   "moreWorks": "Другие работы",
 
@@ -158,5 +158,20 @@
         }
       ]
     }
-  }
+  },
+  "otherSphers_title": "Другие сферы",
+  "otherSphers": [
+    { "id": "textile",    "label": "Текстиль",          "accent": false },
+    { "id": "equipment",  "label": "Оборудование",       "accent": true  },
+    { "id": "cosmetics",  "label": "Косметика",          "accent": false },
+    { "id": "leather",    "label": "Кожаные изделия",    "accent": true  },
+    { "id": "blinds",     "label": "Жалюзи",             "accent": true  },
+    { "id": "logistics",  "label": "Логистика",          "accent": false },
+    { "id": "printing",   "label": "Типография",         "accent": false },
+    { "id": "building",   "label": "Стройматериалы",     "accent": false },
+    { "id": "project",    "label": "Проектные работы",   "accent": false },
+    { "id": "gas",        "label": "Заправки (АЗС)",     "accent": false },
+    { "id": "food",       "label": "Продукты питания",   "accent": false },
+    { "id": "it",         "label": "IT",                 "accent": true  }
+  ]
 }

@@ -126,7 +126,8 @@ const Questions = ({dict, lang}) => {
                             .map((item, index) => (
                                 <Link
                                     key={index}
-                                    href="#"
+                                    target={"_blank"}
+                                    href={item.href}
                                     className="
                                 relative flex items-center gap-2
                                 after:content-['']

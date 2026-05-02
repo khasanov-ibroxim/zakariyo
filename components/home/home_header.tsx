@@ -25,9 +25,8 @@ const HomeHeader = ({ dict }) => {
         };
     }, []);
 
-    // ✅ Mobile da kam zoom, desktop da ko'proq
-    const maxScale = isMobile ? 1.1 : 1.3;
-    const scale = 1 + Math.min(scrollY / 3000, maxScale - 1);
+    // ✅ Mobile da zoom yo'q, faqat desktop da zoom
+    const scale = isMobile ? 1 : 1 + Math.min(scrollY / 3000, 0.3);
 
     return (
         <>

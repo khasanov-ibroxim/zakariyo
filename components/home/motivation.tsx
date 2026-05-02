@@ -7,11 +7,14 @@ import Image from "next/image";
 const Motivation = ({dict}) => {
     const [scrollY, setScrollY] = useState(0);
     const [windowHeight, setWindowHeight] = useState(0);
+    const [isMobile, setIsMobile] = useState(false);
     const imageRef = React.useRef<HTMLDivElement>(null);
     const [imageTop, setImageTop] = useState(0);
 
     useEffect(() => {
         setWindowHeight(window.innerHeight);
+        const checkMobile = () => setIsMobile(window.innerWidth < 768);
+        checkMobile();
 
         const handleScroll = () => {
             setScrollY(window.scrollY);
@@ -19,6 +22,7 @@ const Motivation = ({dict}) => {
 
         const handleResize = () => {
             setWindowHeight(window.innerHeight);
+            checkMobile();
         };
 
         window.addEventListener("scroll", handleScroll);
@@ -38,13 +42,13 @@ const Motivation = ({dict}) => {
     }, []);
 
     // Rasm viewport ga kirganmi tekshirish
-    const viewportStart = scrollY + windowHeight; // Ekranning pastki qismi
+    const viewportStart = scrollY + windowHeight;
     const imageInView = viewportStart > imageTop;
 
-    // Scale ni hisoblash - faqat viewport ga kirganida
+    // ✅ Mobile da zoom yo'q, faqat desktop da zoom
     const scrollProgress = imageInView ? Math.max(0, viewportStart - imageTop) : 0;
-    const maxScroll = windowHeight * 1.5; // Bu raqamni o'zgartiring (katta = sekinroq zoom)
-    const scale = 1 + Math.min(scrollProgress / maxScroll, 1) * 0.2; // 1 dan 1.5x gacha
+    const maxScroll = windowHeight * 1.5;
+    const scale = isMobile ? 1 : 1 + Math.min(scrollProgress / maxScroll, 1) * 0.2;
 
     return (
         <div className={"py-16 "}>

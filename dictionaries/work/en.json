@@ -170,7 +170,7 @@
     { "id": "printing",   "label": "Printing",         "accent": false },
     { "id": "building",   "label": "Construction Materials",     "accent": false },
     { "id": "project",    "label": "Project Works",   "accent": false },
-    { "id": "gas",        "label": "Gas Stations (Fuel Stations",     "accent": false },
+    { "id": "gas",        "label": "Gas Stations (Fuel Stations)",     "accent": false },
     { "id": "food",       "label": "Food Products",   "accent": false },
     { "id": "it",         "label": "IT",                 "accent": true  }
   ]

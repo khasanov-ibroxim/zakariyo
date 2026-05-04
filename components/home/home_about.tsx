@@ -75,7 +75,7 @@ const HomeAbout = ({dict}) => {
     return (
         <>
             {/* Desktop Version - Scroll Animation */}
-            <div ref={containerRef} className="hidden md:block relative min-h-[200vh] lg:min-h-[220vh] ">
+            <div ref={containerRef} className="hidden md:block relative min-h-[70vh] lg:min-h-[100vh] ">
                 <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
 
                     {/* Text */}
